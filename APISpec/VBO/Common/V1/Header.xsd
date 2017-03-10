@@ -1,11 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<!--(c) Vodafone Group Services Limited. All rights reserved. This document 
-	comprises proprietary and confidential information and copyright material 
-	belonging to Vodafone Group Services Limited. Other than as permitted by 
-	law, no part of this document may be reproduced, adapted, or distributed, 
-	in any form or by any means, without the prior written consent of Vodafone 
-	Group Services Limited. The information in this document is subject to change 
-	without notice. All trademarks acknowledged. Vodafone Group Services Limited 
+s<?xml version="1.0" encoding="utf-8" ?>
+<!--(c) Vodafone Group Services Limited. All rights reserved. This document
+	comprises proprietary and confidential information and copyright material
+	belonging to Vodafone Group Services Limited. Other than as permitted by
+	law, no part of this document may be reproduced, adapted, or distributed,
+	in any form or by any means, without the prior written consent of Vodafone
+	Group Services Limited. The information in this document is subject to change
+	without notice. All trademarks acknowledged. Vodafone Group Services Limited
 	- Confidential -->
 <xsd:schema xmlns:cmn="http://group.vodafone.com/schema/common/v1" xmlns:tns="http://group.vodafone.com/contract/vho/header/v1" xmlns:vfo="http://group.vodafone.com/contract/vfo/fault/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://group.vodafone.com/contract/vho/header/v1" version="1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <!-- ====================================================================== -->
@@ -84,7 +84,7 @@
             <xsd:documentation>
 				Mandatory cache parameter support by all services
 				(a service must understand the directive even if no caching support
-				in the service – this allows for future extensibility of the service
+				in the service â€“ this allows for future extensibility of the service
 				implementation)
 			</xsd:documentation>
         </xsd:annotation>
@@ -126,7 +126,7 @@
         <xsd:annotation>
             <xsd:documentation>
 				Documentation data structure exposes
-				implementation details – violates the
+				implementation details â€“ violates the
 				service abstraction principle.
 				To prevent consumers from using, any public
 				service response or
@@ -203,13 +203,13 @@
     </xsd:complexType>
     <xsd:element name="RouteInfo" type="tns:RouteInfoType">
         <xsd:annotation>
-            <xsd:documentation xml:lang="EN">A header providing additional routing discriminators that can be used 
+            <xsd:documentation xml:lang="EN">A header providing additional routing discriminators that can be used
 in the context of routing rules</xsd:documentation>
         </xsd:annotation>
     </xsd:element>
     <xsd:complexType name="RouteInfoType">
         <xsd:annotation>
-            <xsd:documentation xml:lang="EN">A header providing additional routing discriminators that can be used 
+            <xsd:documentation xml:lang="EN">A header providing additional routing discriminators that can be used
 in the context of routing rules</xsd:documentation>
         </xsd:annotation>
         <xsd:sequence>
@@ -220,7 +220,7 @@ in the context of routing rules</xsd:documentation>
         <xsd:sequence>
             <xsd:element name="ID" type="xsd:normalizedString" minOccurs="0">
                 <xsd:annotation>
-                    <xsd:documentation xml:lang="EN">The identifier of the route definition. 
+                    <xsd:documentation xml:lang="EN">The identifier of the route definition.
 This should be used to identify instances of routes. </xsd:documentation>
                 </xsd:annotation>
             </xsd:element>
@@ -237,8 +237,8 @@ This should be used to identify instances of routes. </xsd:documentation>
                     <xsd:sequence>
                         <xsd:element name="Key" maxOccurs="unbounded">
                             <xsd:annotation>
-                                <xsd:documentation xml:lang="EN">The Key allows the consumer to pass aditional information relevant 
-to the producer in order to perform the routing of the message to 
+                                <xsd:documentation xml:lang="EN">The Key allows the consumer to pass aditional information relevant
+to the producer in order to perform the routing of the message to
 the appropriate system/component</xsd:documentation>
                             </xsd:annotation>
                             <xsd:complexType>
@@ -251,7 +251,7 @@ the appropriate system/component</xsd:documentation>
                                         </xsd:attribute>
                                         <xsd:attribute name="OrderIndex" type="xsd:integer">
                                             <xsd:annotation>
-                                                <xsd:documentation xml:lang="EN">The priority of the Key relative to other Keys present in the 
+                                                <xsd:documentation xml:lang="EN">The priority of the Key relative to other Keys present in the
 same route. </xsd:documentation>
                                             </xsd:annotation>
                                         </xsd:attribute>
