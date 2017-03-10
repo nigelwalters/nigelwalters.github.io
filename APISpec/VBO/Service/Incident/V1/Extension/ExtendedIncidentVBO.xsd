@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--Created with Liquid XML 2016 Designer Edition 14.1.5.6733 (https://www.liquid-technologies.com)-->
+<!--(c) Vodafone Group Services Limited. All rights reserved. This document comprises proprietary and confidential information and copyright material belonging to Vodafone Group Services Limited. Other than as permitted by law, no part of this document may be reproduced, adapted, or distributed, in any form or by any means, without the prior written consent of Vodafone Group Services Limited. The information in this document is subject to change without notice. All trademarks acknowledged. Vodafone Group Services Limited - Confidential -->
+<xsd:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cct="urn:un:unece:uncefact:documentation:standard:CoreComponentType:2" xmlns:tns="http://group.vodafone.com/schema/extension/vbo/service/incident/v1" xmlns:cmn="http://group.vodafone.com/schema/common/v1" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://group.vodafone.com/schema/extension/vbo/service/incident/v1" version="1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:import schemaLocation="../../../../Common/V1/CoreComponentType_2p0.xsd" namespace="urn:un:unece:uncefact:documentation:standard:CoreComponentType:2" />
+    <xsd:import schemaLocation="../../../../Common/V1/CommonComponents.xsd" namespace="http://group.vodafone.com/schema/common/v1" />
+    <xsd:import schemaLocation="../../../../Common/V1/CodeLists.xsd" namespace="http://group.vodafone.com/schema/common/v1" />
+    <xsd:import schemaLocation="../../../../Common/V1/Meta.xsd" namespace="http://group.vodafone.com/schema/common/v1" />
+    <xsd:annotation>
+        <xsd:documentation>
+                     <p>Schema Definition for Incident Extension</p>
+                 </xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType name="ExtendedIncidentVBOType" />
+    <xsd:complexType name="ExtendedIncidentDetailsType">
+        <xsd:sequence>
+            <xsd:element name="LastAssignedDate" type="cct:DateType" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>The date when the Incident was assigned for the last time</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="SubReasonCode" type="cct:CodeType" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>The Sub reason code describing why the transition occured.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="SubReasonText" type="cct:TextType" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>The sub-reason text describing why the transition occured.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="SubReasons" minOccurs="0">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="SubReason" type="tns:SubReasonType" minOccurs="0" maxOccurs="unbounded" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="SubReasonType">
+        <xsd:sequence>
+            <xsd:element name="SubReasonCode" type="cct:CodeType" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>The Sub reason code describing why the transition occured.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="SubReasonText" type="cct:TextType" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>The sub-reason text describing why the transition occured.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="ExtendedRelatedIncidentType" />
+    <xsd:complexType name="ExtendedIncidentRolesType" />
+    <xsd:complexType name="ExtendedIncidentPartsType" />
+    <xsd:complexType name="ExtendedIncidentProductType" />
+    <xsd:complexType name="ExtendedIncidentResourceType" />
+    <xsd:complexType name="ExtendedIncidentServiceType" />
+    <xsd:complexType name="ExtendedIncidentServiceLevelType" />
+    <xsd:complexType name="ExtendedIncidentSupportGroupType" />
+    <xsd:complexType name="ExtendedIncidentSupportPersonType" />
+    <xsd:complexType name="ExtendedIncidentImpactType" />
+    <xsd:complexType name="ExtendedIncidentServiceProviderType" />
+    <xsd:complexType name="ExtendedExternalReferenceType" />
+    <xsd:complexType name="ExtendedSymptomType" />
+    <xsd:complexType name="ExtendedChannelType" />
+    <xsd:complexType name="ExtendedAttachmentType" />
+    <xsd:complexType name="ExtendedNoteType" />
+    <xsd:complexType name="ExtendedIncidentSiteType" />
+    <xsd:complexType name="ExtendedResolutionType" />
+    <xsd:complexType name="ExtendedSpecificationType" />
+    <xsd:complexType name="ExtendedStatusHistoryType" />
+    <xsd:complexType name="ExtendedEscalationType" />
+    <xsd:complexType name="ExtendedRequesterType" />
+    <xsd:complexType name="ExtendedAffecteeType" />
+    <xsd:complexType name="ExtendedInitiatorType">
+        <xsd:sequence>
+            <xsd:element name="ContactPoints" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>The set of contact points for the initiator</xsd:documentation>
+                </xsd:annotation>
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="ContactPoint" type="cmn:ContactPointType" maxOccurs="unbounded">
+                            <xsd:annotation>
+                                <xsd:documentation>A specific contact point for the initiator</xsd:documentation>
+                            </xsd:annotation>
+                        </xsd:element>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="ContactName" type="tns:ContactNameType" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>The name of the contact for the initiator individual or organisation.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="ExtendedAssigneeType" />
+    <xsd:complexType name="ExtendedOwnerType" />
+    <xsd:complexType name="ExtendedContactPointType" />
+    <xsd:complexType name="ExtendedContactNameType" />
+    <xsd:complexType name="ExtendedCauseType" />
+    <xsd:complexType name="ExtendedWorkLogInfoType">
+        <xsd:sequence>
+            <xsd:element name="SubOperation" type="cct:TextType" minOccurs="0" />
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="ExtendedWorkOrderType" />
+    <xsd:complexType name="ContactNameType">
+        <xsd:complexContent>
+            <xsd:extension base="cmn:BaseComponentType">
+                <xsd:sequence>
+                    <xsd:element name="MiddleName" type="cct:TextType" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation>The person middle name</xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element name="FamilyName" type="cct:TextType" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation>The person family name</xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element name="Extension" type="tns:ExtendedContactNameType" minOccurs="0" />
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+</xsd:schema>

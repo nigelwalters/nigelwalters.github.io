@@ -1,0 +1,939 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vbm:GetIncidentListVBMResponse
+	xmlns:vbm="http://group.vodafone.com/schema/vbm/service/incident/v1"
+	xmlns:cdt="urn:un:unece:uncefact:documentation:standard:CoreComponentType:2"
+	xmlns:cmn="http://group.vodafone.com/schema/common/v1" xmlns:vbo="http://group.vodafone.com/schema/vbo/service/incident/v1"
+	xmlns:tns2="http://group.vodafone.com/schema/extension/vbo/service/incident/v1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://group.vodafone.com/schema/vbm/service/incident/v1 ../IncidentVBM.xsd">
+	<vbm:IncidentVBO>
+		<cmn:IDs>
+			<cmn:ID schemeAgencyName="Vodafone" schemeName="Incident ID">123</cmn:ID>
+		</cmn:IDs>
+		<cmn:Name>Incident One</cmn:Name>
+		<cmn:Desc>The Incident for the party</cmn:Desc>
+		<cmn:Type listAgencyName="Vodafone" listName="Incident Type Code">Consumer
+			Incident</cmn:Type>
+		<cmn:Categories>
+			<cmn:Category listAgencyName="Vodafone" listName="Incident Category Code"></cmn:Category>
+		</cmn:Categories>
+		<cmn:Status listAgencyName="Vodafone" listName="Incident Status Code">Active</cmn:Status>
+		<cmn:Version>987</cmn:Version>
+		<cmn:Created format="ISO8601">2015-04-01T00:00:00Z</cmn:Created>
+		<cmn:CreatedBy schemeAgencyName="Vodafone" schemeName="UserID">j.smith</cmn:CreatedBy>
+		<cmn:LastModified format="ISO8601">2015-04-01T00:00:00Z</cmn:LastModified>
+		<cmn:LastModifiedBy schemeAgencyName="Vodafone"
+			schemeName="UserID">s.rogers</cmn:LastModifiedBy>
+		<cmn:ValidityPeriod>
+			<cmn:FromDate>
+				<cdt:Date>2015-10-01</cdt:Date>
+			</cmn:FromDate>
+			<cmn:ToDate>
+				<cdt:Date>2015-10-01</cdt:Date>
+			</cmn:ToDate>
+		</cmn:ValidityPeriod>
+		<cmn:LastActivityDate format="ISO8601">2015-10-01</cmn:LastActivityDate>
+		<vbo:Details>
+			<vbo:SeverityCode listAgencyName="Vodafone"
+				listName="Incident Severity Code">Medium</vbo:SeverityCode>
+			<vbo:PriorityCode listAgencyName="Vodafone"
+				listName="Incident Priority Code">Low</vbo:PriorityCode>
+			<vbo:UrgencyCode listAgencyName="Vodafone"
+				listName="Incident Urgency Code">Low</vbo:UrgencyCode>
+			<vbo:ImpactCode listAgencyName="Vodafone" listName="Incident Impact Code">Medium</vbo:ImpactCode>
+			<vbo:AlertRequestInd>
+				<cdt:Indicator>false</cdt:Indicator>
+			</vbo:AlertRequestInd>
+			<vbo:ResolvedInd>
+				<cdt:Indicator>false</cdt:Indicator>
+			</vbo:ResolvedInd>
+			<vbo:InstantResolutionInd>
+				<cdt:Indicator>false</cdt:Indicator>
+			</vbo:InstantResolutionInd>
+			<vbo:ExternalReferenceID schemeAgencyName="Vodafone"
+				schemeName="string">123</vbo:ExternalReferenceID>
+			<vbo:ParentInd>
+				<cdt:Indicator>false</cdt:Indicator>
+			</vbo:ParentInd>
+			<vbo:SharedInd>
+				<cdt:Indicator>false</cdt:Indicator>
+			</vbo:SharedInd>
+			<vbo:CustomerResolutionAcceptanceIndicator>
+				<cdt:IndicatorString>New</cdt:IndicatorString>
+			</vbo:CustomerResolutionAcceptanceIndicator>
+			<vbo:Extension>
+				<tns2:LastAssignedDate>
+					<cdt:Date>2015-10-01</cdt:Date>
+				</tns2:LastAssignedDate>
+				<tns2:SubReasons>
+					<tns2:SubReason>
+						<tns2:SubReasonCode listAgencyName="Vodafone"
+							listName="string">token</tns2:SubReasonCode>
+						<tns2:SubReasonText>string</tns2:SubReasonText>
+					</tns2:SubReason>
+				</tns2:SubReasons>
+			</vbo:Extension>
+		</vbo:Details>
+		<vbo:RelatedIncidents>
+			<vbo:RelatedIncident relationshipLocationCode="DE"
+				relationshipOrganisationCode="BMW DE" relationshipTypeCode="Parent">
+				<cmn:IDs>
+					<cmn:ID schemeAgencyName="Vodafone" schemeName="Incident ID">123</cmn:ID>
+				</cmn:IDs>
+				<cmn:Name>Incident Two</cmn:Name>
+				<cmn:Desc>The Incident for the party</cmn:Desc>
+				<cmn:Type listAgencyName="Vodafone" listName="Incident Type Code">Consumer
+					Incident</cmn:Type>
+				<cmn:Categories>
+					<cmn:Category listAgencyName="Vodafone" listName="string"></cmn:Category>
+				</cmn:Categories>
+				<cmn:Status listAgencyName="Vodafone" listName="Incident Status Code">Active</cmn:Status>
+				<vbo:Extension></vbo:Extension>
+			</vbo:RelatedIncident>
+		</vbo:RelatedIncidents>
+		<vbo:Roles>
+			<vbo:Requester>
+				<cmn:IDs>
+					<cmn:ID schemeAgencyName="Vodafone" schemeName="Party Role ID">123</cmn:ID>
+				</cmn:IDs>
+				<cmn:Name>John Smith</cmn:Name>
+				<cmn:Desc>An individual involved in the Incident</cmn:Desc>
+				<cmn:Type listAgencyName="Vodafone" listName="Party Type Code">Consumer Party</cmn:Type>
+				<cmn:Categories>
+					<cmn:Category listAgencyName="Vodafone" listName="string"></cmn:Category>
+				</cmn:Categories>
+				<cmn:Status listAgencyName="Vodafone" listName="Incident Status Code">Active</cmn:Status>
+				<cmn:Individual>
+					<cmn:IDs>
+						<cmn:ID schemeAgencyName="Vodafone" schemeName="Party Role ID">123</cmn:ID>
+					</cmn:IDs>
+					<cmn:Name>John Smith</cmn:Name>
+					<cmn:Desc>A Party interacting with Vodafone</cmn:Desc>
+					<cmn:Type listAgencyName="Vodafone" listName="Party Type Code">Consumer
+						Party</cmn:Type>
+					<cmn:Categories>
+						<cmn:Category listAgencyName="Vodafone" listName="string"></cmn:Category>
+					</cmn:Categories>
+					<cmn:Status listAgencyName="Vodafone" listName="Incident Status Code">Active</cmn:Status>
+					<cmn:IndividualName>
+						<cmn:Title listAgencyName="Vodafone" listName="Individual Title Code">Mr</cmn:Title>
+						<cmn:FirstName>John</cmn:FirstName>
+						<cmn:MiddleName>Peter</cmn:MiddleName>
+						<cmn:MiddleInitial>P</cmn:MiddleInitial>
+						<cmn:FamilyName>Smith</cmn:FamilyName>
+						<cmn:Prefix listAgencyName="Vodafone"
+							listName="Individual Name Prefix Code">token</cmn:Prefix>
+						<cmn:Suffix listAgencyName="Vodafone"
+							listName="Individual Name Suffix Code">token</cmn:Suffix>
+						<cmn:Salutation>string</cmn:Salutation>
+						<cmn:FormattedName>Mr John P. Smith</cmn:FormattedName>
+						<cmn:AristocraticTitle listAgencyName="Vodafone"
+							listName="Individual Aristocratic Title Code">token</cmn:AristocraticTitle>
+						<cmn:LegalName>Mr John P. Smith</cmn:LegalName>
+						<cmn:PreferredGivenName>John</cmn:PreferredGivenName>
+					</cmn:IndividualName>
+					<cmn:BirthDate>
+						<cdt:Date>2015-10-01</cdt:Date>
+					</cmn:BirthDate>
+					<cmn:BloodType>B Neg</cmn:BloodType>
+					<cmn:DeathDate>
+						<cdt:Date>2015-10-01</cdt:Date>
+					</cmn:DeathDate>
+					<cmn:DeathIndicator>
+						<cdt:Indicator>false</cdt:Indicator>
+					</cmn:DeathIndicator>
+					<cmn:Ethnicity>string</cmn:Ethnicity>
+					<cmn:Gender>Male</cmn:Gender>
+					<cmn:Language>en</cmn:Language>
+					<cmn:MaritalStatus>Single</cmn:MaritalStatus>
+					<cmn:Nationality>British</cmn:Nationality>
+					<cmn:DesignatedIndicator>
+						<cdt:Indicator>false</cdt:Indicator>
+					</cmn:DesignatedIndicator>
+					<cmn:TPSRegistration>
+						<cdt:Indicator>false</cdt:Indicator>
+					</cmn:TPSRegistration>
+				</cmn:Individual>
+				<vbo:ContactPoints>
+					<vbo:ContactPoint>
+						<cmn:ID schemeAgencyName="Vodafone" schemeName="Party Role ID">123</cmn:ID>
+						<cmn:Email>
+							<cmn:FullAddress>j.smith@vodafone.com</cmn:FullAddress>
+							<cmn:DomainName>vodafone.com</cmn:DomainName>
+							<cmn:UserName>j.smith</cmn:UserName>
+							<cmn:Verified>
+								<cdt:Indicator>false</cdt:Indicator>
+							</cmn:Verified>
+						</cmn:Email>
+					</vbo:ContactPoint>
+				</vbo:ContactPoints>
+				<vbo:ContactName>
+					<cmn:IDs>
+						<cmn:ID schemeAgencyName="Vodafone" schemeName="Party Role ID">123</cmn:ID>
+					</cmn:IDs>
+					<cmn:Name>Contact One</cmn:Name>
+					<cmn:Desc>string</cmn:Desc>
+					<cmn:Type listAgencyName="Vodafone" listName="Party Type Code">Consumer
+						Party</cmn:Type>
+					<cmn:Categories>
+						<cmn:Category listAgencyName="Vodafone" listName="string"></cmn:Category>
+					</cmn:Categories>
+					<cmn:Status listAgencyName="Vodafone" listName="Incident Status Code">Active</cmn:Status>
+					<vbo:MiddleName languageID="EN" languageLocaleID="token">P</vbo:MiddleName>
+					<vbo:FamilyName languageID="EN" languageLocaleID="token">Smith</vbo:FamilyName>
+					<vbo:Extension></vbo:Extension>
+				</vbo:ContactName>
+				<vbo:Extension></vbo:Extension>
+			</vbo:Requester>
+			<vbo:Initiator>
+				<cmn:IDs>
+					<cmn:ID schemeAgencyName="Vodafone" schemeName="Party Role ID">123</cmn:ID>
+				</cmn:IDs>
+				<cmn:Name>John Smith</cmn:Name>
+				<cmn:Desc>An individual involved in the Incident</cmn:Desc>
+				<cmn:Type listAgencyName="Vodafone" listName="Party Type Code">Consumer Party</cmn:Type>
+				<cmn:Categories>
+					<cmn:Category listAgencyName="Vodafone" listName="string"></cmn:Category>
+				</cmn:Categories>
+				<cmn:Status listAgencyName="Vodafone" listName="Incident Status Code">Active</cmn:Status>
+				<cmn:Individual>
+					<cmn:IDs>
+						<cmn:ID schemeAgencyName="Vodafone" schemeName="Party Role ID">123</cmn:ID>
+					</cmn:IDs>
+					<cmn:Name>John Smith</cmn:Name>
+					<cmn:Desc>A Party interacting with Vodafone</cmn:Desc>
+					<cmn:Type listAgencyName="Vodafone" listName="Party Type Code">Consumer
+						Party</cmn:Type>
+					<cmn:Categories>
+						<cmn:Category listAgencyName="Vodafone" listName="string"></cmn:Category>
+					</cmn:Categories>
+					<cmn:Status listAgencyName="Vodafone" listName="Incident Status Code">Active</cmn:Status>
+					<cmn:IndividualName>
+						<cmn:Title listAgencyName="Vodafone" listName="Individual Title Code">Mr</cmn:Title>
+						<cmn:FirstName>John</cmn:FirstName>
+						<cmn:MiddleName>Peter</cmn:MiddleName>
+						<cmn:MiddleInitial>P</cmn:MiddleInitial>
+						<cmn:FamilyName>Smith</cmn:FamilyName>
+						<cmn:Prefix listAgencyName="Vodafone"
+							listName="Individual Name Prefix Code">token</cmn:Prefix>
+						<cmn:Suffix listAgencyName="Vodafone"
+							listName="Individual Name Suffix Code">token</cmn:Suffix>
+						<cmn:Salutation>string</cmn:Salutation>
+						<cmn:FormattedName>Mr John P. Smith</cmn:FormattedName>
+						<cmn:AristocraticTitle listAgencyName="Vodafone"
+							listName="Individual Aristocratic Title Code">token</cmn:AristocraticTitle>
+						<cmn:LegalName>Mr John P. Smith</cmn:LegalName>
+						<cmn:PreferredGivenName>John</cmn:PreferredGivenName>
+					</cmn:IndividualName>
+					<cmn:BirthDate>
+						<cdt:Date>2015-10-01</cdt:Date>
+					</cmn:BirthDate>
+					<cmn:BloodType>B Neg</cmn:BloodType>
+					<cmn:DeathDate>
+						<cdt:Date>2015-10-01</cdt:Date>
+					</cmn:DeathDate>
+					<cmn:DeathIndicator>
+						<cdt:Indicator>false</cdt:Indicator>
+					</cmn:DeathIndicator>
+					<cmn:Ethnicity>string</cmn:Ethnicity>
+					<cmn:Gender>Male</cmn:Gender>
+					<cmn:Language>en</cmn:Language>
+					<cmn:MaritalStatus>Single</cmn:MaritalStatus>
+					<cmn:Nationality>British</cmn:Nationality>
+					<cmn:DesignatedIndicator>
+						<cdt:Indicator>false</cdt:Indicator>
+					</cmn:DesignatedIndicator>
+					<cmn:TPSRegistration>
+						<cdt:Indicator>false</cdt:Indicator>
+					</cmn:TPSRegistration>
+				</cmn:Individual>
+				<vbo:InitiatorGroup>
+					<vbo:ID schemeAgencyName="Vodafone" schemeName="Support Group ID">123</vbo:ID>
+					<vbo:NameText>Service Desk</vbo:NameText>
+					<vbo:DescText>The first-line Service Desk</vbo:DescText>
+					<vbo:ShiftNameText>Morning Shift</vbo:ShiftNameText>
+					<vbo:OrganisationID schemeAgencyName="Vodafone"
+						schemeName="Organisation ID">123</vbo:OrganisationID>
+					<vbo:OrganisationNameText>Vodafone DE</vbo:OrganisationNameText>
+					<vbo:ParentOrganisationID
+						schemeAgencyName="Vodafone" schemeName="Organisation ID">123</vbo:ParentOrganisationID>
+					<vbo:ParentOrganisationNameText>Vodafone</vbo:ParentOrganisationNameText>
+					<vbo:Extension></vbo:Extension>
+				</vbo:InitiatorGroup>
+				<vbo:Extension>
+					<tns2:ContactPoints>
+						<tns2:ContactPoint>
+							<cmn:ID schemeAgencyName="Vodafone" schemeName="Party Role ID">123</cmn:ID>
+							<cmn:Email>
+								<cmn:FullAddress>j.smith@vodafone.com</cmn:FullAddress>
+								<cmn:DomainName>vodafone.com</cmn:DomainName>
+								<cmn:UserName>j.smith</cmn:UserName>
+								<cmn:Verified>
+									<cdt:Indicator>false</cdt:Indicator>
+								</cmn:Verified>
+							</cmn:Email>
+						</tns2:ContactPoint>
+					</tns2:ContactPoints>
+					<tns2:ContactName>
+						<cmn:IDs>
+							<cmn:ID schemeAgencyName="Vodafone" schemeName="Party Role ID">123</cmn:ID>
+						</cmn:IDs>
+						<cmn:Name>Contact One</cmn:Name>
+						<cmn:Desc>string</cmn:Desc>
+						<cmn:Type listAgencyName="Vodafone" listName="Party Type Code">Consumer
+							Party</cmn:Type>
+						<cmn:Categories>
+							<cmn:Category listAgencyName="Vodafone" listName="string"></cmn:Category>
+						</cmn:Categories>
+						<cmn:Status listAgencyName="Vodafone" listName="Incident Status Code">Active</cmn:Status>
+						<tns2:MiddleName languageID="EN" languageLocaleID="token">P</tns2:MiddleName>
+						<tns2:FamilyName languageID="EN" languageLocaleID="token">Smith</tns2:FamilyName>
+					</tns2:ContactName>
+				</vbo:Extension>
+			</vbo:Initiator>
+			<vbo:Assignee>
+				<cmn:IDs>
+					<cmn:ID schemeAgencyName="Vodafone" schemeName="Party Role ID">123</cmn:ID>
+				</cmn:IDs>
+				<cmn:Name>Bob Hart</cmn:Name>
+				<cmn:Desc>An individual involved in the Incident</cmn:Desc>
+				<cmn:Type listAgencyName="Vodafone" listName="Party Type Code">Support
+					Engineer</cmn:Type>
+				<cmn:Categories>
+					<cmn:Category listAgencyName="Vodafone" listName="string"></cmn:Category>
+				</cmn:Categories>
+				<cmn:Status listAgencyName="Vodafone" listName="Incident Status Code">Active</cmn:Status>
+				<vbo:AssignedToGroup>
+					<vbo:ID schemeAgencyName="Vodafone" schemeName="Support Group ID">123</vbo:ID>
+					<vbo:NameText>Service Desk</vbo:NameText>
+					<vbo:DescText>The first-line Service Desk</vbo:DescText>
+					<vbo:ShiftNameText>Morning Shift</vbo:ShiftNameText>
+					<vbo:OrganisationID schemeAgencyName="Vodafone"
+						schemeName="Organisation ID">123</vbo:OrganisationID>
+					<vbo:OrganisationNameText>Vodafone DE</vbo:OrganisationNameText>
+					<vbo:ParentOrganisationID
+						schemeAgencyName="Vodafone" schemeName="Organisation ID">123</vbo:ParentOrganisationID>
+					<vbo:ParentOrganisationNameText>Vodafone</vbo:ParentOrganisationNameText>
+					<vbo:Extension></vbo:Extension>
+				</vbo:AssignedToGroup>
+				<vbo:Extension></vbo:Extension>
+			</vbo:Assignee>
+			<vbo:Owner>
+				<cmn:IDs>
+					<cmn:ID schemeAgencyName="Vodafone" schemeName="Party Role ID">123</cmn:ID>
+				</cmn:IDs>
+				<cmn:Name>John Smith</cmn:Name>
+				<cmn:Desc>An individual involved in the Incident</cmn:Desc>
+				<cmn:Type listAgencyName="Vodafone" listName="Party Type Code">Consumer Party</cmn:Type>
+				<cmn:Categories>
+					<cmn:Category listAgencyName="Vodafone" listName="string"></cmn:Category>
+				</cmn:Categories>
+				<cmn:Status listAgencyName="Vodafone" listName="Incident Status Code">Active</cmn:Status>
+				<vbo:OwnerGroup>
+					<vbo:ID schemeAgencyName="Vodafone" schemeName="Support Group ID">123</vbo:ID>
+					<vbo:NameText>Service Desk</vbo:NameText>
+					<vbo:DescText>The first-line Service Desk</vbo:DescText>
+					<vbo:ShiftNameText>Morning Shift</vbo:ShiftNameText>
+					<vbo:OrganisationID schemeAgencyName="Vodafone"
+						schemeName="Organisation ID">123</vbo:OrganisationID>
+					<vbo:OrganisationNameText>Vodafone DE</vbo:OrganisationNameText>
+					<vbo:ParentOrganisationID
+						schemeAgencyName="Vodafone" schemeName="Organisation ID">123</vbo:ParentOrganisationID>
+					<vbo:ParentOrganisationNameText>Vodafone</vbo:ParentOrganisationNameText>
+					<vbo:Extension></vbo:Extension>
+				</vbo:OwnerGroup>
+				<vbo:Extension></vbo:Extension>
+			</vbo:Owner>
+			<vbo:Affectee>
+				<cmn:IDs>
+					<cmn:ID schemeAgencyName="Vodafone" schemeName="Party Role ID">123</cmn:ID>
+				</cmn:IDs>
+				<cmn:Name>Bill Wan</cmn:Name>
+				<cmn:Desc>An individual involved in the Incident</cmn:Desc>
+				<cmn:Type listAgencyName="Vodafone" listName="Party Type Code">Consumer Party</cmn:Type>
+				<cmn:Categories>
+					<cmn:Category listAgencyName="Vodafone" listName="string"></cmn:Category>
+				</cmn:Categories>
+				<cmn:Status listAgencyName="Vodafone" listName="Incident Status Code">Active</cmn:Status>
+				<cmn:Individual>
+					<cmn:IDs>
+						<cmn:ID schemeAgencyName="Vodafone" schemeName="Party Role ID">123</cmn:ID>
+					</cmn:IDs>
+					<cmn:Name>John Smith</cmn:Name>
+					<cmn:Desc>A Party interacting with Vodafone</cmn:Desc>
+					<cmn:Type listAgencyName="Vodafone" listName="Party Type Code">Consumer
+						Party</cmn:Type>
+					<cmn:Categories>
+						<cmn:Category listAgencyName="Vodafone" listName="string"></cmn:Category>
+					</cmn:Categories>
+					<cmn:Status listAgencyName="Vodafone" listName="Incident Status Code">Active</cmn:Status>
+					<cmn:IndividualName>
+						<cmn:Title listAgencyName="Vodafone" listName="Individual Title Code">Mr</cmn:Title>
+						<cmn:FirstName>John</cmn:FirstName>
+						<cmn:MiddleName>Peter</cmn:MiddleName>
+						<cmn:MiddleInitial>P</cmn:MiddleInitial>
+						<cmn:FamilyName>Smith</cmn:FamilyName>
+						<cmn:Prefix listAgencyName="Vodafone"
+							listName="Individual Name Prefix Code">token</cmn:Prefix>
+						<cmn:Suffix listAgencyName="Vodafone"
+							listName="Individual Name Suffix Code">token</cmn:Suffix>
+						<cmn:Salutation>string</cmn:Salutation>
+						<cmn:FormattedName>Mr John P. Smith</cmn:FormattedName>
+						<cmn:AristocraticTitle listAgencyName="Vodafone"
+							listName="Individual Aristocratic Title Code">token</cmn:AristocraticTitle>
+						<cmn:LegalName>Mr John P. Smith</cmn:LegalName>
+						<cmn:PreferredGivenName>John</cmn:PreferredGivenName>
+					</cmn:IndividualName>
+					<cmn:BirthDate>
+						<cdt:Date>2015-10-01</cdt:Date>
+					</cmn:BirthDate>
+					<cmn:BloodType>B Neg</cmn:BloodType>
+					<cmn:DeathDate>
+						<cdt:Date>2015-10-01</cdt:Date>
+					</cmn:DeathDate>
+					<cmn:DeathIndicator>
+						<cdt:Indicator>false</cdt:Indicator>
+					</cmn:DeathIndicator>
+					<cmn:Ethnicity>string</cmn:Ethnicity>
+					<cmn:Gender>Male</cmn:Gender>
+					<cmn:Language>en</cmn:Language>
+					<cmn:MaritalStatus>Single</cmn:MaritalStatus>
+					<cmn:Nationality>British</cmn:Nationality>
+					<cmn:DesignatedIndicator>
+						<cdt:Indicator>false</cdt:Indicator>
+					</cmn:DesignatedIndicator>
+					<cmn:TPSRegistration>
+						<cdt:Indicator>false</cdt:Indicator>
+					</cmn:TPSRegistration>
+				</cmn:Individual>
+				<vbo:ContactPoints>
+					<vbo:ContactPoint>
+						<cmn:ID schemeAgencyName="Vodafone" schemeName="Party Role ID">123</cmn:ID>
+						<cmn:Email>
+							<cmn:FullAddress>j.smith@vodafone.com</cmn:FullAddress>
+							<cmn:DomainName>vodafone.com</cmn:DomainName>
+							<cmn:UserName>j.smith</cmn:UserName>
+							<cmn:Verified>
+								<cdt:Indicator>false</cdt:Indicator>
+							</cmn:Verified>
+						</cmn:Email>
+					</vbo:ContactPoint>
+				</vbo:ContactPoints>
+				<vbo:ContactName>
+					<cmn:IDs>
+						<cmn:ID schemeAgencyName="Vodafone" schemeName="Party Role ID">123</cmn:ID>
+					</cmn:IDs>
+					<cmn:Name>Contact One</cmn:Name>
+					<cmn:Desc>string</cmn:Desc>
+					<cmn:Type listAgencyName="Vodafone" listName="Party Type Code">Consumer
+						Party</cmn:Type>
+					<cmn:Categories>
+						<cmn:Category listAgencyName="Vodafone" listName="string"></cmn:Category>
+					</cmn:Categories>
+					<cmn:Status listAgencyName="Vodafone" listName="Incident Status Code">Active</cmn:Status>
+					<vbo:MiddleName languageID="EN" languageLocaleID="token">P</vbo:MiddleName>
+					<vbo:FamilyName languageID="EN" languageLocaleID="token">Smith</vbo:FamilyName>
+					<vbo:Extension></vbo:Extension>
+				</vbo:ContactName>
+				<vbo:Extension></vbo:Extension>
+			</vbo:Affectee>
+			<vbo:Extension></vbo:Extension>
+		</vbo:Roles>
+		<vbo:Parts>
+			<vbo:Products>
+				<vbo:Product>
+					<cmn:IDs>
+						<cmn:ID schemeAgencyName="Vodafone" schemeName="string">123</cmn:ID>
+					</cmn:IDs>
+					<cmn:Name>Product One</cmn:Name>
+					<cmn:Desc>The Online Portal</cmn:Desc>
+					<cmn:Type listAgencyName="Vodafone" listName="Product Type Code">Portal</cmn:Type>
+					<cmn:Categories>
+						<cmn:Category listAgencyName="Vodafone" listName="string"></cmn:Category>
+					</cmn:Categories>
+					<cmn:Status listAgencyName="Vodafone" listName="Incident Status Code">Active</cmn:Status>
+					<vbo:Specification>
+						<cmn:IDs>
+							<cmn:ID schemeAgencyName="Vodafone" schemeName="Specification ID">123</cmn:ID>
+						</cmn:IDs>
+						<cmn:Name>Specification One</cmn:Name>
+						<cmn:Desc>Description of the Specification</cmn:Desc>
+						<cmn:Type listAgencyName="Vodafone" listName="Specification Type Code">Default</cmn:Type>
+						<cmn:Categories>
+							<cmn:Category listAgencyName="Vodafone"
+								listName="Specification Category Code"></cmn:Category>
+						</cmn:Categories>
+						<cmn:Status listAgencyName="Vodafone" listName="Specification Status Code">Active</cmn:Status>
+						<cmn:CharacteristicsValue
+							characteristicName="string">
+							<cmn:Value>Network Services</cmn:Value>
+							<cmn:Type listAgencyName="Vodafone" listName="string">token</cmn:Type>
+							<cmn:Description>string</cmn:Description>
+							<cmn:CreationTime format="ISO8601">2015-04-01T00:00:00Z</cmn:CreationTime>
+							<cmn:ValidityPeriod>
+								<cmn:FromDate>
+									<cdt:Date>2015-10-01</cdt:Date>
+								</cmn:FromDate>
+								<cmn:ToDate>
+									<cdt:Date>2015-10-01</cdt:Date>
+								</cmn:ToDate>
+							</cmn:ValidityPeriod>
+						</cmn:CharacteristicsValue>
+					</vbo:Specification>
+					<vbo:Extension></vbo:Extension>
+				</vbo:Product>
+			</vbo:Products>
+			<vbo:Services>
+				<vbo:Service>
+					<cmn:IDs>
+						<cmn:ID schemeAgencyName="Vodafone" schemeName="string">123</cmn:ID>
+					</cmn:IDs>
+					<cmn:Name>Service One</cmn:Name>
+					<cmn:Desc>string</cmn:Desc>
+					<cmn:Type listAgencyName="Vodafone" listName="Service Type Code">token</cmn:Type>
+					<cmn:Categories>
+						<cmn:Category listAgencyName="Vodafone" listName="string"></cmn:Category>
+					</cmn:Categories>
+					<cmn:Status listAgencyName="Vodafone" listName="Incident Status Code">Active</cmn:Status>
+					<vbo:ServiceArea listAgencyName="Vodafone"
+						listName="string">token</vbo:ServiceArea>
+					<vbo:ServiceAffecting>
+						<cdt:Indicator>false</cdt:Indicator>
+					</vbo:ServiceAffecting>
+					<vbo:Provider>
+						<cmn:IDs>
+							<cmn:ID schemeAgencyName="Vodafone" schemeName="string">123</cmn:ID>
+						</cmn:IDs>
+						<cmn:Name>Provider One</cmn:Name>
+						<cmn:Desc>The provider of the service</cmn:Desc>
+						<cmn:Type listAgencyName="Vodafone" listName="Provider Type Code">token</cmn:Type>
+						<cmn:Categories>
+							<cmn:Category listAgencyName="Vodafone" listName="string"></cmn:Category>
+						</cmn:Categories>
+						<cmn:Status listAgencyName="Vodafone" listName="Incident Status Code">Active</cmn:Status>
+						<vbo:Extension></vbo:Extension>
+					</vbo:Provider>
+					<vbo:Specification>
+						<cmn:IDs>
+							<cmn:ID schemeAgencyName="Vodafone" schemeName="Specification ID">123</cmn:ID>
+						</cmn:IDs>
+						<cmn:Name>Specification One</cmn:Name>
+						<cmn:Desc>Description of the Specification</cmn:Desc>
+						<cmn:Type listAgencyName="Vodafone" listName="Specification Type Code">Default</cmn:Type>
+						<cmn:Categories>
+							<cmn:Category listAgencyName="Vodafone"
+								listName="Specification Category Code"></cmn:Category>
+						</cmn:Categories>
+						<cmn:Status listAgencyName="Vodafone" listName="Specification Status Code">Active</cmn:Status>
+						<cmn:CharacteristicsValue
+							characteristicName="string">
+							<cmn:Value>Network Services</cmn:Value>
+							<cmn:Type listAgencyName="Vodafone" listName="string">token</cmn:Type>
+							<cmn:Description>string</cmn:Description>
+							<cmn:CreationTime format="ISO8601">2015-04-01T00:00:00Z</cmn:CreationTime>
+							<cmn:ValidityPeriod>
+								<cmn:FromDate>
+									<cdt:Date>2015-10-01</cdt:Date>
+								</cmn:FromDate>
+								<cmn:ToDate>
+									<cdt:Date>2015-10-01</cdt:Date>
+								</cmn:ToDate>
+							</cmn:ValidityPeriod>
+						</cmn:CharacteristicsValue>
+					</vbo:Specification>
+					<vbo:Extension></vbo:Extension>
+				</vbo:Service>
+			</vbo:Services>
+			<vbo:Resources>
+				<vbo:Resource>
+					<cmn:IDs>
+						<cmn:ID schemeAgencyName="Vodafone" schemeName="IMEI">49-015420-323751</cmn:ID>
+					</cmn:IDs>
+					<cmn:Name>Resource One</cmn:Name>
+					<cmn:Desc>Customer's Mobile Device</cmn:Desc>
+					<cmn:Type listAgencyName="Vodafone" listName="Resource Type Code">Mobile Device</cmn:Type>
+					<cmn:Categories>
+						<cmn:Category listAgencyName="Vodafone" listName="string"></cmn:Category>
+					</cmn:Categories>
+					<cmn:Status listAgencyName="Vodafone" listName="Incident Status Code">Active</cmn:Status>
+					<vbo:Specification>
+						<cmn:IDs>
+							<cmn:ID schemeAgencyName="Vodafone" schemeName="Specification ID">123</cmn:ID>
+						</cmn:IDs>
+						<cmn:Name>Specification One</cmn:Name>
+						<cmn:Desc>Description of the Specification</cmn:Desc>
+						<cmn:Type listAgencyName="Vodafone" listName="Specification Type Code">Default</cmn:Type>
+						<cmn:Categories>
+							<cmn:Category listAgencyName="Vodafone"
+								listName="Specification Category Code"></cmn:Category>
+						</cmn:Categories>
+						<cmn:Status listAgencyName="Vodafone" listName="Specification Status Code">Active</cmn:Status>
+						<cmn:CharacteristicsValue
+							characteristicName="string">
+							<cmn:Value>Network Services</cmn:Value>
+							<cmn:Type listAgencyName="Vodafone" listName="string">token</cmn:Type>
+							<cmn:Description>string</cmn:Description>
+							<cmn:CreationTime format="ISO8601">2015-04-01T00:00:00Z</cmn:CreationTime>
+							<cmn:ValidityPeriod>
+								<cmn:FromDate>
+									<cdt:Date>2015-10-01</cdt:Date>
+								</cmn:FromDate>
+								<cmn:ToDate>
+									<cdt:Date>2015-10-01</cdt:Date>
+								</cmn:ToDate>
+							</cmn:ValidityPeriod>
+						</cmn:CharacteristicsValue>
+					</vbo:Specification>
+					<vbo:Extension></vbo:Extension>
+				</vbo:Resource>
+			</vbo:Resources>
+			<vbo:ServiceLevel>
+				<cmn:IDs>
+					<cmn:ID schemeAgencyName="Vodafone" schemeName="string">123</cmn:ID>
+				</cmn:IDs>
+				<cmn:Name>Service Level One</cmn:Name>
+				<cmn:Desc>string</cmn:Desc>
+				<cmn:Type listAgencyName="Vodafone" listName="Service Level Type Code">token</cmn:Type>
+				<cmn:Categories>
+					<cmn:Category listAgencyName="Vodafone" listName="string"></cmn:Category>
+				</cmn:Categories>
+				<cmn:Status listAgencyName="Vodafone" listName="Incident Status Code">Active</cmn:Status>
+				<vbo:StartDateTime format="ISO8601">2015-10-01T00:00:00</vbo:StartDateTime>
+				<vbo:RequestedResponseDateTime format="ISO8601">2015-10-01T00:00:00</vbo:RequestedResponseDateTime>
+				<vbo:PromisedResponseDateTime format="ISO8601">2015-10-01T00:00:00</vbo:PromisedResponseDateTime>
+				<vbo:ActualResponseDateTime format="ISO8601">2015-10-01T00:00:00</vbo:ActualResponseDateTime>
+				<vbo:RequestedResolutionDateTime
+					format="ISO8601">2015-10-01T00:00:00</vbo:RequestedResolutionDateTime>
+				<vbo:PromisedResolutionDateTime
+					format="ISO8601">2015-10-01T00:00:00</vbo:PromisedResolutionDateTime>
+				<vbo:ActualResolutionDateTime format="ISO8601">2015-10-01T00:00:00</vbo:ActualResolutionDateTime>
+				<vbo:EstimatedOnholdDateTime format="ISO8601">2015-10-01T00:00:00</vbo:EstimatedOnholdDateTime>
+				<vbo:EstimatedCloseDateTime format="ISO8601">2015-10-01T00:00:00</vbo:EstimatedCloseDateTime>
+				<vbo:Extension></vbo:Extension>
+			</vbo:ServiceLevel>
+			<vbo:Channel>
+				<cmn:IDs>
+					<cmn:ID schemeAgencyName="Vodafone" schemeName="Channel ID">123</cmn:ID>
+				</cmn:IDs>
+				<cmn:Name>UK Contact Centre</cmn:Name>
+				<cmn:Desc>UK Contact Centre</cmn:Desc>
+				<cmn:Type listAgencyName="Vodafone" listName="Channel Type Code">Support</cmn:Type>
+				<cmn:Categories>
+					<cmn:Category listAgencyName="Vodafone" listName="string"></cmn:Category>
+				</cmn:Categories>
+				<cmn:Status listAgencyName="Vodafone" listName="Incident Status Code">Active</cmn:Status>
+				<vbo:Extension></vbo:Extension>
+			</vbo:Channel>
+			<vbo:IncidentSites>
+				<vbo:IncidentSite>
+					<cmn:IDs>
+						<cmn:ID schemeAgencyName="Vodafone" schemeName="string">123</cmn:ID>
+					</cmn:IDs>
+					<cmn:Name>Site One</cmn:Name>
+					<cmn:Desc>string</cmn:Desc>
+					<cmn:Type listAgencyName="Vodafone" listName="Site Type Code">token</cmn:Type>
+					<cmn:Categories>
+						<cmn:Category listAgencyName="Vodafone" listName="string"></cmn:Category>
+					</cmn:Categories>
+					<cmn:Status listAgencyName="Vodafone" listName="Site Status Code">Active</cmn:Status>
+					<vbo:AccessInfoText>string</vbo:AccessInfoText>
+					<vbo:ContactPoints>
+						<vbo:ContactPoint>
+							<cmn:ID schemeAgencyName="Vodafone" schemeName="string">123</cmn:ID>
+							<cmn:Email>
+								<cmn:FullAddress>j.smith@vodafone.com</cmn:FullAddress>
+								<cmn:DomainName>vodafone.com</cmn:DomainName>
+								<cmn:UserName>j.smith</cmn:UserName>
+								<cmn:Verified>
+									<cdt:Indicator>false</cdt:Indicator>
+								</cmn:Verified>
+							</cmn:Email>
+						</vbo:ContactPoint>
+					</vbo:ContactPoints>
+					<vbo:ContactName>
+						<cmn:IDs>
+							<cmn:ID schemeAgencyName="Vodafone" schemeName="string">123</cmn:ID>
+						</cmn:IDs>
+						<cmn:Name>Contact One</cmn:Name>
+						<cmn:Desc>string</cmn:Desc>
+						<cmn:Type listAgencyName="Vodafone" listName="Contact Type Code">token</cmn:Type>
+						<cmn:Categories>
+							<cmn:Category listAgencyName="Vodafone" listName="string"></cmn:Category>
+						</cmn:Categories>
+						<cmn:Status listAgencyName="Vodafone" listName="Incident Status Code">Active</cmn:Status>
+						<vbo:Extension></vbo:Extension>
+					</vbo:ContactName>
+					<vbo:GeographicLocation>
+						<cmn:AltitudeMeasure unitCode="KG">100</cmn:AltitudeMeasure>
+						<cmn:LatitudeMeasure unitCode="KG">51.5072</cmn:LatitudeMeasure>
+						<cmn:LongitudeMeasure unitCode="KG">0.1275</cmn:LongitudeMeasure>
+						<cmn:LatitudeDirectionCode
+							listAgencyName="ISO" listName="ISO6709">+(N)</cmn:LatitudeDirectionCode>
+						<cmn:LongitudeDirectionCode
+							listAgencyName="ISO" listName="ISO6709">+(W)</cmn:LongitudeDirectionCode>
+						<cmn:SystemID schemeAgencyName="Vodafone" schemeName="string">
+							123</cmn:SystemID>
+					</vbo:GeographicLocation>
+					<vbo:Extension></vbo:Extension>
+				</vbo:IncidentSite>
+			</vbo:IncidentSites>
+			<vbo:Symptom>
+				<cmn:IDs>
+					<cmn:ID schemeAgencyName="Vodafone" schemeName="string">123</cmn:ID>
+				</cmn:IDs>
+				<cmn:Name>Server Unavailable</cmn:Name>
+				<cmn:Desc>Server Unavailable</cmn:Desc>
+				<cmn:Type listAgencyName="Vodafone" listName="Symptom Type Code">token</cmn:Type>
+				<cmn:Categories>
+					<cmn:Category listAgencyName="Vodafone" listName="Symptom Category Code"></cmn:Category>
+				</cmn:Categories>
+				<cmn:Status listAgencyName="Vodafone" listName="Incident Status Code">Active</cmn:Status>
+				<vbo:DiscoveredDateTime format="ISO8601">2015-10-01T00:00:00</vbo:DiscoveredDateTime>
+				<vbo:IsRepeatableInd>
+					<cdt:Indicator>false</cdt:Indicator>
+				</vbo:IsRepeatableInd>
+				<vbo:Extension></vbo:Extension>
+			</vbo:Symptom>
+			<vbo:Impact>
+				<vbo:FinancialImpactText>string</vbo:FinancialImpactText>
+				<vbo:BrandImpactText>string</vbo:BrandImpactText>
+				<vbo:TradingPeriodImpactText>string</vbo:TradingPeriodImpactText>
+				<vbo:SiteQuantity unitCode="Site">5</vbo:SiteQuantity>
+				<vbo:SitePercent>20</vbo:SitePercent>
+				<vbo:SiteText>The impact covers those sites in the south-east</vbo:SiteText>
+				<vbo:UserQuantity unitCode="KG">5</vbo:UserQuantity>
+				<vbo:UserPercent>20</vbo:UserPercent>
+				<vbo:UserText>The impact covers those users logged in to the UK servers</vbo:UserText>
+				<vbo:Extension></vbo:Extension>
+			</vbo:Impact>
+			<vbo:Cause>
+				<cmn:IDs>
+					<cmn:ID schemeAgencyName="Vodafone" schemeName="string">123</cmn:ID>
+				</cmn:IDs>
+				<cmn:Name>Network Unavailable</cmn:Name>
+				<cmn:Desc>string</cmn:Desc>
+				<cmn:Type listAgencyName="Vodafone" listName="Cause Type Code">token</cmn:Type>
+				<cmn:Categories>
+					<cmn:Category listAgencyName="Vodafone" listName="Cause Category Code"></cmn:Category>
+				</cmn:Categories>
+				<cmn:Status listAgencyName="Vodafone" listName="Cause Status Code">Active</cmn:Status>
+				<vbo:Extension></vbo:Extension>
+			</vbo:Cause>
+			<vbo:Resolution>
+				<cmn:IDs>
+					<cmn:ID schemeAgencyName="Vodafone" schemeName="string">123</cmn:ID>
+				</cmn:IDs>
+				<cmn:Name>Resolution One</cmn:Name>
+				<cmn:Desc>string</cmn:Desc>
+				<cmn:Type listAgencyName="Vodafone" listName="Resolution Type Code">token</cmn:Type>
+				<cmn:Categories>
+					<cmn:Category listAgencyName="Vodafone"
+						listName="Resolution Category Code"></cmn:Category>
+				</cmn:Categories>
+				<cmn:Status listAgencyName="Vodafone" listName="Resolution Status Code">Active</cmn:Status>
+				<vbo:ResolutionMethod>string</vbo:ResolutionMethod>
+				<vbo:Extension></vbo:Extension>
+			</vbo:Resolution>
+			<vbo:WorkLog>
+				<vbo:WorkInfo>
+					<cmn:IDs>
+						<cmn:ID schemeAgencyName="Vodafone" schemeName="Work Info ID">123</cmn:ID>
+					</cmn:IDs>
+					<cmn:Name>Work Info One</cmn:Name>
+					<cmn:Desc>Description of the Work Info</cmn:Desc>
+					<cmn:Type listAgencyName="Vodafone" listName="Work Info Type Code">Default</cmn:Type>
+					<cmn:Categories>
+						<cmn:Category listAgencyName="Vodafone"
+							listName="Work Info Category Code"></cmn:Category>
+					</cmn:Categories>
+					<cmn:Status listAgencyName="Vodafone" listName="Incident Status Code">Active</cmn:Status>
+					<vbo:Text>string</vbo:Text>
+					<vbo:LoggedDateTime format="ISO8601">2015-10-01T00:00:00</vbo:LoggedDateTime>
+					<vbo:LockedInd>
+						<cdt:Indicator>false</cdt:Indicator>
+					</vbo:LockedInd>
+					<vbo:ViewAccessCode listAgencyName="Vodafone"
+						listName="string">token</vbo:ViewAccessCode>
+					<vbo:Submitter>
+						<vbo:ID schemeAgencyName="Vodafone" schemeName="Support Person ID">123</vbo:ID>
+						<vbo:NameText>J. Stokes</vbo:NameText>
+						<vbo:DescText>The first-line Service Desk Analyst</vbo:DescText>
+						<vbo:ShiftNameText>Morning Shift</vbo:ShiftNameText>
+						<vbo:OrganisationID schemeAgencyName="Vodafone"
+							schemeName="Organisation ID">123</vbo:OrganisationID>
+						<vbo:OrganisationNameText>First Line Support</vbo:OrganisationNameText>
+						<vbo:ParentOrganisationID
+							schemeAgencyName="Vodafone" schemeName="Organisation ID">123</vbo:ParentOrganisationID>
+						<vbo:ParentOrganisationNameText>Vodafone DE</vbo:ParentOrganisationNameText>
+						<vbo:Extension></vbo:Extension>
+					</vbo:Submitter>
+					<vbo:EndDateTime format="ISO8601">2016-10-01T00:00:00</vbo:EndDateTime>
+					<vbo:Extension>
+						<tns2:SubOperation>string</tns2:SubOperation>
+					</vbo:Extension>
+				</vbo:WorkInfo>
+			</vbo:WorkLog>
+			<vbo:WorkOrders>
+				<vbo:WorkOrder>
+					<cmn:IDs>
+						<cmn:ID schemeAgencyName="Vodafone" schemeName="Work Order ID">123</cmn:ID>
+					</cmn:IDs>
+					<cmn:Name>Work Order One</cmn:Name>
+					<cmn:Desc>Description of the Work Order</cmn:Desc>
+					<cmn:Type listAgencyName="Vodafone" listName="Work Order Type Code">Default</cmn:Type>
+					<cmn:Categories>
+						<cmn:Category listAgencyName="Vodafone"
+							listName="Work Order Category Code"></cmn:Category>
+					</cmn:Categories>
+					<cmn:Status listAgencyName="Vodafone" listName="Incident Status Code">Active</cmn:Status>
+					<vbo:Extension></vbo:Extension>
+				</vbo:WorkOrder>
+			</vbo:WorkOrders>
+			<vbo:Specification>
+				<cmn:IDs>
+					<cmn:ID schemeAgencyName="Vodafone" schemeName="Specification ID">123</cmn:ID>
+				</cmn:IDs>
+				<cmn:Name>Specification One</cmn:Name>
+				<cmn:Desc>Description of the Specification</cmn:Desc>
+				<cmn:Type listAgencyName="Vodafone" listName="Specification Type Code">Default</cmn:Type>
+				<cmn:Categories>
+					<cmn:Category listAgencyName="Vodafone"
+						listName="Specification Category Code"></cmn:Category>
+				</cmn:Categories>
+				<cmn:Status listAgencyName="Vodafone" listName="Specification Status Code">Active</cmn:Status>
+				<cmn:CharacteristicsValue
+					characteristicName="string">
+					<cmn:Value>Network Services</cmn:Value>
+					<cmn:Type listAgencyName="Vodafone" listName="string">token</cmn:Type>
+					<cmn:Description>string</cmn:Description>
+					<cmn:CreationTime format="ISO8601">2015-04-01T00:00:00Z</cmn:CreationTime>
+					<cmn:ValidityPeriod>
+						<cmn:FromDate>
+							<cdt:Date>2015-10-01</cdt:Date>
+						</cmn:FromDate>
+						<cmn:ToDate>
+							<cdt:Date>2015-10-01</cdt:Date>
+						</cmn:ToDate>
+					</cmn:ValidityPeriod>
+				</cmn:CharacteristicsValue>
+				<vbo:Extension></vbo:Extension>
+			</vbo:Specification>
+			<vbo:Notes>
+				<vbo:Note>
+					<cmn:IDs>
+						<cmn:ID schemeAgencyName="Vodafone" schemeName="Note ID">123</cmn:ID>
+					</cmn:IDs>
+					<cmn:Name>Note One</cmn:Name>
+					<cmn:Desc>An associated Note to the VBO</cmn:Desc>
+					<cmn:Type listAgencyName="Vodafone" listName="Note Type Code">Comment</cmn:Type>
+					<cmn:Categories>
+						<cmn:Category listAgencyName="Vodafone" listName="Note Category Code"></cmn:Category>
+					</cmn:Categories>
+					<cmn:Status listAgencyName="Vodafone" listName="Incident Status Code">Active</cmn:Status>
+					<cmn:Content>The Customer likes to be called on a weekday evening</cmn:Content>
+					<cmn:AgentID schemeAgencyName="Vodafone" schemeName="Agent ID">123</cmn:AgentID>
+					<cmn:CreatedDateTime format="ISO8601">2015-10-01T00:00:00</cmn:CreatedDateTime>
+					<cmn:LastModifiedDateTime format="ISO8601">2015-10-01T00:00:00</cmn:LastModifiedDateTime>
+					<vbo:Extension></vbo:Extension>
+				</vbo:Note>
+			</vbo:Notes>
+			<vbo:Attachments>
+				<vbo:Attachment>
+					<cmn:IDs>
+						<cmn:ID schemeAgencyName="Vodafone" schemeName="Attachment ID">123</cmn:ID>
+					</cmn:IDs>
+					<cmn:Name>Attachment One</cmn:Name>
+					<cmn:Desc>string</cmn:Desc>
+					<cmn:Type listAgencyName="Vodafone" listName="string">token</cmn:Type>
+					<cmn:Categories>
+						<cmn:Category listAgencyName="Vodafone" listName="string"></cmn:Category>
+					</cmn:Categories>
+					<cmn:Status listAgencyName="Vodafone" listName="Incident Status Code">Active</cmn:Status>
+					<cmn:BinaryObject format="base64" mimeCode="application/base64">SGVsbG8sIFdvcmxkIQ==</cmn:BinaryObject>
+					<cmn:Size unitCode="Byte">20</cmn:Size>
+					<cmn:Reference>
+						<cmn:IDs>
+							<cmn:ID schemeAgencyName="Vodafone" schemeName="Document Reference ID">123</cmn:ID>
+						</cmn:IDs>
+					</cmn:Reference>
+					<vbo:Extension></vbo:Extension>
+				</vbo:Attachment>
+			</vbo:Attachments>
+			<vbo:StatusHistory>
+				<cmn:StateTransition actionCode="ADD">
+					<cmn:ID schemeAgencyName="Vodafone" schemeName="State Transition ID">123</cmn:ID>
+					<cmn:FromStatusCode listAgencyName="Vodafone"
+						listName="Status Code">Active</cmn:FromStatusCode>
+					<cmn:ToStatusCode listAgencyName="Vodafone"
+						listName="Status Code">Cancelled</cmn:ToStatusCode>
+					<cmn:EffectiveDateTime format="ISO8601">2015-10-01T00:00:00</cmn:EffectiveDateTime>
+					<cmn:ReasonCode listAgencyName="Vodafone"
+						listName="State Transition Reason Code">Work In Progress</cmn:ReasonCode>
+					<cmn:ReasonText>string</cmn:ReasonText>
+					<cmn:SubReasonCode listAgencyName="Vodafone"
+						listName="string">token</cmn:SubReasonCode>
+					<cmn:SubReasonText>string</cmn:SubReasonText>
+					<cmn:Description>Description of the State Transition</cmn:Description>
+					<cmn:ChangedByUserID schemeAgencyName="Vodafone"
+						schemeName="User ID">123</cmn:ChangedByUserID>
+				</cmn:StateTransition>
+				<vbo:Extension></vbo:Extension>
+			</vbo:StatusHistory>
+			<vbo:EscalationHistory>
+				<vbo:Escalation>
+					<vbo:ID schemeAgencyName="Vodafone" schemeName="Escalation ID">123</vbo:ID>
+					<vbo:NameText>string</vbo:NameText>
+					<vbo:DescText>string</vbo:DescText>
+					<vbo:EscalationIndicator>
+						<cdt:Indicator>false</cdt:Indicator>
+					</vbo:EscalationIndicator>
+					<vbo:EscalatedToPerson>
+						<vbo:ID schemeAgencyName="Vodafone" schemeName="Support Person ID">123</vbo:ID>
+						<vbo:NameText>Burt Foray</vbo:NameText>
+						<vbo:DescText>string</vbo:DescText>
+						<vbo:ShiftNameText>string</vbo:ShiftNameText>
+						<vbo:OrganisationID schemeAgencyName="Vodafone"
+							schemeName="Organisation ID">123</vbo:OrganisationID>
+						<vbo:OrganisationNameText>Network Services Manager</vbo:OrganisationNameText>
+						<vbo:ParentOrganisationID
+							schemeAgencyName="Vodafone" schemeName="Organisation ID">123</vbo:ParentOrganisationID>
+						<vbo:ParentOrganisationNameText>Network Services Manager</vbo:ParentOrganisationNameText>
+						<vbo:Extension></vbo:Extension>
+					</vbo:EscalatedToPerson>
+					<vbo:EscalatedToGroup>
+						<vbo:ID schemeAgencyName="Vodafone" schemeName="Support Group ID">123</vbo:ID>
+						<vbo:NameText>Network Services</vbo:NameText>
+						<vbo:DescText>string</vbo:DescText>
+						<vbo:ShiftNameText>string</vbo:ShiftNameText>
+						<vbo:OrganisationID schemeAgencyName="Vodafone"
+							schemeName="Organisation ID">123</vbo:OrganisationID>
+						<vbo:OrganisationNameText>Network Services Support Group</vbo:OrganisationNameText>
+						<vbo:ParentOrganisationID
+							schemeAgencyName="Vodafone" schemeName="Organisation ID">123</vbo:ParentOrganisationID>
+						<vbo:ParentOrganisationNameText>Network Services Support Group</vbo:ParentOrganisationNameText>
+						<vbo:Extension></vbo:Extension>
+					</vbo:EscalatedToGroup>
+					<vbo:EscalatedTypeCode listAgencyName="Vodafone"
+						listName="string">token</vbo:EscalatedTypeCode>
+					<vbo:EffectiveDateTime format="ISO8601">2015-10-01T00:00:00</vbo:EffectiveDateTime>
+					<vbo:ReasonCode listAgencyName="Vodafone" listName="string">Has
+						violated its promised resolution date time</vbo:ReasonCode>
+					<vbo:Extension></vbo:Extension>
+				</vbo:Escalation>
+			</vbo:EscalationHistory>
+			<vbo:ExternalReferences>
+				<vbo:ExternalReference>
+					<vbo:TypeCode listAgencyName="Vodafone"
+						listName="External Reference Type Code">External Record Reference</vbo:TypeCode>
+					<vbo:ReferenceID schemeAgencyName="Vodafone"
+						schemeName="External Record Reference ID">123</vbo:ReferenceID>
+					<vbo:Name>string</vbo:Name>
+					<vbo:Type listAgencyName="Vodafone" listName="string">token</vbo:Type>
+					<vbo:Extension></vbo:Extension>
+				</vbo:ExternalReference>
+			</vbo:ExternalReferences>
+			<vbo:Extension></vbo:Extension>
+		</vbo:Parts>
+		<vbo:Extension></vbo:Extension>
+	</vbm:IncidentVBO>
+</vbm:GetIncidentListVBMResponse>

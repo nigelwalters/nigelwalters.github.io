@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<vbm:UpdateIncidentVBMResponse
+	xmlns:vbm="http://group.vodafone.com/schema/vbm/service/incident/v1"
+	xmlns:cdt="urn:un:unece:uncefact:documentation:standard:CoreComponentType:2"
+	xmlns:cmn="http://group.vodafone.com/schema/common/v1" xmlns:vbo="http://group.vodafone.com/schema/vbo/service/incident/v1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://group.vodafone.com/schema/vbm/service/incident/v1 ../IncidentVBM.xsd">
+	<vbm:IncidentVBO>
+		<cmn:IDs>
+			<cmn:ID schemeAgencyName="Vodafone" schemeName="Incident ID">123</cmn:ID>
+		</cmn:IDs>
+		<cmn:Name>Incident One</cmn:Name>
+		<cmn:Desc>The Incident for the party</cmn:Desc>
+		<cmn:Type listAgencyName="Vodafone" listName="Incident Type Code">Consumer
+			Incident</cmn:Type>
+		<cmn:Categories>
+			<cmn:Category listAgencyName="Vodafone" listName="Incident Category Code" />
+		</cmn:Categories>
+		<cmn:Status listAgencyName="Vodafone" listName="Incident Status Code">Active</cmn:Status>
+		<cmn:Version>987</cmn:Version>
+		<cmn:Created format="ISO8601">2015-04-01T00:00:00Z</cmn:Created>
+		<cmn:CreatedBy schemeAgencyName="Vodafone" schemeName="UserID">j.smith</cmn:CreatedBy>
+		<cmn:LastModified format="ISO8601">2015-04-01T00:00:00Z</cmn:LastModified>
+		<cmn:LastModifiedBy schemeAgencyName="Vodafone"
+			schemeName="UserID">s.rogers</cmn:LastModifiedBy>
+		<cmn:ValidityPeriod>
+			<cmn:FromDate>
+				<cdt:Date>2015-10-01</cdt:Date>
+			</cmn:FromDate>
+			<cmn:ToDate>
+				<cdt:Date>2015-10-01</cdt:Date>
+			</cmn:ToDate>
+		</cmn:ValidityPeriod>
+		<cmn:LastActivityDate format="ISO8601">2015-10-01</cmn:LastActivityDate>
+		<vbo:Extension />
+	</vbm:IncidentVBO>
+</vbm:UpdateIncidentVBMResponse>

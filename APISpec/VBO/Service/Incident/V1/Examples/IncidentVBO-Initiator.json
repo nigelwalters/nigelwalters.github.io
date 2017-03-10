@@ -1,0 +1,175 @@
+{
+	"ids": [
+		{
+			"scheme-name": "Party Role id",
+			"scheme-agency-name": "Vodafone",
+			"#text": "123"
+		}
+	],
+	"name": "John Smith",
+	"desc": "An individual involved in the incident",
+	"type": {
+		"list-name": "Party type Code",
+		"list-agency-name": "Vodafone",
+		"#text": "Consumer Party"
+	},
+	"categories": [
+		{
+			"list-name": "string",
+			"list-agency-name": "Vodafone"
+		}
+	],
+	"status": {
+		"list-name": "incident status Code",
+		"list-agency-name": "Vodafone",
+		"#text": "Active"
+	},
+	"individual": {
+		"ids": [
+			{
+				"scheme-name": "Party Role id",
+				"scheme-agency-name": "Vodafone",
+				"#text": "123"
+			}
+		],
+		"name": "John Smith",
+		"desc": "A Party interacting with Vodafone",
+		"type": {
+			"list-name": "Party type Code",
+			"list-agency-name": "Vodafone",
+			"#text": "Consumer Party"
+		},
+		"categories": [
+			{
+				"list-name": "string",
+				"list-agency-name": "Vodafone"
+			}
+		],
+		"status": {
+			"list-name": "incident status Code",
+			"list-agency-name": "Vodafone",
+			"#text": "Active"
+		},
+		"individual-name": {
+			"title": {
+				"list-name": "individual title Code",
+				"list-agency-name": "Vodafone",
+				"#text": "Mr"
+			},
+			"first-name": "John",
+			"middle-name": "Peter",
+			"middle-initial": "P",
+			"family-name": "Smith",
+			"prefix": {
+				"list-name": "individual name prefix Code",
+				"list-agency-name": "Vodafone",
+				"#text": "token"
+			},
+			"suffix": {
+				"list-name": "individual name suffix Code",
+				"list-agency-name": "Vodafone",
+				"#text": "token"
+			},
+			"salutation": "string",
+			"formatted-name": "Mr John P. Smith",
+			"aristocratic-title": {
+				"list-name": "individual aristocratic title Code",
+				"list-agency-name": "Vodafone",
+				"#text": "token"
+			},
+			"legal-name": "Mr John P. Smith",
+			"preferred-given-name": "John"
+		},
+		"birth-date": {
+			"date": "2015-10-01"
+		},
+		"blood-type": "B Neg",
+		"death-date": {
+			"date": "2015-10-01"
+		},
+		"death-indicator": {
+			"indicator": "false"
+		},
+		"ethnicity": "string",
+		"gender": "Male",
+		"language": "en",
+		"marital-status": "Single",
+		"nationality": "British",
+		"designated-indicator": {
+			"indicator": "false"
+		},
+		"tps-registration": {
+			"indicator": "false"
+		}
+	},
+	"initiator-group": {
+		"id": [
+			{
+				"scheme-name": "Support Group id",
+				"scheme-agency-name": "Vodafone",
+				"#text": "123"
+			}
+		],
+		"name-text": "service Desk",
+		"desc-text": "The first-line service Desk",
+		"shift-name-text": "Morning Shift",
+		"organisation-id": {
+			"scheme-name": "Organisation id",
+			"scheme-agency-name": "Vodafone",
+			"#text": "123"
+		},
+		"organisation-name-text": "Vodafone DE",
+		"parent-organisation-id": {
+			"scheme-name": "Organisation id",
+			"scheme-agency-name": "Vodafone",
+			"#text": "123"
+		},
+		"parent-organisation-name-text": "Vodafone"
+	},
+	"extension": {
+		"contact-points": [
+			{
+				"id": {
+					"scheme-name": "Party Role id",
+					"scheme-agency-name": "Vodafone",
+					"#text": "123"
+				},
+				"email": {
+					"full-address": "j.smith@vodafone.com",
+					"domain-name": "vodafone.com",
+					"user-name": "j.smith",
+					"verified": {
+						"indicator": "false"
+					}
+				}
+			}
+		],
+		"contact-name": {
+			"ids": [
+				{
+					"scheme-name": "Party Role id",
+					"scheme-agency-name": "Vodafone",
+					"#text": "123"
+				}
+			],
+			"name": "Contact One",
+			"desc": "string",
+			"type": {
+				"list-name": "Party type Code",
+				"list-agency-name": "Vodafone",
+				"#text": "Consumer Party"
+			},
+			"categories": [
+				{
+					"list-name": "string",
+					"list-agency-name": "Vodafone"
+				}
+			],
+			"status": {
+				"list-name": "incident status Code",
+				"list-agency-name": "Vodafone",
+				"#text": "Active"
+			}
+		}
+	}
+}

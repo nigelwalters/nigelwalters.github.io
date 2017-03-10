@@ -1,0 +1,3369 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"title": "Common Service Model API: Incident",
+		"description": "The Common Service Model (CSM) API for the Incident Resource",
+		"termsOfService": "https://{env}.api-v1.{locale}.vodafone.com/enterprise-resources/terms",
+		"contact": {
+			"name": "API Support",
+			"url": "http://{env}.api-v1.{locale}.vodafone.com/enterprise-resources/support",
+			"email": "csm.support@vodafone.com"
+		},
+		"license": {
+			"name": "Vodafone Licence 1.0",
+			"url": "http://{env}.api-v1.{locale}.vodafone.com/enterprise-resources/licenses/LICENSE-1.0.html"
+		},
+		"version": "1.0"
+	},
+	"host": "api-v1.locale.vodafone.com",
+	"basePath": "/enterprise-resources/{access}",
+	"schemes": [
+		"https"
+	],
+	"consumes": [
+		"application/json",
+		"application/xml"
+	],
+	"produces": [
+		"application/json",
+		"application/xml"
+	],
+	"paths": {
+		"/service/incidents": {
+			"get": {
+				"description": "A method that allows a consumer of the API to get-list a Incident representation.",
+				"operationId": "get-list",
+				"produces": [
+					"application/vnd.vodafone.incident.v1+json",
+					"application/vnd.vodafone.incident.v1+xml"
+				],
+				"parameters": [
+					{
+						"name": "id",
+						"in": "query",
+						"type": "string",
+						"description": "The primary identifier of the resource as used in the URI for an operation on a specific resource."
+					},
+					{
+						"name": "type",
+						"in": "query",
+						"type": "string",
+						"description": "A classification of the business object or component. This identifies the sub-type of the instance of object or component."
+					},
+					{
+						"name": "created",
+						"in": "query",
+						"type": "string",
+						"description": "The date and time the Incident was created."
+					},
+					{
+						"name": "last-modified",
+						"in": "query",
+						"type": "string",
+						"description": "The date and time the Incident was last modified."
+					},
+					{
+						"name": "severity-code",
+						"in": "query",
+						"type": "string",
+						"description": "A classification of the severity of the incident; e.g. high; medium or low."
+					},
+					{
+						"name": "priority-code",
+						"in": "query",
+						"type": "string",
+						"description": "A classification of the priority of the incident; e.g. high; medium or low."
+					},
+					{
+						"name": "urgency-code",
+						"in": "query",
+						"type": "string",
+						"description": "A classification of the urgency of the incident; e.g. high; medium or low."
+					},
+					{
+						"name": "impact-code",
+						"in": "query",
+						"type": "string",
+						"description": "A classification of the impact of the incident; e.g. high; medium or low."
+					},
+					{
+						"name": "site",
+						"in": "query",
+						"type": "string",
+						"description": "A location at which the Incident occurred."
+					},
+					{
+						"name": "requester",
+						"in": "query",
+						"type": "string",
+						"description": "The requester for the Incident."
+					},
+					{
+						"name": "assignee",
+						"in": "query",
+						"type": "string",
+						"description": "The assignee of the incident."
+					},
+					{
+						"name": "assignee-group",
+						"in": "query",
+						"type": "string",
+						"description": "The Assignee Group of the incident."
+					},
+					{
+						"name": "product",
+						"in": "query",
+						"type": "string",
+						"description": "A product or subscription that a customer uses and that is experiencing a failure resulting in the raising of an incident."
+					},
+					{
+						"name": "service",
+						"in": "query",
+						"type": "string",
+						"description": "A service that is experiencing or is impacted by an incident."
+					},
+					{
+						"name": "resource",
+						"in": "query",
+						"type": "string",
+						"description": "A resource that is experiencing or is impacted by an incident. A resource may be any bit of hardware, infrastructure etc."
+					},
+					{
+						"name": "symptom",
+						"in": "query",
+						"type": "string",
+						"description": "A description of the way in which the Incident manifests itself."
+					},
+					{
+						"name": "cause",
+						"in": "query",
+						"type": "string",
+						"description": "The root cause analysis by the assignee as to the cause of the incident."
+					},
+					{
+						"name": "symptom-date-time",
+						"in": "query",
+						"type": "string",
+						"description": "Retrieve those Incidents that either occurred before (greater than) or after (less than) a specified date."
+					},
+					{
+						"$ref": "#/parameters/offset"
+					},
+					{
+						"$ref": "#/parameters/count"
+					},
+					{
+						"$ref": "#/parameters/sort"
+					},
+					{
+						"$ref": "#/parameters/Accept"
+					},
+					{
+						"$ref": "#/parameters/Accept-Language"
+					},
+					{
+						"$ref": "#/parameters/Authorization"
+					},
+					{
+						"$ref": "#/parameters/X-Source-CountryCode"
+					},
+					{
+						"$ref": "#/parameters/X-Source-Operator"
+					},
+					{
+						"$ref": "#/parameters/X-Source-Division"
+					},
+					{
+						"$ref": "#/parameters/X-Source-System"
+					},
+					{
+						"$ref": "#/parameters/X-Source-Timestamp"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "200, OK.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/incident"
+							}
+						},
+						"headers": {
+							"Content-Type": {
+								"type": "string",
+								"description": "The Content-Type entity-header field indicates the media type of the entity-body sent to the recipient or, in the case of the HEAD method, the media type that would have been sent had the request been a GET."
+							},
+							"Content-Length": {
+								"type": "integer",
+								"description": "The Content-Length entity-header field indicates the size of the entity-body, in decimal number of OCTETs, sent to the recipient or, in the case of the HEAD method, the size of the entity-body that would have been sent had the request been a GET"
+							},
+							"Content-Language": {
+								"type": "string",
+								"description": "The Content-Language entity-header field describes the natural language(s) of the intended audience for the enclosed entity"
+							},
+							"Date": {
+								"type": "string",
+								"description": "The date and time at which the message was originated"
+							},
+							"X-Rate-Limit-Limit": {
+								"type": "integer",
+								"description": "The number of allowed requests in the current period"
+							},
+							"X-Rate-Limit-Remaining": {
+								"type": "integer",
+								"description": "The number of remaining requests in the current period"
+							},
+							"X-Rate-Limit-Reset": {
+								"type": "integer",
+								"description": "The number of seconds left in the current period"
+							},
+							"Cache-Control": {
+								"type": "string",
+								"description": "The Cache-Control general-header field is used to specify directives that MUST be obeyed by all caching mechanisms along the request/response chain"
+							},
+							"X-Total-Count": {
+								"type": "string",
+								"description": "The total number of resources found on the server that matched the query parameters."
+							},
+							"X-Items-Per-Page": {
+								"type": "string",
+								"description": "The actual number of items on a page"
+							},
+							"X-ResultStatus-Timestamp": {
+								"type": "string",
+								"description": "The ISO8601 date and Time of the warning/error."
+							},
+							"X-ResultStatus-Originator-Address": {
+								"type": "string",
+								"description": "The URI Address of the system/API generating the warning/error"
+							},
+							"X-ResultStatus-ErrorCode": {
+								"type": "string",
+								"description": "The code of the warning/error."
+							},
+							"X-ResultStatus-Name": {
+								"type": "string",
+								"description": "The name of the warning/error."
+							},
+							"X-ResultStatus-Severity": {
+								"type": "string",
+								"description": "The severity of the warning/error."
+							},
+							"X-ResultStatus-Category": {
+								"type": "string",
+								"description": "The category of the warning/error."
+							},
+							"X-ResultStatus-ReasonCode": {
+								"type": "string",
+								"description": "The reason code of the warning/error."
+							}
+						}
+					},
+					"204": {
+						"description": "204, No Content.",
+						"headers": {
+							"X-Rate-Limit-Limit": {
+								"type": "integer",
+								"description": "The number of allowed requests in the current period"
+							},
+							"X-Rate-Limit-Remaining": {
+								"type": "integer",
+								"description": "The number of remaining requests in the current period"
+							},
+							"X-Rate-Limit-Reset": {
+								"type": "integer",
+								"description": "The number of seconds left in the current period"
+							},
+							"X-ResultStatus-Timestamp": {
+								"type": "string",
+								"description": "The ISO8601 date and Time of the warning/error."
+							},
+							"X-ResultStatus-Originator-Address": {
+								"type": "string",
+								"description": "The URI Address of the system/API generating the warning/error"
+							},
+							"X-ResultStatus-ErrorCode": {
+								"type": "string",
+								"description": "The code of the warning/error."
+							},
+							"X-ResultStatus-Name": {
+								"type": "string",
+								"description": "The name of the warning/error."
+							},
+							"X-ResultStatus-Severity": {
+								"type": "string",
+								"description": "The severity of the warning/error."
+							},
+							"X-ResultStatus-Category": {
+								"type": "string",
+								"description": "The category of the warning/error."
+							},
+							"X-ResultStatus-ReasonCode": {
+								"type": "string",
+								"description": "The reason code of the warning/error."
+							}
+						}
+					},
+					"default": {
+						"description": "An unexpected fault occurred.",
+						"schema": {
+							"$ref": "#/definitions/fault-object"
+						},
+						"headers": {
+							"Content-Type": {
+								"type": "string",
+								"description": "The Content-Type entity-header field indicates the media type of the entity-body sent to the recipient or, in the case of the HEAD method, the media type that would have been sent had the request been a GET."
+							},
+							"Content-Length": {
+								"type": "integer",
+								"description": "The Content-Length entity-header field indicates the size of the entity-body, in decimal number of OCTETs, sent to the recipient or, in the case of the HEAD method, the size of the entity-body that would have been sent had the request been a GET"
+							},
+							"Content-Language": {
+								"type": "string",
+								"description": "The Content-Language entity-header field describes the natural language(s) of the intended audience for the enclosed entity"
+							},
+							"X-Rate-Limit-Limit": {
+								"type": "integer",
+								"description": "The number of allowed requests in the current period"
+							},
+							"X-Rate-Limit-Remaining": {
+								"type": "integer",
+								"description": "The number of remaining requests in the current period"
+							},
+							"X-Rate-Limit-Reset": {
+								"type": "integer",
+								"description": "The number of seconds left in the current period"
+							},
+							"Cache-Control": {
+								"type": "string",
+								"description": "The Cache-Control general-header field is used to specify directives that MUST be obeyed by all caching mechanisms along the request/response chain"
+							},
+							"X-Total-Count": {
+								"type": "string",
+								"description": "The total number of resources found on the server that matched the query parameters."
+							},
+							"X-Items-Per-Page": {
+								"type": "string",
+								"description": "The actual number of items on a page"
+							},
+							"X-ResultStatus-Timestamp": {
+								"type": "string",
+								"description": "The ISO8601 date and Time of the warning/error."
+							},
+							"X-ResultStatus-Originator-Address": {
+								"type": "string",
+								"description": "The URI Address of the system/API generating the warning/error"
+							},
+							"X-ResultStatus-ErrorCode": {
+								"type": "string",
+								"description": "The code of the warning/error."
+							},
+							"X-ResultStatus-Name": {
+								"type": "string",
+								"description": "The name of the warning/error."
+							},
+							"X-ResultStatus-Severity": {
+								"type": "string",
+								"description": "The severity of the warning/error."
+							},
+							"X-ResultStatus-Category": {
+								"type": "string",
+								"description": "The category of the warning/error."
+							},
+							"X-ResultStatus-ReasonCode": {
+								"type": "string",
+								"description": "The reason code of the warning/error."
+							}
+						}
+					}
+				}
+			},
+			"post": {
+				"description": "A method that allows a consumer of the API to create a Incident representation.",
+				"operationId": "create",
+				"parameters": [
+					{
+						"name": "incident",
+						"in": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/incident"
+						}
+					},
+					{
+						"$ref": "#/parameters/Accept"
+					},
+					{
+						"$ref": "#/parameters/Accept-Language"
+					},
+					{
+						"$ref": "#/parameters/Authorization"
+					},
+					{
+						"$ref": "#/parameters/X-Source-CountryCode"
+					},
+					{
+						"$ref": "#/parameters/X-Source-Operator"
+					},
+					{
+						"$ref": "#/parameters/X-Source-Division"
+					},
+					{
+						"$ref": "#/parameters/X-Source-System"
+					},
+					{
+						"$ref": "#/parameters/X-Source-Timestamp"
+					},
+					{
+						"name": "X-Notify-EventCode",
+						"in": "header",
+						"type": "string",
+						"description": "The type of event that caused the notification to be generated.",
+						"enum": [
+							"Created",
+							"Updated",
+							"Deleted"
+						]
+					},
+					{
+						"name": "X-Notify-Business-EventCode",
+						"in": "header",
+						"type": "string",
+						"description": "The business level name of the event that caused the notification to be generated."
+					}
+				],
+				"responses": {
+					"201": {
+						"description": "201, Created.",
+						"headers": {
+							"X-Rate-Limit-Limit": {
+								"type": "integer",
+								"description": "The number of allowed requests in the current period"
+							},
+							"X-Rate-Limit-Remaining": {
+								"type": "integer",
+								"description": "The number of remaining requests in the current period"
+							},
+							"X-Rate-Limit-Reset": {
+								"type": "integer",
+								"description": "The number of seconds left in the current period"
+							},
+							"X-ResultStatus-Timestamp": {
+								"type": "string",
+								"description": "The ISO8601 date and Time of the warning/error."
+							},
+							"X-ResultStatus-Originator-Address": {
+								"type": "string",
+								"description": "The URI Address of the system/API generating the warning/error"
+							},
+							"X-ResultStatus-ErrorCode": {
+								"type": "string",
+								"description": "The code of the warning/error."
+							},
+							"X-ResultStatus-Name": {
+								"type": "string",
+								"description": "The name of the warning/error."
+							},
+							"X-ResultStatus-Severity": {
+								"type": "string",
+								"description": "The severity of the warning/error."
+							},
+							"X-ResultStatus-Category": {
+								"type": "string",
+								"description": "The category of the warning/error."
+							},
+							"X-ResultStatus-ReasonCode": {
+								"type": "string",
+								"description": "The reason code of the warning/error."
+							}
+						}
+					},
+					"default": {
+						"description": "An unexpected fault occurred.",
+						"schema": {
+							"$ref": "#/definitions/fault-object"
+						},
+						"headers": {
+							"X-Rate-Limit-Limit": {
+								"type": "integer",
+								"description": "The number of allowed requests in the current period"
+							},
+							"X-Rate-Limit-Remaining": {
+								"type": "integer",
+								"description": "The number of remaining requests in the current period"
+							},
+							"X-Rate-Limit-Reset": {
+								"type": "integer",
+								"description": "The number of seconds left in the current period"
+							},
+							"X-ResultStatus-Timestamp": {
+								"type": "string",
+								"description": "The ISO8601 date and Time of the warning/error."
+							},
+							"X-ResultStatus-Originator-Address": {
+								"type": "string",
+								"description": "The URI Address of the system/API generating the warning/error"
+							},
+							"X-ResultStatus-ErrorCode": {
+								"type": "string",
+								"description": "The code of the warning/error."
+							},
+							"X-ResultStatus-Name": {
+								"type": "string",
+								"description": "The name of the warning/error."
+							},
+							"X-ResultStatus-Severity": {
+								"type": "string",
+								"description": "The severity of the warning/error."
+							},
+							"X-ResultStatus-Category": {
+								"type": "string",
+								"description": "The category of the warning/error."
+							},
+							"X-ResultStatus-ReasonCode": {
+								"type": "string",
+								"description": "The reason code of the warning/error."
+							}
+						}
+					}
+				}
+			}
+		},
+		"/service/incidents/{id}": {
+			"get": {
+				"description": "A method that allows a consumer of the API to get-list a Incident representation.",
+				"operationId": "get",
+				"produces": [
+					"application/vnd.vodafone.incident.v1+json",
+					"application/vnd.vodafone.incident.v1+xml"
+				],
+				"parameters": [
+					{
+						"name": "msisdn",
+						"in": "query",
+						"type": "string",
+						"description": "This uniquely identifies a Incident."
+					},
+					{
+						"$ref": "#/parameters/offset"
+					},
+					{
+						"$ref": "#/parameters/count"
+					},
+					{
+						"$ref": "#/parameters/sort"
+					},
+					{
+						"$ref": "#/parameters/Accept"
+					},
+					{
+						"$ref": "#/parameters/Accept-Language"
+					},
+					{
+						"$ref": "#/parameters/Authorization"
+					},
+					{
+						"$ref": "#/parameters/X-Source-CountryCode"
+					},
+					{
+						"$ref": "#/parameters/X-Source-Operator"
+					},
+					{
+						"$ref": "#/parameters/X-Source-Division"
+					},
+					{
+						"$ref": "#/parameters/X-Source-System"
+					},
+					{
+						"$ref": "#/parameters/X-Source-Timestamp"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "200, OK.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/incident"
+							}
+						},
+						"headers": {
+							"Content-Type": {
+								"type": "string",
+								"description": "The Content-Type entity-header field indicates the media type of the entity-body sent to the recipient or, in the case of the HEAD method, the media type that would have been sent had the request been a GET."
+							},
+							"Content-Length": {
+								"type": "integer",
+								"description": "The Content-Length entity-header field indicates the size of the entity-body, in decimal number of OCTETs, sent to the recipient or, in the case of the HEAD method, the size of the entity-body that would have been sent had the request been a GET"
+							},
+							"Content-Language": {
+								"type": "string",
+								"description": "The Content-Language entity-header field describes the natural language(s) of the intended audience for the enclosed entity"
+							},
+							"Date": {
+								"type": "string",
+								"description": "The date and time at which the message was originated"
+							},
+							"X-Rate-Limit-Limit": {
+								"type": "integer",
+								"description": "The number of allowed requests in the current period"
+							},
+							"X-Rate-Limit-Remaining": {
+								"type": "integer",
+								"description": "The number of remaining requests in the current period"
+							},
+							"X-Rate-Limit-Reset": {
+								"type": "integer",
+								"description": "The number of seconds left in the current period"
+							},
+							"Cache-Control": {
+								"type": "string",
+								"description": "The Cache-Control general-header field is used to specify directives that MUST be obeyed by all caching mechanisms along the request/response chain"
+							},
+							"X-Total-Count": {
+								"type": "string",
+								"description": "The total number of resources found on the server that matched the query parameters."
+							},
+							"X-Items-Per-Page": {
+								"type": "string",
+								"description": "The actual number of items on a page"
+							},
+							"X-ResultStatus-Timestamp": {
+								"type": "string",
+								"description": "The ISO8601 date and Time of the warning/error."
+							},
+							"X-ResultStatus-Originator-Address": {
+								"type": "string",
+								"description": "The URI Address of the system/API generating the warning/error"
+							},
+							"X-ResultStatus-ErrorCode": {
+								"type": "string",
+								"description": "The code of the warning/error."
+							},
+							"X-ResultStatus-Name": {
+								"type": "string",
+								"description": "The name of the warning/error."
+							},
+							"X-ResultStatus-Severity": {
+								"type": "string",
+								"description": "The severity of the warning/error."
+							},
+							"X-ResultStatus-Category": {
+								"type": "string",
+								"description": "The category of the warning/error."
+							},
+							"X-ResultStatus-ReasonCode": {
+								"type": "string",
+								"description": "The reason code of the warning/error."
+							}
+						}
+					},
+					"204": {
+						"description": "204, No Content.",
+						"headers": {
+							"X-Rate-Limit-Limit": {
+								"type": "integer",
+								"description": "The number of allowed requests in the current period"
+							},
+							"X-Rate-Limit-Remaining": {
+								"type": "integer",
+								"description": "The number of remaining requests in the current period"
+							},
+							"X-Rate-Limit-Reset": {
+								"type": "integer",
+								"description": "The number of seconds left in the current period"
+							},
+							"X-ResultStatus-Timestamp": {
+								"type": "string",
+								"description": "The ISO8601 date and Time of the warning/error."
+							},
+							"X-ResultStatus-Originator-Address": {
+								"type": "string",
+								"description": "The URI Address of the system/API generating the warning/error"
+							},
+							"X-ResultStatus-ErrorCode": {
+								"type": "string",
+								"description": "The code of the warning/error."
+							},
+							"X-ResultStatus-Name": {
+								"type": "string",
+								"description": "The name of the warning/error."
+							},
+							"X-ResultStatus-Severity": {
+								"type": "string",
+								"description": "The severity of the warning/error."
+							},
+							"X-ResultStatus-Category": {
+								"type": "string",
+								"description": "The category of the warning/error."
+							},
+							"X-ResultStatus-ReasonCode": {
+								"type": "string",
+								"description": "The reason code of the warning/error."
+							}
+						}
+					},
+					"default": {
+						"description": "An unexpected fault occurred.",
+						"schema": {
+							"$ref": "#/definitions/fault-object"
+						},
+						"headers": {
+							"Content-Type": {
+								"type": "string",
+								"description": "The Content-Type entity-header field indicates the media type of the entity-body sent to the recipient or, in the case of the HEAD method, the media type that would have been sent had the request been a GET."
+							},
+							"Content-Length": {
+								"type": "integer",
+								"description": "The Content-Length entity-header field indicates the size of the entity-body, in decimal number of OCTETs, sent to the recipient or, in the case of the HEAD method, the size of the entity-body that would have been sent had the request been a GET"
+							},
+							"Content-Language": {
+								"type": "string",
+								"description": "The Content-Language entity-header field describes the natural language(s) of the intended audience for the enclosed entity"
+							},
+							"X-Rate-Limit-Limit": {
+								"type": "integer",
+								"description": "The number of allowed requests in the current period"
+							},
+							"X-Rate-Limit-Remaining": {
+								"type": "integer",
+								"description": "The number of remaining requests in the current period"
+							},
+							"X-Rate-Limit-Reset": {
+								"type": "integer",
+								"description": "The number of seconds left in the current period"
+							},
+							"Cache-Control": {
+								"type": "string",
+								"description": "The Cache-Control general-header field is used to specify directives that MUST be obeyed by all caching mechanisms along the request/response chain"
+							},
+							"X-Total-Count": {
+								"type": "string",
+								"description": "The total number of resources found on the server that matched the query parameters."
+							},
+							"X-Items-Per-Page": {
+								"type": "string",
+								"description": "The actual number of items on a page"
+							},
+							"X-ResultStatus-Timestamp": {
+								"type": "string",
+								"description": "The ISO8601 date and Time of the warning/error."
+							},
+							"X-ResultStatus-Originator-Address": {
+								"type": "string",
+								"description": "The URI Address of the system/API generating the warning/error"
+							},
+							"X-ResultStatus-ErrorCode": {
+								"type": "string",
+								"description": "The code of the warning/error."
+							},
+							"X-ResultStatus-Name": {
+								"type": "string",
+								"description": "The name of the warning/error."
+							},
+							"X-ResultStatus-Severity": {
+								"type": "string",
+								"description": "The severity of the warning/error."
+							},
+							"X-ResultStatus-Category": {
+								"type": "string",
+								"description": "The category of the warning/error."
+							},
+							"X-ResultStatus-ReasonCode": {
+								"type": "string",
+								"description": "The reason code of the warning/error."
+							}
+						}
+					}
+				}
+			},
+			"put": {
+				"description": "A method that allows a consumer of the API to update a Incident representation.",
+				"operationId": "update-replace",
+				"produces": [
+					"application/vnd.vodafone.network-access-profile.v1+json",
+					"application/vnd.vodafone.network-access-profile.v1+xml"
+				],
+				"parameters": [
+					{
+						"name": "incident",
+						"in": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/incident"
+						}
+					},
+					{
+						"$ref": "#/parameters/Accept"
+					},
+					{
+						"$ref": "#/parameters/Accept-Language"
+					},
+					{
+						"$ref": "#/parameters/Authorization"
+					},
+					{
+						"$ref": "#/parameters/X-Source-CountryCode"
+					},
+					{
+						"$ref": "#/parameters/X-Source-Operator"
+					},
+					{
+						"$ref": "#/parameters/X-Source-Division"
+					},
+					{
+						"$ref": "#/parameters/X-Source-System"
+					},
+					{
+						"$ref": "#/parameters/X-Source-Timestamp"
+					},
+					{
+						"name": "X-Notify-EventCode",
+						"in": "header",
+						"type": "string",
+						"description": "The type of event that caused the notification to be generated.",
+						"enum": [
+							"Created",
+							"Updated",
+							"Deleted"
+						]
+					},
+					{
+						"name": "X-Notify-Business-EventCode",
+						"in": "header",
+						"type": "string",
+						"description": "The business level name of the event that caused the notification to be generated."
+					}
+				],
+				"responses": {
+					"201": {
+						"description": "201, Created.",
+						"headers": {
+							"X-Rate-Limit-Limit": {
+								"type": "integer",
+								"description": "The number of allowed requests in the current period"
+							},
+							"X-Rate-Limit-Remaining": {
+								"type": "integer",
+								"description": "The number of remaining requests in the current period"
+							},
+							"X-Rate-Limit-Reset": {
+								"type": "integer",
+								"description": "The number of seconds left in the current period"
+							},
+							"X-ResultStatus-Timestamp": {
+								"type": "string",
+								"description": "The ISO8601 date and Time of the warning/error."
+							},
+							"X-ResultStatus-Originator-Address": {
+								"type": "string",
+								"description": "The URI Address of the system/API generating the warning/error"
+							},
+							"X-ResultStatus-ErrorCode": {
+								"type": "string",
+								"description": "The code of the warning/error."
+							},
+							"X-ResultStatus-Name": {
+								"type": "string",
+								"description": "The name of the warning/error."
+							},
+							"X-ResultStatus-Severity": {
+								"type": "string",
+								"description": "The severity of the warning/error."
+							},
+							"X-ResultStatus-Category": {
+								"type": "string",
+								"description": "The category of the warning/error."
+							},
+							"X-ResultStatus-ReasonCode": {
+								"type": "string",
+								"description": "The reason code of the warning/error."
+							}
+						}
+					},
+					"default": {
+						"description": "An unexpected fault occurred.",
+						"schema": {
+							"$ref": "#/definitions/fault-object"
+						},
+						"headers": {
+							"X-Rate-Limit-Limit": {
+								"type": "integer",
+								"description": "The number of allowed requests in the current period"
+							},
+							"X-Rate-Limit-Remaining": {
+								"type": "integer",
+								"description": "The number of remaining requests in the current period"
+							},
+							"X-Rate-Limit-Reset": {
+								"type": "integer",
+								"description": "The number of seconds left in the current period"
+							},
+							"X-ResultStatus-Timestamp": {
+								"type": "string",
+								"description": "The ISO8601 date and Time of the warning/error."
+							},
+							"X-ResultStatus-Originator-Address": {
+								"type": "string",
+								"description": "The URI Address of the system/API generating the warning/error"
+							},
+							"X-ResultStatus-ErrorCode": {
+								"type": "string",
+								"description": "The code of the warning/error."
+							},
+							"X-ResultStatus-Name": {
+								"type": "string",
+								"description": "The name of the warning/error."
+							},
+							"X-ResultStatus-Severity": {
+								"type": "string",
+								"description": "The severity of the warning/error."
+							},
+							"X-ResultStatus-Category": {
+								"type": "string",
+								"description": "The category of the warning/error."
+							},
+							"X-ResultStatus-ReasonCode": {
+								"type": "string",
+								"description": "The reason code of the warning/error."
+							}
+						}
+					}
+				}
+			},
+			"patch": {
+				"description": "A method that allows a consumer of the API to update a incident representation.",
+				"operationId": "update-partial",
+				"produces": [
+					"application/vnd.vodafone.incident.v1+json",
+					"application/vnd.vodafone.incident.v1+xml"
+				],
+				"parameters": [
+					{
+						"name": "incident",
+						"in": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/patch-object"
+						}
+					},
+					{
+						"$ref": "#/parameters/Accept"
+					},
+					{
+						"$ref": "#/parameters/Accept-Language"
+					},
+					{
+						"$ref": "#/parameters/Authorization"
+					},
+					{
+						"$ref": "#/parameters/X-Source-CountryCode"
+					},
+					{
+						"$ref": "#/parameters/X-Source-Operator"
+					},
+					{
+						"$ref": "#/parameters/X-Source-Division"
+					},
+					{
+						"$ref": "#/parameters/X-Source-System"
+					},
+					{
+						"$ref": "#/parameters/X-Source-Timestamp"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "200, OK.",
+						"schema": {
+							"$ref": "#/definitions/incident"
+						},
+						"headers": {
+							"Content-Type": {
+								"type": "string",
+								"description": "The Content-Type entity-header field indicates the media type of the entity-body sent to the recipient or, in the case of the HEAD method, the media type that would have been sent had the request been a GET."
+							},
+							"Content-Length": {
+								"type": "integer",
+								"description": "The Content-Length entity-header field indicates the size of the entity-body, in decimal number of OCTETs, sent to the recipient or, in the case of the HEAD method, the size of the entity-body that would have been sent had the request been a GET"
+							},
+							"Content-Language": {
+								"type": "string",
+								"description": "The Content-Language entity-header field describes the natural language(s) of the intended audience for the enclosed entity"
+							},
+							"Date": {
+								"type": "string",
+								"description": "The date and time at which the message was originated"
+							},
+							"Last-Modified": {
+								"type": "string",
+								"description": "Indicates the date and time at which the origin server believes the variant was last modified"
+							},
+							"X-Rate-Limit-Limit": {
+								"type": "integer",
+								"description": "The number of allowed requests in the current period"
+							},
+							"X-Rate-Limit-Remaining": {
+								"type": "integer",
+								"description": "The number of remaining requests in the current period"
+							},
+							"X-Rate-Limit-Reset": {
+								"type": "integer",
+								"description": "The number of seconds left in the current period"
+							},
+							"X-ResultStatus-Timestamp": {
+								"type": "string",
+								"description": "The ISO8601 date and Time of the warning/error."
+							},
+							"X-ResultStatus-Originator-Address": {
+								"type": "string",
+								"description": "The URI Address of the system/API generating the warning/error"
+							},
+							"X-ResultStatus-ErrorCode": {
+								"type": "string",
+								"description": "The code of the warning/error."
+							},
+							"X-ResultStatus-Name": {
+								"type": "string",
+								"description": "The name of the warning/error."
+							},
+							"X-ResultStatus-Severity": {
+								"type": "string",
+								"description": "The severity of the warning/error."
+							},
+							"X-ResultStatus-Category": {
+								"type": "string",
+								"description": "The category of the warning/error."
+							},
+							"X-ResultStatus-ReasonCode": {
+								"type": "string",
+								"description": "The reason code of the warning/error."
+							}
+						}
+					},
+					"204": {
+						"description": "204, No Content.",
+						"headers": {
+							"X-Rate-Limit-Limit": {
+								"type": "integer",
+								"description": "The number of allowed requests in the current period"
+							},
+							"X-Rate-Limit-Remaining": {
+								"type": "integer",
+								"description": "The number of remaining requests in the current period"
+							},
+							"X-Rate-Limit-Reset": {
+								"type": "integer",
+								"description": "The number of seconds left in the current period"
+							},
+							"X-ResultStatus-Timestamp": {
+								"type": "string",
+								"description": "The ISO8601 date and Time of the warning/error."
+							},
+							"X-ResultStatus-Originator-Address": {
+								"type": "string",
+								"description": "The URI Address of the system/API generating the warning/error"
+							},
+							"X-ResultStatus-ErrorCode": {
+								"type": "string",
+								"description": "The Vodafone Code of the warning/error."
+							},
+							"X-ResultStatus-Name": {
+								"type": "string",
+								"description": "The Vodafone Name of the warning/error."
+							},
+							"X-ResultStatus-Severity": {
+								"type": "string",
+								"description": "The Vodafone Severity of the warning/error."
+							},
+							"X-ResultStatus-Category": {
+								"type": "string",
+								"description": "The Vodafone Category of the warning/error."
+							},
+							"X-ResultStatus-ReasonCode": {
+								"type": "string",
+								"description": "The Vodafone ReasonCode of the warning/error."
+							}
+						}
+					},
+					"default": {
+						"description": "An unexpected fault occurred.",
+						"schema": {
+							"$ref": "#/definitions/fault-object"
+						},
+						"headers": {
+							"Content-Type": {
+								"type": "string",
+								"description": "The Content-Type entity-header field indicates the media type of the entity-body sent to the recipient or, in the case of the HEAD method, the media type that would have been sent had the request been a GET."
+							},
+							"Content-Length": {
+								"type": "integer",
+								"description": "The Content-Length entity-header field indicates the size of the entity-body, in decimal number of OCTETs, sent to the recipient or, in the case of the HEAD method, the size of the entity-body that would have been sent had the request been a GET"
+							},
+							"Content-Language": {
+								"type": "string",
+								"description": "The Content-Language entity-header field describes the natural language(s) of the intended audience for the enclosed entity"
+							},
+							"X-Rate-Limit-Limit": {
+								"type": "integer",
+								"description": "The number of allowed requests in the current period"
+							},
+							"X-Rate-Limit-Remaining": {
+								"type": "integer",
+								"description": "The number of remaining requests in the current period"
+							},
+							"X-Rate-Limit-Reset": {
+								"type": "integer",
+								"description": "The number of seconds left in the current period"
+							},
+							"X-ResultStatus-Timestamp": {
+								"type": "string",
+								"description": "The ISO8601 date and Time of the warning/error."
+							},
+							"X-ResultStatus-Originator-Address": {
+								"type": "string",
+								"description": "The URI Address of the system/API generating the warning/error"
+							},
+							"X-ResultStatus-ErrorCode": {
+								"type": "string",
+								"description": "The code of the warning/error."
+							},
+							"X-ResultStatus-Name": {
+								"type": "string",
+								"description": "The name of the warning/error."
+							},
+							"X-ResultStatus-Severity": {
+								"type": "string",
+								"description": "The severity of the warning/error."
+							},
+							"X-ResultStatus-Category": {
+								"type": "string",
+								"description": "The category of the warning/error."
+							},
+							"X-ResultStatus-ReasonCode": {
+								"type": "string",
+								"description": "The reason code of the warning/error."
+							}
+						}
+					}
+				}
+			},
+			"parameters": [
+				{
+					"name": "id",
+					"in": "path",
+					"description": "The primary ID for the resource",
+					"required": true,
+					"type": "string"
+				}
+			]
+		},
+		"/service/incidents/{id}/related-incidents/{related-incident-id}": {
+			"get": {
+				"description": "Retrieve the details of a related Incident.",
+				"operationId": "get-related-incident",
+				"produces": [
+					"application/vnd.vodafone.incident.v1+json#related-incident",
+					"application/vnd.vodafone.incident.v1+xml#related-incident"
+				],
+				"parameters": [
+					{
+						"$ref": "#/parameters/Accept"
+					},
+					{
+						"$ref": "#/parameters/Accept-Language"
+					},
+					{
+						"$ref": "#/parameters/Authorization"
+					},
+					{
+						"$ref": "#/parameters/X-Source-CountryCode"
+					},
+					{
+						"$ref": "#/parameters/X-Source-Operator"
+					},
+					{
+						"$ref": "#/parameters/X-Source-Division"
+					},
+					{
+						"$ref": "#/parameters/X-Source-System"
+					},
+					{
+						"$ref": "#/parameters/X-Source-Timestamp"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "200, OK.",
+						"schema": {
+							"$ref": "#/definitions/related-incident"
+						},
+						"headers": {
+							"Content-Type": {
+								"type": "string",
+								"description": "The Content-Type entity-header field indicates the media type of the entity-body sent to the recipient or, in the case of the HEAD method, the media type that would have been sent had the request been a GET."
+							},
+							"Content-Length": {
+								"type": "integer",
+								"description": "The Content-Length entity-header field indicates the size of the entity-body, in decimal number of OCTETs, sent to the recipient or, in the case of the HEAD method, the size of the entity-body that would have been sent had the request been a GET"
+							},
+							"Content-Language": {
+								"type": "string",
+								"description": "The Content-Language entity-header field describes the natural language(s) of the intended audience for the enclosed entity"
+							},
+							"Date": {
+								"type": "string",
+								"description": "The date and time at which the message was originated"
+							},
+							"Last-Modified": {
+								"type": "string",
+								"description": "Indicates the date and time at which the origin server believes the variant was last modified"
+							},
+							"X-Rate-Limit-Limit": {
+								"type": "integer",
+								"description": "The number of allowed requests in the current period"
+							},
+							"X-Rate-Limit-Remaining": {
+								"type": "integer",
+								"description": "The number of remaining requests in the current period"
+							},
+							"X-Rate-Limit-Reset": {
+								"type": "integer",
+								"description": "The number of seconds left in the current period"
+							},
+							"Cache-Control": {
+								"type": "string",
+								"description": "The Cache-Control general-header field is used to specify directives that MUST be obeyed by all caching mechanisms along the request/response chain"
+							},
+							"X-ResultStatus-Timestamp": {
+								"type": "string",
+								"description": "The ISO8601 date and Time of the warning/error."
+							},
+							"X-ResultStatus-Originator-Address": {
+								"type": "string",
+								"description": "The URI Address of the system/API generating the warning/error"
+							},
+							"X-ResultStatus-ErrorCode": {
+								"type": "string",
+								"description": "The code of the warning/error."
+							},
+							"X-ResultStatus-Name": {
+								"type": "string",
+								"description": "The name of the warning/error."
+							},
+							"X-ResultStatus-Severity": {
+								"type": "string",
+								"description": "The severity of the warning/error."
+							},
+							"X-ResultStatus-Category": {
+								"type": "string",
+								"description": "The category of the warning/error."
+							},
+							"X-ResultStatus-ReasonCode": {
+								"type": "string",
+								"description": "The reason code of the warning/error."
+							}
+						}
+					},
+					"default": {
+						"description": "An unexpected fault occurred.",
+						"schema": {
+							"$ref": "#/definitions/fault-object"
+						},
+						"headers": {
+							"Content-Type": {
+								"type": "string",
+								"description": "The Content-Type entity-header field indicates the media type of the entity-body sent to the recipient or, in the case of the HEAD method, the media type that would have been sent had the request been a GET."
+							},
+							"Content-Length": {
+								"type": "integer",
+								"description": "The Content-Length entity-header field indicates the size of the entity-body, in decimal number of OCTETs, sent to the recipient or, in the case of the HEAD method, the size of the entity-body that would have been sent had the request been a GET"
+							},
+							"Content-Language": {
+								"type": "string",
+								"description": "The Content-Language entity-header field describes the natural language(s) of the intended audience for the enclosed entity"
+							},
+							"X-Rate-Limit-Limit": {
+								"type": "integer",
+								"description": "The number of allowed requests in the current period"
+							},
+							"X-Rate-Limit-Remaining": {
+								"type": "integer",
+								"description": "The number of remaining requests in the current period"
+							},
+							"X-Rate-Limit-Reset": {
+								"type": "integer",
+								"description": "The number of seconds left in the current period"
+							},
+							"Cache-Control": {
+								"type": "string",
+								"description": "The Cache-Control general-header field is used to specify directives that MUST be obeyed by all caching mechanisms along the request/response chain"
+							},
+							"X-ResultStatus-Timestamp": {
+								"type": "string",
+								"description": "The ISO8601 date and Time of the warning/error."
+							},
+							"X-ResultStatus-Originator-Address": {
+								"type": "string",
+								"description": "The URI Address of the system/API generating the warning/error"
+							},
+							"X-ResultStatus-ErrorCode": {
+								"type": "string",
+								"description": "The code of the warning/error."
+							},
+							"X-ResultStatus-Name": {
+								"type": "string",
+								"description": "The name of the warning/error."
+							},
+							"X-ResultStatus-Severity": {
+								"type": "string",
+								"description": "The severity of the warning/error."
+							},
+							"X-ResultStatus-Category": {
+								"type": "string",
+								"description": "The category of the warning/error."
+							},
+							"X-ResultStatus-ReasonCode": {
+								"type": "string",
+								"description": "The reason code of the warning/error."
+							}
+						}
+					}
+				}
+			},
+			"parameters": [
+				{
+					"name": "id",
+					"in": "path",
+					"description": "The primary ID for the resource",
+					"required": true,
+					"type": "string"
+				},
+				{
+					"name": "related-incident-id",
+					"in": "path",
+					"description": "The primary ID for the target related incident.",
+					"required": true,
+					"type": "string"
+				}
+			]
+		},
+		"/service/incidents/{id}/requester-party/{party-id}": {
+			"get": {
+				"description": "A method that allows a consumer of the API to get the Requester Role component of the VBO.",
+				"operationId": "get-requester",
+				"produces": [
+					"application/vnd.vodafone.incident.v1+json#related-incident",
+					"application/vnd.vodafone.incident.v1+xml#related-incident"
+				],
+				"parameters": [
+					{
+						"$ref": "#/parameters/Accept"
+					},
+					{
+						"$ref": "#/parameters/Accept-Language"
+					},
+					{
+						"$ref": "#/parameters/Authorization"
+					},
+					{
+						"$ref": "#/parameters/X-Source-CountryCode"
+					},
+					{
+						"$ref": "#/parameters/X-Source-Operator"
+					},
+					{
+						"$ref": "#/parameters/X-Source-Division"
+					},
+					{
+						"$ref": "#/parameters/X-Source-System"
+					},
+					{
+						"$ref": "#/parameters/X-Source-Timestamp"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "200, OK.",
+						"schema": {
+							"$ref": "#/definitions/requester-party"
+						},
+						"headers": {
+							"Content-Type": {
+								"type": "string",
+								"description": "The Content-Type entity-header field indicates the media type of the entity-body sent to the recipient or, in the case of the HEAD method, the media type that would have been sent had the request been a GET."
+							},
+							"Content-Length": {
+								"type": "integer",
+								"description": "The Content-Length entity-header field indicates the size of the entity-body, in decimal number of OCTETs, sent to the recipient or, in the case of the HEAD method, the size of the entity-body that would have been sent had the request been a GET"
+							},
+							"Content-Language": {
+								"type": "string",
+								"description": "The Content-Language entity-header field describes the natural language(s) of the intended audience for the enclosed entity"
+							},
+							"Date": {
+								"type": "string",
+								"description": "The date and time at which the message was originated"
+							},
+							"Last-Modified": {
+								"type": "string",
+								"description": "Indicates the date and time at which the origin server believes the variant was last modified"
+							},
+							"X-Rate-Limit-Limit": {
+								"type": "integer",
+								"description": "The number of allowed requests in the current period"
+							},
+							"X-Rate-Limit-Remaining": {
+								"type": "integer",
+								"description": "The number of remaining requests in the current period"
+							},
+							"X-Rate-Limit-Reset": {
+								"type": "integer",
+								"description": "The number of seconds left in the current period"
+							},
+							"Cache-Control": {
+								"type": "string",
+								"description": "The Cache-Control general-header field is used to specify directives that MUST be obeyed by all caching mechanisms along the request/response chain"
+							},
+							"X-ResultStatus-Timestamp": {
+								"type": "string",
+								"description": "The ISO8601 date and Time of the warning/error."
+							},
+							"X-ResultStatus-Originator-Address": {
+								"type": "string",
+								"description": "The URI Address of the system/API generating the warning/error"
+							},
+							"X-ResultStatus-ErrorCode": {
+								"type": "string",
+								"description": "The code of the warning/error."
+							},
+							"X-ResultStatus-Name": {
+								"type": "string",
+								"description": "The name of the warning/error."
+							},
+							"X-ResultStatus-Severity": {
+								"type": "string",
+								"description": "The severity of the warning/error."
+							},
+							"X-ResultStatus-Category": {
+								"type": "string",
+								"description": "The category of the warning/error."
+							},
+							"X-ResultStatus-ReasonCode": {
+								"type": "string",
+								"description": "The reason code of the warning/error."
+							}
+						}
+					},
+					"default": {
+						"description": "An unexpected fault occurred.",
+						"schema": {
+							"$ref": "#/definitions/fault-object"
+						},
+						"headers": {
+							"Content-Type": {
+								"type": "string",
+								"description": "The Content-Type entity-header field indicates the media type of the entity-body sent to the recipient or, in the case of the HEAD method, the media type that would have been sent had the request been a GET."
+							},
+							"Content-Length": {
+								"type": "integer",
+								"description": "The Content-Length entity-header field indicates the size of the entity-body, in decimal number of OCTETs, sent to the recipient or, in the case of the HEAD method, the size of the entity-body that would have been sent had the request been a GET"
+							},
+							"Content-Language": {
+								"type": "string",
+								"description": "The Content-Language entity-header field describes the natural language(s) of the intended audience for the enclosed entity"
+							},
+							"X-Rate-Limit-Limit": {
+								"type": "integer",
+								"description": "The number of allowed requests in the current period"
+							},
+							"X-Rate-Limit-Remaining": {
+								"type": "integer",
+								"description": "The number of remaining requests in the current period"
+							},
+							"X-Rate-Limit-Reset": {
+								"type": "integer",
+								"description": "The number of seconds left in the current period"
+							},
+							"Cache-Control": {
+								"type": "string",
+								"description": "The Cache-Control general-header field is used to specify directives that MUST be obeyed by all caching mechanisms along the request/response chain"
+							},
+							"X-ResultStatus-Timestamp": {
+								"type": "string",
+								"description": "The ISO8601 date and Time of the warning/error."
+							},
+							"X-ResultStatus-Originator-Address": {
+								"type": "string",
+								"description": "The URI Address of the system/API generating the warning/error"
+							},
+							"X-ResultStatus-ErrorCode": {
+								"type": "string",
+								"description": "The code of the warning/error."
+							},
+							"X-ResultStatus-Name": {
+								"type": "string",
+								"description": "The name of the warning/error."
+							},
+							"X-ResultStatus-Severity": {
+								"type": "string",
+								"description": "The severity of the warning/error."
+							},
+							"X-ResultStatus-Category": {
+								"type": "string",
+								"description": "The category of the warning/error."
+							},
+							"X-ResultStatus-ReasonCode": {
+								"type": "string",
+								"description": "The reason code of the warning/error."
+							}
+						}
+					}
+				}
+			},
+			"parameters": [
+				{
+					"name": "id",
+					"in": "path",
+					"description": "The primary ID for the resource",
+					"required": true,
+					"type": "string"
+				},
+				{
+					"name": "party-id",
+					"in": "path",
+					"description": "The primary ID for the requester party component of the resource.",
+					"required": true,
+					"type": "string"
+				}
+			]
+		},
+		"/service/incidents/{id}/initiator-party/{party-id}": {
+			"get": {
+				"description": "A method that allows a consumer of the API to get the Initiator Role component of the VBO.",
+				"operationId": "get-initiator",
+				"produces": [
+					"application/vnd.vodafone.incident.v1+json#related-incident",
+					"application/vnd.vodafone.incident.v1+xml#related-incident"
+				],
+				"parameters": [
+					{
+						"$ref": "#/parameters/Accept"
+					},
+					{
+						"$ref": "#/parameters/Accept-Language"
+					},
+					{
+						"$ref": "#/parameters/Authorization"
+					},
+					{
+						"$ref": "#/parameters/X-Source-CountryCode"
+					},
+					{
+						"$ref": "#/parameters/X-Source-Operator"
+					},
+					{
+						"$ref": "#/parameters/X-Source-Division"
+					},
+					{
+						"$ref": "#/parameters/X-Source-System"
+					},
+					{
+						"$ref": "#/parameters/X-Source-Timestamp"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "200, OK.",
+						"schema": {
+							"$ref": "#/definitions/initiator-party"
+						},
+						"headers": {
+							"Content-Type": {
+								"type": "string",
+								"description": "The Content-Type entity-header field indicates the media type of the entity-body sent to the recipient or, in the case of the HEAD method, the media type that would have been sent had the request been a GET."
+							},
+							"Content-Length": {
+								"type": "integer",
+								"description": "The Content-Length entity-header field indicates the size of the entity-body, in decimal number of OCTETs, sent to the recipient or, in the case of the HEAD method, the size of the entity-body that would have been sent had the request been a GET"
+							},
+							"Content-Language": {
+								"type": "string",
+								"description": "The Content-Language entity-header field describes the natural language(s) of the intended audience for the enclosed entity"
+							},
+							"Date": {
+								"type": "string",
+								"description": "The date and time at which the message was originated"
+							},
+							"Last-Modified": {
+								"type": "string",
+								"description": "Indicates the date and time at which the origin server believes the variant was last modified"
+							},
+							"X-Rate-Limit-Limit": {
+								"type": "integer",
+								"description": "The number of allowed requests in the current period"
+							},
+							"X-Rate-Limit-Remaining": {
+								"type": "integer",
+								"description": "The number of remaining requests in the current period"
+							},
+							"X-Rate-Limit-Reset": {
+								"type": "integer",
+								"description": "The number of seconds left in the current period"
+							},
+							"Cache-Control": {
+								"type": "string",
+								"description": "The Cache-Control general-header field is used to specify directives that MUST be obeyed by all caching mechanisms along the request/response chain"
+							},
+							"X-ResultStatus-Timestamp": {
+								"type": "string",
+								"description": "The ISO8601 date and Time of the warning/error."
+							},
+							"X-ResultStatus-Originator-Address": {
+								"type": "string",
+								"description": "The URI Address of the system/API generating the warning/error"
+							},
+							"X-ResultStatus-ErrorCode": {
+								"type": "string",
+								"description": "The code of the warning/error."
+							},
+							"X-ResultStatus-Name": {
+								"type": "string",
+								"description": "The name of the warning/error."
+							},
+							"X-ResultStatus-Severity": {
+								"type": "string",
+								"description": "The severity of the warning/error."
+							},
+							"X-ResultStatus-Category": {
+								"type": "string",
+								"description": "The category of the warning/error."
+							},
+							"X-ResultStatus-ReasonCode": {
+								"type": "string",
+								"description": "The reason code of the warning/error."
+							}
+						}
+					},
+					"default": {
+						"description": "An unexpected fault occurred.",
+						"schema": {
+							"$ref": "#/definitions/fault-object"
+						},
+						"headers": {
+							"Content-Type": {
+								"type": "string",
+								"description": "The Content-Type entity-header field indicates the media type of the entity-body sent to the recipient or, in the case of the HEAD method, the media type that would have been sent had the request been a GET."
+							},
+							"Content-Length": {
+								"type": "integer",
+								"description": "The Content-Length entity-header field indicates the size of the entity-body, in decimal number of OCTETs, sent to the recipient or, in the case of the HEAD method, the size of the entity-body that would have been sent had the request been a GET"
+							},
+							"Content-Language": {
+								"type": "string",
+								"description": "The Content-Language entity-header field describes the natural language(s) of the intended audience for the enclosed entity"
+							},
+							"X-Rate-Limit-Limit": {
+								"type": "integer",
+								"description": "The number of allowed requests in the current period"
+							},
+							"X-Rate-Limit-Remaining": {
+								"type": "integer",
+								"description": "The number of remaining requests in the current period"
+							},
+							"X-Rate-Limit-Reset": {
+								"type": "integer",
+								"description": "The number of seconds left in the current period"
+							},
+							"Cache-Control": {
+								"type": "string",
+								"description": "The Cache-Control general-header field is used to specify directives that MUST be obeyed by all caching mechanisms along the request/response chain"
+							},
+							"X-ResultStatus-Timestamp": {
+								"type": "string",
+								"description": "The ISO8601 date and Time of the warning/error."
+							},
+							"X-ResultStatus-Originator-Address": {
+								"type": "string",
+								"description": "The URI Address of the system/API generating the warning/error"
+							},
+							"X-ResultStatus-ErrorCode": {
+								"type": "string",
+								"description": "The code of the warning/error."
+							},
+							"X-ResultStatus-Name": {
+								"type": "string",
+								"description": "The name of the warning/error."
+							},
+							"X-ResultStatus-Severity": {
+								"type": "string",
+								"description": "The severity of the warning/error."
+							},
+							"X-ResultStatus-Category": {
+								"type": "string",
+								"description": "The category of the warning/error."
+							},
+							"X-ResultStatus-ReasonCode": {
+								"type": "string",
+								"description": "The reason code of the warning/error."
+							}
+						}
+					}
+				}
+			},
+			"parameters": [
+				{
+					"name": "id",
+					"in": "path",
+					"description": "The primary ID for the resource",
+					"required": true,
+					"type": "string"
+				},
+				{
+					"name": "party-id",
+					"in": "path",
+					"description": "The primary ID for the Initiator party component of the resource.",
+					"required": true,
+					"type": "string"
+				}
+			]
+		},
+		"/service/incidents/{id}/owner-party/{party-id}": {
+			"get": {
+				"description": "A method that allows a consumer of the API to get the Owner Role component of the VBO.",
+				"operationId": "get-owner",
+				"produces": [
+					"application/vnd.vodafone.incident.v1+json#related-incident",
+					"application/vnd.vodafone.incident.v1+xml#related-incident"
+				],
+				"parameters": [
+					{
+						"$ref": "#/parameters/Accept"
+					},
+					{
+						"$ref": "#/parameters/Accept-Language"
+					},
+					{
+						"$ref": "#/parameters/Authorization"
+					},
+					{
+						"$ref": "#/parameters/X-Source-CountryCode"
+					},
+					{
+						"$ref": "#/parameters/X-Source-Operator"
+					},
+					{
+						"$ref": "#/parameters/X-Source-Division"
+					},
+					{
+						"$ref": "#/parameters/X-Source-System"
+					},
+					{
+						"$ref": "#/parameters/X-Source-Timestamp"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "200, OK.",
+						"schema": {
+							"$ref": "#/definitions/owner-party"
+						},
+						"headers": {
+							"Content-Type": {
+								"type": "string",
+								"description": "The Content-Type entity-header field indicates the media type of the entity-body sent to the recipient or, in the case of the HEAD method, the media type that would have been sent had the request been a GET."
+							},
+							"Content-Length": {
+								"type": "integer",
+								"description": "The Content-Length entity-header field indicates the size of the entity-body, in decimal number of OCTETs, sent to the recipient or, in the case of the HEAD method, the size of the entity-body that would have been sent had the request been a GET"
+							},
+							"Content-Language": {
+								"type": "string",
+								"description": "The Content-Language entity-header field describes the natural language(s) of the intended audience for the enclosed entity"
+							},
+							"Date": {
+								"type": "string",
+								"description": "The date and time at which the message was originated"
+							},
+							"Last-Modified": {
+								"type": "string",
+								"description": "Indicates the date and time at which the origin server believes the variant was last modified"
+							},
+							"X-Rate-Limit-Limit": {
+								"type": "integer",
+								"description": "The number of allowed requests in the current period"
+							},
+							"X-Rate-Limit-Remaining": {
+								"type": "integer",
+								"description": "The number of remaining requests in the current period"
+							},
+							"X-Rate-Limit-Reset": {
+								"type": "integer",
+								"description": "The number of seconds left in the current period"
+							},
+							"Cache-Control": {
+								"type": "string",
+								"description": "The Cache-Control general-header field is used to specify directives that MUST be obeyed by all caching mechanisms along the request/response chain"
+							},
+							"X-ResultStatus-Timestamp": {
+								"type": "string",
+								"description": "The ISO8601 date and Time of the warning/error."
+							},
+							"X-ResultStatus-Originator-Address": {
+								"type": "string",
+								"description": "The URI Address of the system/API generating the warning/error"
+							},
+							"X-ResultStatus-ErrorCode": {
+								"type": "string",
+								"description": "The code of the warning/error."
+							},
+							"X-ResultStatus-Name": {
+								"type": "string",
+								"description": "The name of the warning/error."
+							},
+							"X-ResultStatus-Severity": {
+								"type": "string",
+								"description": "The severity of the warning/error."
+							},
+							"X-ResultStatus-Category": {
+								"type": "string",
+								"description": "The category of the warning/error."
+							},
+							"X-ResultStatus-ReasonCode": {
+								"type": "string",
+								"description": "The reason code of the warning/error."
+							}
+						}
+					},
+					"default": {
+						"description": "An unexpected fault occurred.",
+						"schema": {
+							"$ref": "#/definitions/fault-object"
+						},
+						"headers": {
+							"Content-Type": {
+								"type": "string",
+								"description": "The Content-Type entity-header field indicates the media type of the entity-body sent to the recipient or, in the case of the HEAD method, the media type that would have been sent had the request been a GET."
+							},
+							"Content-Length": {
+								"type": "integer",
+								"description": "The Content-Length entity-header field indicates the size of the entity-body, in decimal number of OCTETs, sent to the recipient or, in the case of the HEAD method, the size of the entity-body that would have been sent had the request been a GET"
+							},
+							"Content-Language": {
+								"type": "string",
+								"description": "The Content-Language entity-header field describes the natural language(s) of the intended audience for the enclosed entity"
+							},
+							"X-Rate-Limit-Limit": {
+								"type": "integer",
+								"description": "The number of allowed requests in the current period"
+							},
+							"X-Rate-Limit-Remaining": {
+								"type": "integer",
+								"description": "The number of remaining requests in the current period"
+							},
+							"X-Rate-Limit-Reset": {
+								"type": "integer",
+								"description": "The number of seconds left in the current period"
+							},
+							"Cache-Control": {
+								"type": "string",
+								"description": "The Cache-Control general-header field is used to specify directives that MUST be obeyed by all caching mechanisms along the request/response chain"
+							},
+							"X-ResultStatus-Timestamp": {
+								"type": "string",
+								"description": "The ISO8601 date and Time of the warning/error."
+							},
+							"X-ResultStatus-Originator-Address": {
+								"type": "string",
+								"description": "The URI Address of the system/API generating the warning/error"
+							},
+							"X-ResultStatus-ErrorCode": {
+								"type": "string",
+								"description": "The code of the warning/error."
+							},
+							"X-ResultStatus-Name": {
+								"type": "string",
+								"description": "The name of the warning/error."
+							},
+							"X-ResultStatus-Severity": {
+								"type": "string",
+								"description": "The severity of the warning/error."
+							},
+							"X-ResultStatus-Category": {
+								"type": "string",
+								"description": "The category of the warning/error."
+							},
+							"X-ResultStatus-ReasonCode": {
+								"type": "string",
+								"description": "The reason code of the warning/error."
+							}
+						}
+					}
+				}
+			},
+			"parameters": [
+				{
+					"name": "id",
+					"in": "path",
+					"description": "The primary ID for the resource",
+					"required": true,
+					"type": "string"
+				},
+				{
+					"name": "party-id",
+					"in": "path",
+					"description": "The primary ID for the owner party component of the resource.",
+					"required": true,
+					"type": "string"
+				}
+			]
+		},
+		"/service/incidents/{id}/assignee-party/{party-id}": {
+			"get": {
+				"description": "A method that allows a consumer of the API to get the Assignee Role component of the VBO.",
+				"operationId": "get-assignee",
+				"produces": [
+					"application/vnd.vodafone.incident.v1+json#related-incident",
+					"application/vnd.vodafone.incident.v1+xml#related-incident"
+				],
+				"parameters": [
+					{
+						"$ref": "#/parameters/Accept"
+					},
+					{
+						"$ref": "#/parameters/Accept-Language"
+					},
+					{
+						"$ref": "#/parameters/Authorization"
+					},
+					{
+						"$ref": "#/parameters/X-Source-CountryCode"
+					},
+					{
+						"$ref": "#/parameters/X-Source-Operator"
+					},
+					{
+						"$ref": "#/parameters/X-Source-Division"
+					},
+					{
+						"$ref": "#/parameters/X-Source-System"
+					},
+					{
+						"$ref": "#/parameters/X-Source-Timestamp"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "200, OK.",
+						"schema": {
+							"$ref": "#/definitions/assignee-party"
+						},
+						"headers": {
+							"Content-Type": {
+								"type": "string",
+								"description": "The Content-Type entity-header field indicates the media type of the entity-body sent to the recipient or, in the case of the HEAD method, the media type that would have been sent had the request been a GET."
+							},
+							"Content-Length": {
+								"type": "integer",
+								"description": "The Content-Length entity-header field indicates the size of the entity-body, in decimal number of OCTETs, sent to the recipient or, in the case of the HEAD method, the size of the entity-body that would have been sent had the request been a GET"
+							},
+							"Content-Language": {
+								"type": "string",
+								"description": "The Content-Language entity-header field describes the natural language(s) of the intended audience for the enclosed entity"
+							},
+							"Date": {
+								"type": "string",
+								"description": "The date and time at which the message was originated"
+							},
+							"Last-Modified": {
+								"type": "string",
+								"description": "Indicates the date and time at which the origin server believes the variant was last modified"
+							},
+							"X-Rate-Limit-Limit": {
+								"type": "integer",
+								"description": "The number of allowed requests in the current period"
+							},
+							"X-Rate-Limit-Remaining": {
+								"type": "integer",
+								"description": "The number of remaining requests in the current period"
+							},
+							"X-Rate-Limit-Reset": {
+								"type": "integer",
+								"description": "The number of seconds left in the current period"
+							},
+							"Cache-Control": {
+								"type": "string",
+								"description": "The Cache-Control general-header field is used to specify directives that MUST be obeyed by all caching mechanisms along the request/response chain"
+							},
+							"X-ResultStatus-Timestamp": {
+								"type": "string",
+								"description": "The ISO8601 date and Time of the warning/error."
+							},
+							"X-ResultStatus-Originator-Address": {
+								"type": "string",
+								"description": "The URI Address of the system/API generating the warning/error"
+							},
+							"X-ResultStatus-ErrorCode": {
+								"type": "string",
+								"description": "The code of the warning/error."
+							},
+							"X-ResultStatus-Name": {
+								"type": "string",
+								"description": "The name of the warning/error."
+							},
+							"X-ResultStatus-Severity": {
+								"type": "string",
+								"description": "The severity of the warning/error."
+							},
+							"X-ResultStatus-Category": {
+								"type": "string",
+								"description": "The category of the warning/error."
+							},
+							"X-ResultStatus-ReasonCode": {
+								"type": "string",
+								"description": "The reason code of the warning/error."
+							}
+						}
+					},
+					"default": {
+						"description": "An unexpected fault occurred.",
+						"schema": {
+							"$ref": "#/definitions/fault-object"
+						},
+						"headers": {
+							"Content-Type": {
+								"type": "string",
+								"description": "The Content-Type entity-header field indicates the media type of the entity-body sent to the recipient or, in the case of the HEAD method, the media type that would have been sent had the request been a GET."
+							},
+							"Content-Length": {
+								"type": "integer",
+								"description": "The Content-Length entity-header field indicates the size of the entity-body, in decimal number of OCTETs, sent to the recipient or, in the case of the HEAD method, the size of the entity-body that would have been sent had the request been a GET"
+							},
+							"Content-Language": {
+								"type": "string",
+								"description": "The Content-Language entity-header field describes the natural language(s) of the intended audience for the enclosed entity"
+							},
+							"X-Rate-Limit-Limit": {
+								"type": "integer",
+								"description": "The number of allowed requests in the current period"
+							},
+							"X-Rate-Limit-Remaining": {
+								"type": "integer",
+								"description": "The number of remaining requests in the current period"
+							},
+							"X-Rate-Limit-Reset": {
+								"type": "integer",
+								"description": "The number of seconds left in the current period"
+							},
+							"Cache-Control": {
+								"type": "string",
+								"description": "The Cache-Control general-header field is used to specify directives that MUST be obeyed by all caching mechanisms along the request/response chain"
+							},
+							"X-ResultStatus-Timestamp": {
+								"type": "string",
+								"description": "The ISO8601 date and Time of the warning/error."
+							},
+							"X-ResultStatus-Originator-Address": {
+								"type": "string",
+								"description": "The URI Address of the system/API generating the warning/error"
+							},
+							"X-ResultStatus-ErrorCode": {
+								"type": "string",
+								"description": "The code of the warning/error."
+							},
+							"X-ResultStatus-Name": {
+								"type": "string",
+								"description": "The name of the warning/error."
+							},
+							"X-ResultStatus-Severity": {
+								"type": "string",
+								"description": "The severity of the warning/error."
+							},
+							"X-ResultStatus-Category": {
+								"type": "string",
+								"description": "The category of the warning/error."
+							},
+							"X-ResultStatus-ReasonCode": {
+								"type": "string",
+								"description": "The reason code of the warning/error."
+							}
+						}
+					}
+				}
+			},
+			"parameters": [
+				{
+					"name": "id",
+					"in": "path",
+					"description": "The primary ID for the resource",
+					"required": true,
+					"type": "string"
+				},
+				{
+					"name": "party-id",
+					"in": "path",
+					"description": "The primary ID for the Assignee party component of the resource.",
+					"required": true,
+					"type": "string"
+				}
+			]
+		},
+		"/service/incidents/{id}/affectee-party/{party-id}": {
+			"get": {
+				"description": "A method that allows a consumer of the API to get the Affectee Role component of the VBO.",
+				"operationId": "get-affectee",
+				"produces": [
+					"application/vnd.vodafone.incident.v1+json#related-incident",
+					"application/vnd.vodafone.incident.v1+xml#related-incident"
+				],
+				"parameters": [
+					{
+						"$ref": "#/parameters/Accept"
+					},
+					{
+						"$ref": "#/parameters/Accept-Language"
+					},
+					{
+						"$ref": "#/parameters/Authorization"
+					},
+					{
+						"$ref": "#/parameters/X-Source-CountryCode"
+					},
+					{
+						"$ref": "#/parameters/X-Source-Operator"
+					},
+					{
+						"$ref": "#/parameters/X-Source-Division"
+					},
+					{
+						"$ref": "#/parameters/X-Source-System"
+					},
+					{
+						"$ref": "#/parameters/X-Source-Timestamp"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "200, OK.",
+						"schema": {
+							"$ref": "#/definitions/affectee-party"
+						},
+						"headers": {
+							"Content-Type": {
+								"type": "string",
+								"description": "The Content-Type entity-header field indicates the media type of the entity-body sent to the recipient or, in the case of the HEAD method, the media type that would have been sent had the request been a GET."
+							},
+							"Content-Length": {
+								"type": "integer",
+								"description": "The Content-Length entity-header field indicates the size of the entity-body, in decimal number of OCTETs, sent to the recipient or, in the case of the HEAD method, the size of the entity-body that would have been sent had the request been a GET"
+							},
+							"Content-Language": {
+								"type": "string",
+								"description": "The Content-Language entity-header field describes the natural language(s) of the intended audience for the enclosed entity"
+							},
+							"Date": {
+								"type": "string",
+								"description": "The date and time at which the message was originated"
+							},
+							"Last-Modified": {
+								"type": "string",
+								"description": "Indicates the date and time at which the origin server believes the variant was last modified"
+							},
+							"X-Rate-Limit-Limit": {
+								"type": "integer",
+								"description": "The number of allowed requests in the current period"
+							},
+							"X-Rate-Limit-Remaining": {
+								"type": "integer",
+								"description": "The number of remaining requests in the current period"
+							},
+							"X-Rate-Limit-Reset": {
+								"type": "integer",
+								"description": "The number of seconds left in the current period"
+							},
+							"Cache-Control": {
+								"type": "string",
+								"description": "The Cache-Control general-header field is used to specify directives that MUST be obeyed by all caching mechanisms along the request/response chain"
+							},
+							"X-ResultStatus-Timestamp": {
+								"type": "string",
+								"description": "The ISO8601 date and Time of the warning/error."
+							},
+							"X-ResultStatus-Originator-Address": {
+								"type": "string",
+								"description": "The URI Address of the system/API generating the warning/error"
+							},
+							"X-ResultStatus-ErrorCode": {
+								"type": "string",
+								"description": "The code of the warning/error."
+							},
+							"X-ResultStatus-Name": {
+								"type": "string",
+								"description": "The name of the warning/error."
+							},
+							"X-ResultStatus-Severity": {
+								"type": "string",
+								"description": "The severity of the warning/error."
+							},
+							"X-ResultStatus-Category": {
+								"type": "string",
+								"description": "The category of the warning/error."
+							},
+							"X-ResultStatus-ReasonCode": {
+								"type": "string",
+								"description": "The reason code of the warning/error."
+							}
+						}
+					},
+					"default": {
+						"description": "An unexpected fault occurred.",
+						"schema": {
+							"$ref": "#/definitions/fault-object"
+						},
+						"headers": {
+							"Content-Type": {
+								"type": "string",
+								"description": "The Content-Type entity-header field indicates the media type of the entity-body sent to the recipient or, in the case of the HEAD method, the media type that would have been sent had the request been a GET."
+							},
+							"Content-Length": {
+								"type": "integer",
+								"description": "The Content-Length entity-header field indicates the size of the entity-body, in decimal number of OCTETs, sent to the recipient or, in the case of the HEAD method, the size of the entity-body that would have been sent had the request been a GET"
+							},
+							"Content-Language": {
+								"type": "string",
+								"description": "The Content-Language entity-header field describes the natural language(s) of the intended audience for the enclosed entity"
+							},
+							"X-Rate-Limit-Limit": {
+								"type": "integer",
+								"description": "The number of allowed requests in the current period"
+							},
+							"X-Rate-Limit-Remaining": {
+								"type": "integer",
+								"description": "The number of remaining requests in the current period"
+							},
+							"X-Rate-Limit-Reset": {
+								"type": "integer",
+								"description": "The number of seconds left in the current period"
+							},
+							"Cache-Control": {
+								"type": "string",
+								"description": "The Cache-Control general-header field is used to specify directives that MUST be obeyed by all caching mechanisms along the request/response chain"
+							},
+							"X-ResultStatus-Timestamp": {
+								"type": "string",
+								"description": "The ISO8601 date and Time of the warning/error."
+							},
+							"X-ResultStatus-Originator-Address": {
+								"type": "string",
+								"description": "The URI Address of the system/API generating the warning/error"
+							},
+							"X-ResultStatus-ErrorCode": {
+								"type": "string",
+								"description": "The code of the warning/error."
+							},
+							"X-ResultStatus-Name": {
+								"type": "string",
+								"description": "The name of the warning/error."
+							},
+							"X-ResultStatus-Severity": {
+								"type": "string",
+								"description": "The severity of the warning/error."
+							},
+							"X-ResultStatus-Category": {
+								"type": "string",
+								"description": "The category of the warning/error."
+							},
+							"X-ResultStatus-ReasonCode": {
+								"type": "string",
+								"description": "The reason code of the warning/error."
+							}
+						}
+					}
+				}
+			},
+			"parameters": [
+				{
+					"name": "id",
+					"in": "path",
+					"description": "The primary ID for the resource",
+					"required": true,
+					"type": "string"
+				},
+				{
+					"name": "party-id",
+					"in": "path",
+					"description": "The primary ID for the affectee party component of the resource.",
+					"required": true,
+					"type": "string"
+				}
+			]
+		},
+		"/service/incidents/{id}/notes/{note-id}": {
+			"get": {
+				"description": "A method that allows a consumer of the API to get the notes component of the VBO.",
+				"operationId": "get-note",
+				"produces": [
+					"application/vnd.vodafone.incident.v1+json#related-incident",
+					"application/vnd.vodafone.incident.v1+xml#related-incident"
+				],
+				"parameters": [
+					{
+						"$ref": "#/parameters/Accept"
+					},
+					{
+						"$ref": "#/parameters/Accept-Language"
+					},
+					{
+						"$ref": "#/parameters/Authorization"
+					},
+					{
+						"$ref": "#/parameters/X-Source-CountryCode"
+					},
+					{
+						"$ref": "#/parameters/X-Source-Operator"
+					},
+					{
+						"$ref": "#/parameters/X-Source-Division"
+					},
+					{
+						"$ref": "#/parameters/X-Source-System"
+					},
+					{
+						"$ref": "#/parameters/X-Source-Timestamp"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "200, OK.",
+						"schema": {
+							"$ref": "#/definitions/notes"
+						},
+						"headers": {
+							"Content-Type": {
+								"type": "string",
+								"description": "The Content-Type entity-header field indicates the media type of the entity-body sent to the recipient or, in the case of the HEAD method, the media type that would have been sent had the request been a GET."
+							},
+							"Content-Length": {
+								"type": "integer",
+								"description": "The Content-Length entity-header field indicates the size of the entity-body, in decimal number of OCTETs, sent to the recipient or, in the case of the HEAD method, the size of the entity-body that would have been sent had the request been a GET"
+							},
+							"Content-Language": {
+								"type": "string",
+								"description": "The Content-Language entity-header field describes the natural language(s) of the intended audience for the enclosed entity"
+							},
+							"Date": {
+								"type": "string",
+								"description": "The date and time at which the message was originated"
+							},
+							"Last-Modified": {
+								"type": "string",
+								"description": "Indicates the date and time at which the origin server believes the variant was last modified"
+							},
+							"X-Rate-Limit-Limit": {
+								"type": "integer",
+								"description": "The number of allowed requests in the current period"
+							},
+							"X-Rate-Limit-Remaining": {
+								"type": "integer",
+								"description": "The number of remaining requests in the current period"
+							},
+							"X-Rate-Limit-Reset": {
+								"type": "integer",
+								"description": "The number of seconds left in the current period"
+							},
+							"Cache-Control": {
+								"type": "string",
+								"description": "The Cache-Control general-header field is used to specify directives that MUST be obeyed by all caching mechanisms along the request/response chain"
+							},
+							"X-ResultStatus-Timestamp": {
+								"type": "string",
+								"description": "The ISO8601 date and Time of the warning/error."
+							},
+							"X-ResultStatus-Originator-Address": {
+								"type": "string",
+								"description": "The URI Address of the system/API generating the warning/error"
+							},
+							"X-ResultStatus-ErrorCode": {
+								"type": "string",
+								"description": "The code of the warning/error."
+							},
+							"X-ResultStatus-Name": {
+								"type": "string",
+								"description": "The name of the warning/error."
+							},
+							"X-ResultStatus-Severity": {
+								"type": "string",
+								"description": "The severity of the warning/error."
+							},
+							"X-ResultStatus-Category": {
+								"type": "string",
+								"description": "The category of the warning/error."
+							},
+							"X-ResultStatus-ReasonCode": {
+								"type": "string",
+								"description": "The reason code of the warning/error."
+							}
+						}
+					},
+					"default": {
+						"description": "An unexpected fault occurred.",
+						"schema": {
+							"$ref": "#/definitions/fault-object"
+						},
+						"headers": {
+							"Content-Type": {
+								"type": "string",
+								"description": "The Content-Type entity-header field indicates the media type of the entity-body sent to the recipient or, in the case of the HEAD method, the media type that would have been sent had the request been a GET."
+							},
+							"Content-Length": {
+								"type": "integer",
+								"description": "The Content-Length entity-header field indicates the size of the entity-body, in decimal number of OCTETs, sent to the recipient or, in the case of the HEAD method, the size of the entity-body that would have been sent had the request been a GET"
+							},
+							"Content-Language": {
+								"type": "string",
+								"description": "The Content-Language entity-header field describes the natural language(s) of the intended audience for the enclosed entity"
+							},
+							"X-Rate-Limit-Limit": {
+								"type": "integer",
+								"description": "The number of allowed requests in the current period"
+							},
+							"X-Rate-Limit-Remaining": {
+								"type": "integer",
+								"description": "The number of remaining requests in the current period"
+							},
+							"X-Rate-Limit-Reset": {
+								"type": "integer",
+								"description": "The number of seconds left in the current period"
+							},
+							"Cache-Control": {
+								"type": "string",
+								"description": "The Cache-Control general-header field is used to specify directives that MUST be obeyed by all caching mechanisms along the request/response chain"
+							},
+							"X-ResultStatus-Timestamp": {
+								"type": "string",
+								"description": "The ISO8601 date and Time of the warning/error."
+							},
+							"X-ResultStatus-Originator-Address": {
+								"type": "string",
+								"description": "The URI Address of the system/API generating the warning/error"
+							},
+							"X-ResultStatus-ErrorCode": {
+								"type": "string",
+								"description": "The code of the warning/error."
+							},
+							"X-ResultStatus-Name": {
+								"type": "string",
+								"description": "The name of the warning/error."
+							},
+							"X-ResultStatus-Severity": {
+								"type": "string",
+								"description": "The severity of the warning/error."
+							},
+							"X-ResultStatus-Category": {
+								"type": "string",
+								"description": "The category of the warning/error."
+							},
+							"X-ResultStatus-ReasonCode": {
+								"type": "string",
+								"description": "The reason code of the warning/error."
+							}
+						}
+					}
+				}
+			},
+			"parameters": [
+				{
+					"name": "id",
+					"in": "path",
+					"description": "The primary ID for the resource",
+					"required": true,
+					"type": "string"
+				},
+				{
+					"name": "note-id",
+					"in": "path",
+					"description": "The primary ID for the notes component of the resource.",
+					"required": true,
+					"type": "string"
+				}
+			]
+		},
+		"/service/incidents/{id}/services/{service-id}": {
+			"get": {
+				"description": "A method that allows a consumer of the API to get the servcice component of the VBO.",
+				"operationId": "get-service",
+				"produces": [
+					"application/vnd.vodafone.incident.v1+json#related-incident",
+					"application/vnd.vodafone.incident.v1+xml#related-incident"
+				],
+				"parameters": [
+					{
+						"$ref": "#/parameters/Accept"
+					},
+					{
+						"$ref": "#/parameters/Accept-Language"
+					},
+					{
+						"$ref": "#/parameters/Authorization"
+					},
+					{
+						"$ref": "#/parameters/X-Source-CountryCode"
+					},
+					{
+						"$ref": "#/parameters/X-Source-Operator"
+					},
+					{
+						"$ref": "#/parameters/X-Source-Division"
+					},
+					{
+						"$ref": "#/parameters/X-Source-System"
+					},
+					{
+						"$ref": "#/parameters/X-Source-Timestamp"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "200, OK.",
+						"schema": {
+							"$ref": "#/definitions/services"
+						},
+						"headers": {
+							"Content-Type": {
+								"type": "string",
+								"description": "The Content-Type entity-header field indicates the media type of the entity-body sent to the recipient or, in the case of the HEAD method, the media type that would have been sent had the request been a GET."
+							},
+							"Content-Length": {
+								"type": "integer",
+								"description": "The Content-Length entity-header field indicates the size of the entity-body, in decimal number of OCTETs, sent to the recipient or, in the case of the HEAD method, the size of the entity-body that would have been sent had the request been a GET"
+							},
+							"Content-Language": {
+								"type": "string",
+								"description": "The Content-Language entity-header field describes the natural language(s) of the intended audience for the enclosed entity"
+							},
+							"Date": {
+								"type": "string",
+								"description": "The date and time at which the message was originated"
+							},
+							"Last-Modified": {
+								"type": "string",
+								"description": "Indicates the date and time at which the origin server believes the variant was last modified"
+							},
+							"X-Rate-Limit-Limit": {
+								"type": "integer",
+								"description": "The number of allowed requests in the current period"
+							},
+							"X-Rate-Limit-Remaining": {
+								"type": "integer",
+								"description": "The number of remaining requests in the current period"
+							},
+							"X-Rate-Limit-Reset": {
+								"type": "integer",
+								"description": "The number of seconds left in the current period"
+							},
+							"Cache-Control": {
+								"type": "string",
+								"description": "The Cache-Control general-header field is used to specify directives that MUST be obeyed by all caching mechanisms along the request/response chain"
+							},
+							"X-ResultStatus-Timestamp": {
+								"type": "string",
+								"description": "The ISO8601 date and Time of the warning/error."
+							},
+							"X-ResultStatus-Originator-Address": {
+								"type": "string",
+								"description": "The URI Address of the system/API generating the warning/error"
+							},
+							"X-ResultStatus-ErrorCode": {
+								"type": "string",
+								"description": "The code of the warning/error."
+							},
+							"X-ResultStatus-Name": {
+								"type": "string",
+								"description": "The name of the warning/error."
+							},
+							"X-ResultStatus-Severity": {
+								"type": "string",
+								"description": "The severity of the warning/error."
+							},
+							"X-ResultStatus-Category": {
+								"type": "string",
+								"description": "The category of the warning/error."
+							},
+							"X-ResultStatus-ReasonCode": {
+								"type": "string",
+								"description": "The reason code of the warning/error."
+							}
+						}
+					},
+					"default": {
+						"description": "An unexpected fault occurred.",
+						"schema": {
+							"$ref": "#/definitions/fault-object"
+						},
+						"headers": {
+							"Content-Type": {
+								"type": "string",
+								"description": "The Content-Type entity-header field indicates the media type of the entity-body sent to the recipient or, in the case of the HEAD method, the media type that would have been sent had the request been a GET."
+							},
+							"Content-Length": {
+								"type": "integer",
+								"description": "The Content-Length entity-header field indicates the size of the entity-body, in decimal number of OCTETs, sent to the recipient or, in the case of the HEAD method, the size of the entity-body that would have been sent had the request been a GET"
+							},
+							"Content-Language": {
+								"type": "string",
+								"description": "The Content-Language entity-header field describes the natural language(s) of the intended audience for the enclosed entity"
+							},
+							"X-Rate-Limit-Limit": {
+								"type": "integer",
+								"description": "The number of allowed requests in the current period"
+							},
+							"X-Rate-Limit-Remaining": {
+								"type": "integer",
+								"description": "The number of remaining requests in the current period"
+							},
+							"X-Rate-Limit-Reset": {
+								"type": "integer",
+								"description": "The number of seconds left in the current period"
+							},
+							"Cache-Control": {
+								"type": "string",
+								"description": "The Cache-Control general-header field is used to specify directives that MUST be obeyed by all caching mechanisms along the request/response chain"
+							},
+							"X-ResultStatus-Timestamp": {
+								"type": "string",
+								"description": "The ISO8601 date and Time of the warning/error."
+							},
+							"X-ResultStatus-Originator-Address": {
+								"type": "string",
+								"description": "The URI Address of the system/API generating the warning/error"
+							},
+							"X-ResultStatus-ErrorCode": {
+								"type": "string",
+								"description": "The code of the warning/error."
+							},
+							"X-ResultStatus-Name": {
+								"type": "string",
+								"description": "The name of the warning/error."
+							},
+							"X-ResultStatus-Severity": {
+								"type": "string",
+								"description": "The severity of the warning/error."
+							},
+							"X-ResultStatus-Category": {
+								"type": "string",
+								"description": "The category of the warning/error."
+							},
+							"X-ResultStatus-ReasonCode": {
+								"type": "string",
+								"description": "The reason code of the warning/error."
+							}
+						}
+					}
+				}
+			},
+			"parameters": [
+				{
+					"name": "id",
+					"in": "path",
+					"description": "The primary ID for the resource",
+					"required": true,
+					"type": "string"
+				},
+				{
+					"name": "service-id",
+					"in": "path",
+					"description": "The primary ID for the service component of the Incident resource.",
+					"required": true,
+					"type": "string"
+				}
+			]
+		},
+		"/service/incidents/{id}/resources/{resource-id}": {
+			"get": {
+				"description": "A method that allows a consumer of the API to get the resource component of the VBO.",
+				"operationId": "get-resource",
+				"produces": [
+					"application/vnd.vodafone.incident.v1+json#related-incident",
+					"application/vnd.vodafone.incident.v1+xml#related-incident"
+				],
+				"parameters": [
+					{
+						"$ref": "#/parameters/Accept"
+					},
+					{
+						"$ref": "#/parameters/Accept-Language"
+					},
+					{
+						"$ref": "#/parameters/Authorization"
+					},
+					{
+						"$ref": "#/parameters/X-Source-CountryCode"
+					},
+					{
+						"$ref": "#/parameters/X-Source-Operator"
+					},
+					{
+						"$ref": "#/parameters/X-Source-Division"
+					},
+					{
+						"$ref": "#/parameters/X-Source-System"
+					},
+					{
+						"$ref": "#/parameters/X-Source-Timestamp"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "200, OK.",
+						"schema": {
+							"$ref": "#/definitions/resource"
+						},
+						"headers": {
+							"Content-Type": {
+								"type": "string",
+								"description": "The Content-Type entity-header field indicates the media type of the entity-body sent to the recipient or, in the case of the HEAD method, the media type that would have been sent had the request been a GET."
+							},
+							"Content-Length": {
+								"type": "integer",
+								"description": "The Content-Length entity-header field indicates the size of the entity-body, in decimal number of OCTETs, sent to the recipient or, in the case of the HEAD method, the size of the entity-body that would have been sent had the request been a GET"
+							},
+							"Content-Language": {
+								"type": "string",
+								"description": "The Content-Language entity-header field describes the natural language(s) of the intended audience for the enclosed entity"
+							},
+							"Date": {
+								"type": "string",
+								"description": "The date and time at which the message was originated"
+							},
+							"Last-Modified": {
+								"type": "string",
+								"description": "Indicates the date and time at which the origin server believes the variant was last modified"
+							},
+							"X-Rate-Limit-Limit": {
+								"type": "integer",
+								"description": "The number of allowed requests in the current period"
+							},
+							"X-Rate-Limit-Remaining": {
+								"type": "integer",
+								"description": "The number of remaining requests in the current period"
+							},
+							"X-Rate-Limit-Reset": {
+								"type": "integer",
+								"description": "The number of seconds left in the current period"
+							},
+							"Cache-Control": {
+								"type": "string",
+								"description": "The Cache-Control general-header field is used to specify directives that MUST be obeyed by all caching mechanisms along the request/response chain"
+							},
+							"X-ResultStatus-Timestamp": {
+								"type": "string",
+								"description": "The ISO8601 date and Time of the warning/error."
+							},
+							"X-ResultStatus-Originator-Address": {
+								"type": "string",
+								"description": "The URI Address of the system/API generating the warning/error"
+							},
+							"X-ResultStatus-ErrorCode": {
+								"type": "string",
+								"description": "The code of the warning/error."
+							},
+							"X-ResultStatus-Name": {
+								"type": "string",
+								"description": "The name of the warning/error."
+							},
+							"X-ResultStatus-Severity": {
+								"type": "string",
+								"description": "The severity of the warning/error."
+							},
+							"X-ResultStatus-Category": {
+								"type": "string",
+								"description": "The category of the warning/error."
+							},
+							"X-ResultStatus-ReasonCode": {
+								"type": "string",
+								"description": "The reason code of the warning/error."
+							}
+						}
+					},
+					"default": {
+						"description": "An unexpected fault occurred.",
+						"schema": {
+							"$ref": "#/definitions/fault-object"
+						},
+						"headers": {
+							"Content-Type": {
+								"type": "string",
+								"description": "The Content-Type entity-header field indicates the media type of the entity-body sent to the recipient or, in the case of the HEAD method, the media type that would have been sent had the request been a GET."
+							},
+							"Content-Length": {
+								"type": "integer",
+								"description": "The Content-Length entity-header field indicates the size of the entity-body, in decimal number of OCTETs, sent to the recipient or, in the case of the HEAD method, the size of the entity-body that would have been sent had the request been a GET"
+							},
+							"Content-Language": {
+								"type": "string",
+								"description": "The Content-Language entity-header field describes the natural language(s) of the intended audience for the enclosed entity"
+							},
+							"X-Rate-Limit-Limit": {
+								"type": "integer",
+								"description": "The number of allowed requests in the current period"
+							},
+							"X-Rate-Limit-Remaining": {
+								"type": "integer",
+								"description": "The number of remaining requests in the current period"
+							},
+							"X-Rate-Limit-Reset": {
+								"type": "integer",
+								"description": "The number of seconds left in the current period"
+							},
+							"Cache-Control": {
+								"type": "string",
+								"description": "The Cache-Control general-header field is used to specify directives that MUST be obeyed by all caching mechanisms along the request/response chain"
+							},
+							"X-ResultStatus-Timestamp": {
+								"type": "string",
+								"description": "The ISO8601 date and Time of the warning/error."
+							},
+							"X-ResultStatus-Originator-Address": {
+								"type": "string",
+								"description": "The URI Address of the system/API generating the warning/error"
+							},
+							"X-ResultStatus-ErrorCode": {
+								"type": "string",
+								"description": "The code of the warning/error."
+							},
+							"X-ResultStatus-Name": {
+								"type": "string",
+								"description": "The name of the warning/error."
+							},
+							"X-ResultStatus-Severity": {
+								"type": "string",
+								"description": "The severity of the warning/error."
+							},
+							"X-ResultStatus-Category": {
+								"type": "string",
+								"description": "The category of the warning/error."
+							},
+							"X-ResultStatus-ReasonCode": {
+								"type": "string",
+								"description": "The reason code of the warning/error."
+							}
+						}
+					}
+				}
+			},
+			"parameters": [
+				{
+					"name": "id",
+					"in": "path",
+					"description": "The primary ID for the resource",
+					"required": true,
+					"type": "string"
+				},
+				{
+					"name": "resource-id",
+					"in": "path",
+					"description": "The primary ID for the resource component of the resource.",
+					"required": true,
+					"type": "string"
+				}
+			]
+		},
+		"/service/incidents/notifications": {
+			"post": {
+				"description": "A method that allows a consumer of the API to POST a notification of an event on a Incident.",
+				"operationId": "notify",
+				"parameters": [
+					{
+						"name": "incident",
+						"in": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/incident"
+						}
+					},
+					{
+						"$ref": "#/parameters/Accept"
+					},
+					{
+						"$ref": "#/parameters/Accept-Language"
+					},
+					{
+						"$ref": "#/parameters/Authorization"
+					},
+					{
+						"$ref": "#/parameters/X-Source-CountryCode"
+					},
+					{
+						"$ref": "#/parameters/X-Source-Operator"
+					},
+					{
+						"$ref": "#/parameters/X-Source-Division"
+					},
+					{
+						"$ref": "#/parameters/X-Source-System"
+					},
+					{
+						"$ref": "#/parameters/X-Source-Timestamp"
+					},
+					{
+						"name": "X-Notify-EventCode",
+						"in": "header",
+						"type": "string",
+						"description": "The type of event that caused the notification to be generated.",
+						"enum": [
+							"Created",
+							"Updated",
+							"Deleted"
+						]
+					},
+					{
+						"name": "X-Notify-Business-EventCode",
+						"in": "header",
+						"type": "string",
+						"description": "The business level name of the event that caused the notification to be generated."
+					}
+				],
+				"responses": {
+					"201": {
+						"description": "201, Created.",
+						"headers": {
+							"X-Rate-Limit-Limit": {
+								"type": "integer",
+								"description": "The number of allowed requests in the current period"
+							},
+							"X-Rate-Limit-Remaining": {
+								"type": "integer",
+								"description": "The number of remaining requests in the current period"
+							},
+							"X-Rate-Limit-Reset": {
+								"type": "integer",
+								"description": "The number of seconds left in the current period"
+							},
+							"X-ResultStatus-Timestamp": {
+								"type": "string",
+								"description": "The ISO8601 date and Time of the warning/error."
+							},
+							"X-ResultStatus-Originator-Address": {
+								"type": "string",
+								"description": "The URI Address of the system/API generating the warning/error"
+							},
+							"X-ResultStatus-ErrorCode": {
+								"type": "string",
+								"description": "The code of the warning/error."
+							},
+							"X-ResultStatus-Name": {
+								"type": "string",
+								"description": "The name of the warning/error."
+							},
+							"X-ResultStatus-Severity": {
+								"type": "string",
+								"description": "The severity of the warning/error."
+							},
+							"X-ResultStatus-Category": {
+								"type": "string",
+								"description": "The category of the warning/error."
+							},
+							"X-ResultStatus-ReasonCode": {
+								"type": "string",
+								"description": "The reason code of the warning/error."
+							}
+						}
+					},
+					"default": {
+						"description": "An unexpected fault occurred.",
+						"schema": {
+							"$ref": "#/definitions/fault-object"
+						},
+						"headers": {
+							"X-Rate-Limit-Limit": {
+								"type": "integer",
+								"description": "The number of allowed requests in the current period"
+							},
+							"X-Rate-Limit-Remaining": {
+								"type": "integer",
+								"description": "The number of remaining requests in the current period"
+							},
+							"X-Rate-Limit-Reset": {
+								"type": "integer",
+								"description": "The number of seconds left in the current period"
+							},
+							"X-ResultStatus-Timestamp": {
+								"type": "string",
+								"description": "The ISO8601 date and Time of the warning/error."
+							},
+							"X-ResultStatus-Originator-Address": {
+								"type": "string",
+								"description": "The URI Address of the system/API generating the warning/error"
+							},
+							"X-ResultStatus-ErrorCode": {
+								"type": "string",
+								"description": "The code of the warning/error."
+							},
+							"X-ResultStatus-Name": {
+								"type": "string",
+								"description": "The name of the warning/error."
+							},
+							"X-ResultStatus-Severity": {
+								"type": "string",
+								"description": "The severity of the warning/error."
+							},
+							"X-ResultStatus-Category": {
+								"type": "string",
+								"description": "The category of the warning/error."
+							},
+							"X-ResultStatus-ReasonCode": {
+								"type": "string",
+								"description": "The reason code of the warning/error."
+							}
+						}
+					}
+				}
+			}
+		},
+		"/service/incidents/report": {
+			"post": {
+				"description": "A method that allows a consumer of the API to get the reports on a Incident.",
+				"operationId": "get-report",
+				"parameters": [
+					{
+						"name": "incident",
+						"in": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/incident-report-request"
+						}
+					},
+					{
+						"$ref": "#/parameters/Accept"
+					},
+					{
+						"$ref": "#/parameters/Accept-Language"
+					},
+					{
+						"$ref": "#/parameters/Authorization"
+					},
+					{
+						"$ref": "#/parameters/X-Source-CountryCode"
+					},
+					{
+						"$ref": "#/parameters/X-Source-Operator"
+					},
+					{
+						"$ref": "#/parameters/X-Source-Division"
+					},
+					{
+						"$ref": "#/parameters/X-Source-System"
+					},
+					{
+						"$ref": "#/parameters/X-Source-Timestamp"
+					},
+					{
+						"name": "X-Notify-EventCode",
+						"in": "header",
+						"type": "string",
+						"description": "The type of event that caused the notification to be generated.",
+						"enum": [
+							"Created",
+							"Updated",
+							"Deleted"
+						]
+					},
+					{
+						"name": "X-Notify-Business-EventCode",
+						"in": "header",
+						"type": "string",
+						"description": "The business level name of the event that caused the notification to be generated."
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "200, OK.",
+						"schema": {
+							"$ref": "#/definitions/incident-report-response"
+						},
+						"headers": {
+							"Content-Type": {
+								"type": "string",
+								"description": "The Content-Type entity-header field indicates the media type of the entity-body sent to the recipient or, in the case of the HEAD method, the media type that would have been sent had the request been a GET."
+							},
+							"Content-Length": {
+								"type": "integer",
+								"description": "The Content-Length entity-header field indicates the size of the entity-body, in decimal number of OCTETs, sent to the recipient or, in the case of the HEAD method, the size of the entity-body that would have been sent had the request been a GET"
+							},
+							"Content-Language": {
+								"type": "string",
+								"description": "The Content-Language entity-header field describes the natural language(s) of the intended audience for the enclosed entity"
+							},
+							"Date": {
+								"type": "string",
+								"description": "The date and time at which the message was originated"
+							},
+							"X-Rate-Limit-Limit": {
+								"type": "integer",
+								"description": "The number of allowed requests in the current period"
+							},
+							"X-Rate-Limit-Remaining": {
+								"type": "integer",
+								"description": "The number of remaining requests in the current period"
+							},
+							"X-Rate-Limit-Reset": {
+								"type": "integer",
+								"description": "The number of seconds left in the current period"
+							},
+							"Cache-Control": {
+								"type": "string",
+								"description": "The Cache-Control general-header field is used to specify directives that MUST be obeyed by all caching mechanisms along the request/response chain"
+							},
+							"X-Total-Count": {
+								"type": "string",
+								"description": "The total number of resources found on the server that matched the query parameters."
+							},
+							"X-Items-Per-Page": {
+								"type": "string",
+								"description": "The actual number of items on a page"
+							},
+							"X-ResultStatus-Timestamp": {
+								"type": "string",
+								"description": "The ISO8601 date and Time of the warning/error."
+							},
+							"X-ResultStatus-Originator-Address": {
+								"type": "string",
+								"description": "The URI Address of the system/API generating the warning/error"
+							},
+							"X-ResultStatus-ErrorCode": {
+								"type": "string",
+								"description": "The code of the warning/error."
+							},
+							"X-ResultStatus-Name": {
+								"type": "string",
+								"description": "The name of the warning/error."
+							},
+							"X-ResultStatus-Severity": {
+								"type": "string",
+								"description": "The severity of the warning/error."
+							},
+							"X-ResultStatus-Category": {
+								"type": "string",
+								"description": "The category of the warning/error."
+							},
+							"X-ResultStatus-ReasonCode": {
+								"type": "string",
+								"description": "The reason code of the warning/error."
+							}
+						}
+					},
+					"201": {
+						"description": "201, Created.",
+						"headers": {
+							"X-Rate-Limit-Limit": {
+								"type": "integer",
+								"description": "The number of allowed requests in the current period"
+							},
+							"X-Rate-Limit-Remaining": {
+								"type": "integer",
+								"description": "The number of remaining requests in the current period"
+							},
+							"X-Rate-Limit-Reset": {
+								"type": "integer",
+								"description": "The number of seconds left in the current period"
+							},
+							"X-ResultStatus-Timestamp": {
+								"type": "string",
+								"description": "The ISO8601 date and Time of the warning/error."
+							},
+							"X-ResultStatus-Originator-Address": {
+								"type": "string",
+								"description": "The URI Address of the system/API generating the warning/error"
+							},
+							"X-ResultStatus-ErrorCode": {
+								"type": "string",
+								"description": "The code of the warning/error."
+							},
+							"X-ResultStatus-Name": {
+								"type": "string",
+								"description": "The name of the warning/error."
+							},
+							"X-ResultStatus-Severity": {
+								"type": "string",
+								"description": "The severity of the warning/error."
+							},
+							"X-ResultStatus-Category": {
+								"type": "string",
+								"description": "The category of the warning/error."
+							},
+							"X-ResultStatus-ReasonCode": {
+								"type": "string",
+								"description": "The reason code of the warning/error."
+							}
+						}
+					},
+					"default": {
+						"description": "An unexpected fault occurred.",
+						"schema": {
+							"$ref": "#/definitions/fault-object"
+						},
+						"headers": {
+							"X-Rate-Limit-Limit": {
+								"type": "integer",
+								"description": "The number of allowed requests in the current period"
+							},
+							"X-Rate-Limit-Remaining": {
+								"type": "integer",
+								"description": "The number of remaining requests in the current period"
+							},
+							"X-Rate-Limit-Reset": {
+								"type": "integer",
+								"description": "The number of seconds left in the current period"
+							},
+							"X-ResultStatus-Timestamp": {
+								"type": "string",
+								"description": "The ISO8601 date and Time of the warning/error."
+							},
+							"X-ResultStatus-Originator-Address": {
+								"type": "string",
+								"description": "The URI Address of the system/API generating the warning/error"
+							},
+							"X-ResultStatus-ErrorCode": {
+								"type": "string",
+								"description": "The code of the warning/error."
+							},
+							"X-ResultStatus-Name": {
+								"type": "string",
+								"description": "The name of the warning/error."
+							},
+							"X-ResultStatus-Severity": {
+								"type": "string",
+								"description": "The severity of the warning/error."
+							},
+							"X-ResultStatus-Category": {
+								"type": "string",
+								"description": "The category of the warning/error."
+							},
+							"X-ResultStatus-ReasonCode": {
+								"type": "string",
+								"description": "The reason code of the warning/error."
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"definitions": {
+		"patch-object": {
+			"$ref": "../../../../VBO/Common/V1/Impl/Swagger/Patch.json"
+		},
+		"fault-object": {
+			"$ref": "../../../../VBO/Common/V1/Impl/Swagger/Fault.json"
+		},
+		"incident": {
+			"$ref": "../../../../VBO/Service/Incident/V1/Impl/Swagger/IncidentVBO.json"
+		},
+		"incident-report-request": {
+			"$ref": "../../../../VBO/Common/V1/Impl/Swagger/Report-Request.json"
+		},
+		"incident-report-response": {
+			"$ref": "../../../../VBO/Common/V1/Impl/Swagger/Report-Response.json"
+		},
+		"related-incident": {
+			"$ref": "../../../../VBO/Service/Incident/V1/Impl/Swagger/IncidentVBO-Related-Incident.json"
+		},
+		"requester-party": {
+			"$ref": "../../../../VBO/Service/Incident/V1/Impl/Swagger/IncidentVBO-Requester.json"
+		},
+		"initiator-party": {
+			"$ref": "../../../../VBO/Service/Incident/V1/Impl/Swagger/IncidentVBO-Initiator.json"
+		},
+		"owner-party": {
+			"$ref": "../../../../VBO/Service/Incident/V1/Impl/Swagger/IncidentVBO-Owner.json"
+		},
+		"assignee-party": {
+			"$ref": "../../../../VBO/Service/Incident/V1/Impl/Swagger/IncidentVBO-Assignee.json"
+		},
+		"affectee-party": {
+			"$ref": "../../../../VBO/Service/Incident/V1/Impl/Swagger/IncidentVBO-Affectee.json"
+		},
+		"notes": {
+			"$ref": "../../../../VBO/Service/Incident/V1/Impl/Swagger/IncidentVBO-Notes.json"
+		},
+		"services": {
+			"$ref": "../../../../VBO/Service/Incident/V1/Impl/Swagger/IncidentVBO-Services.json"
+		},
+		"resource": {
+			"$ref": "../../../../VBO/Service/Incident/V1/Impl/Swagger/IncidentVBO-Resource.json"
+		}
+	},
+	"parameters": {
+		"offset": {
+			"name": "offset",
+			"in": "query",
+			"type": "integer",
+			"description": "Supports pagination. The offset in the number of resources matched to start the page to be returned."
+		},
+		"count": {
+			"name": "count",
+			"in": "query",
+			"type": "integer",
+			"description": "Support pagination. The size of the page to return."
+		},
+		"sort": {
+			"name": "sort",
+			"in": "query",
+			"type": "string",
+			"description": "Supports sorting. The field and direction on which to sort the returned set of Network Access Profiles. "
+		},
+		"Accept": {
+			"name": "Accept",
+			"in": "header",
+			"type": "string",
+			"description": "The Accept request-header field can be used to specify certain media types which are acceptable for the response"
+		},
+		"Accept-Language": {
+			"name": "Accept-Language",
+			"in": "header",
+			"type": "string",
+			"description": "The Accept-Language request-header field is similar to Accept, but restricts the set of natural languages that are preferred as a response to the request"
+		},
+		"Authorization": {
+			"name": "Authorization",
+			"in": "header",
+			"type": "string",
+			"description": "A user agent that wishes to authenticate itself with a server -- usually, but not necessarily, after receiving a 401 response--does so by including an Authorization request-header field with the request"
+		},
+		"X-Source-CountryCode": {
+			"name": "X-Source-CountryCode",
+			"in": "header",
+			"type": "string",
+			"description": "The ISO Country Code of the client/consuming system."
+		},
+		"X-Source-Operator": {
+			"name": "X-Source-Operator",
+			"in": "header",
+			"type": "string",
+			"description": "The Organisation of the client/consuming system."
+		},
+		"X-Source-Division": {
+			"name": "X-Source-Division",
+			"in": "header",
+			"type": "string",
+			"description": "The Division of the client/consuming system."
+		},
+		"X-Source-System": {
+			"name": "X-Source-System",
+			"in": "header",
+			"type": "string",
+			"description": "The Logical System Name (COBRA) of the client/consuming system."
+		},
+		"X-Source-Timestamp": {
+			"name": "X-Source-Timestamp",
+			"in": "header",
+			"type": "string",
+			"description": "The ISO8601 Date and Time from the client/consuming system."
+		}
+	},
+	"externalDocs": {
+		"description": "Service Specifications, please reference for  a business description, data definition and detailed information on API behaviour and specific response codes.",
+		"url": "https://workspace.vodafone.com/group/GID/SitePages/Home.aspx"
+	}
+}

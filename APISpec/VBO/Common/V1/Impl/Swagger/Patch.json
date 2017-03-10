@@ -1,0 +1,48 @@
+{
+	"title": "JSON Patch",
+	"description": " JSON Patch defines a JSON document structure for expressing a sequence of operations to apply to a JavaScript Object Notation (JSON) document",
+	"type": "array",
+	"items": 
+	{
+		"type": "object",
+		"properties": 
+		{
+			"op": 
+			{
+				"type": "string",
+				"description": "Operation objects MUST have exactly one 'op' member, whose value indicates the operation to perform",
+				"enum" : [
+					"add",
+					"remove",
+					"replace",
+					"move",
+					"copy",
+					"test"
+				]
+			},
+
+			"from": 
+			{
+				"description": "A JSON path pointing to the location to move/copy from.",
+				"type": "string"
+			},
+
+			"path": 
+			{
+				"description": "A JSON path.",
+				"type": "string"
+			},
+
+			"value": 
+			{
+				"type": "string"
+			}
+		},
+
+		"required": 
+		[
+			"op",
+			"path"
+		]
+	}
+}

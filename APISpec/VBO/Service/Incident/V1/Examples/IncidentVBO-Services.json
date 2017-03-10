@@ -1,0 +1,111 @@
+{
+	"ids": [
+		{
+			"scheme-name": "string",
+			"scheme-agency-name": "Vodafone",
+			"#text": "123"
+		}
+	],
+	"name": "service One",
+	"desc": "string",
+	"type": {
+		"list-name": "service type Code",
+		"list-agency-name": "Vodafone",
+		"#text": "token"
+	},
+	"categories": [
+		{
+			"list-name": "string",
+			"list-agency-name": "Vodafone"
+		}
+	],
+	"status": {
+		"list-name": "incident status Code",
+		"list-agency-name": "Vodafone",
+		"#text": "Active"
+	},
+	"serviceArea": {
+		"list-name": "string",
+		"list-agency-name": "Vodafone",
+		"#text": "token"
+	},
+	"serviceAffecting": {
+		"indicator": "false"
+	},
+	"provider": {
+		"ids": [
+			{
+				"scheme-name": "string",
+				"scheme-agency-name": "Vodafone",
+				"#text": "123"
+			}
+		],
+		"name": "Provider One",
+		"desc": "The provider of the service",
+		"type": {
+			"list-name": "Provider type Code",
+			"list-agency-name": "Vodafone",
+			"#text": "token"
+		},
+		"categories": [
+			{
+				"list-name": "string",
+				"list-agency-name": "Vodafone"
+			}
+		],
+		"status": {
+			"list-name": "incident status Code",
+			"list-agency-name": "Vodafone",
+			"#text": "Active"
+		}
+	},
+	"specification": {
+		"ids": [
+			{
+				"scheme-name": "specification id",
+				"scheme-agency-name": "Vodafone",
+				"#text": "123"
+			}
+		],
+		"name": "specification One",
+		"desc": "description of the specification",
+		"type": {
+			"list-name": "specification type Code",
+			"list-agency-name": "Vodafone",
+			"#text": "Default"
+		},
+		"categories": [
+			{
+				"list-name": "specification category Code",
+				"list-agency-name": "Vodafone"
+			}
+		],
+		"status": {
+			"list-name": "specification status Code",
+			"list-agency-name": "Vodafone",
+			"#text": "Active"
+		},
+		"characteristics-value": {
+			"characteristic-name": "string",
+			"value": "Network services",
+			"type": {
+				"list-name": "string",
+				"list-agency-name": "Vodafone",
+				"#text": "token"
+			},
+			"description": "string",
+			"creation-time": {
+				"format": "ISO8601",
+				"#text": "2015-04-01T00:00:00Z"
+			},
+			"validity-period": {
+				"from-date": {
+					"date": "2015-10-01"
+				},
+				"to-date": {
+					"date": "2015-10-01"
+				}
+			}
+		}
+	}
+}

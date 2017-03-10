@@ -1,0 +1,139 @@
+﻿{
+	"title": "IncidentVBO-Related-Incident",
+	"type": "array",
+	"description": "The set of related incidents to this one. The relationship is defined with the relation type code attribute..",
+	"items": {
+		"type": "object",
+		"properties": {
+			"related-incident": {
+				"type": "object",
+				"description": "A specific related incident to this one. The relationship is defined with the type code attribute.",
+				"properties": {
+					"$": {
+						"type": "string",
+						"description": "The value of the field."
+					},
+					"@action-code": {
+						"type": "string",
+						"description": "The @actionCode attribute is used within a modification operation to indicate the action (add; update; delete) intended on a component."
+					},
+					"@relationship-type-code": {
+						"type": "string",
+						"description": "An attribute to hold the type of relationship between this Incident and the referenced target."
+					},
+					"@relationship-location-code": {
+						"type": "string",
+						"description": "A attribute to hold the target location of the incident. Limited to IS03166-Alpha 2 values; e.g. DE; ES; etc. Vodafone Group is denoted by GX."
+					},
+					"@relationship-organisation-code": {
+						"type": "string",
+						"description": "An attribute to hold the target organisation that is holding the related incident"
+					}
+				},
+				"required": [
+					"$"
+				]
+			},
+			"ids": {
+				"type": "array",
+				"description": "The set of Identifiers for the VBO or component. These should be used to uniquely identifier instances of the business object or component.",
+				"items": {
+					"type": "object",
+					"description": "The identifier of the business object or component. This should be used to identify instances of a business object or component. Where the component is being used to reference another business object then this is the primary key of the target object. Use the attributes @schemeName and @schemeAgencyName to identify type of Identifier.",
+					"properties": {
+						"$": {
+							"type": "string",
+							"description": "The value of the field."
+						},
+						"@scheme-name": {
+							"type": "string",
+							"description": "The name of the identification scheme. The schemeName of the ID"
+						},
+						"@scheme-agency-name": {
+							"type": "string",
+							"description": "The name of the agency that maintains the identification scheme. The schemeAgencyName of the ID"
+						}
+					},
+					"required": [
+						"$"
+					]
+				}
+			},
+			"name": {
+				"type": "string",
+				"description": "The name of the instance of a business object or component."
+			},
+			"desc": {
+				"type": "string",
+				"description": "A free text description of a business object or component."
+			},
+			"type": {
+				"type": "object",
+				"description": "A classification of the business object or component. This identifies the sub-type of the instance of object or component.",
+				"properties": {
+					"$": {
+						"type": "string",
+						"description": "The value of the field."
+					},
+					"@list-agency-name": {
+						"type": "string",
+						"description": "The name of the agency that maintains the list of codes. The listAgencyName of the Type"
+					},
+					"@list-name": {
+						"type": "string",
+						"description": "The name of a list of codes. The listName of the Type"
+					}
+				},
+				"required": [
+					"$"
+				]
+			},
+			"categories": {
+				"type": "array",
+				"description": "The set of classifications for the business object or component.",
+				"items": {
+					"type": "object",
+					"description": "A classification applied to the business object or component. More than one classification scheme can be applied using the @listName attribute to identify the type of code list being used. The classification scheme can be used to group instances of the object or component.",
+					"properties": {
+						"$": {
+							"type": "string",
+							"description": "The value of the field."
+						},
+						"@list-agency-name": {
+							"type": "string",
+							"description": "The name of the agency that maintains the list of codes. The listAgencyName of the Category"
+						},
+						"@list-name": {
+							"type": "string",
+							"description": "The name of a list of codes. The listName of the Category"
+						}
+					},
+					"required": [
+						"$"
+					]
+				}
+			},
+			"status": {
+				"type": "object",
+				"description": "The lifecycle state of the business object or component. This field is used to track the specific state an instance of an object or component is in; e.g. the Susbscription is Active or the Customer Request has been Cancelled.",
+				"properties": {
+					"$": {
+						"type": "string",
+						"description": "The value of the field."
+					},
+					"@list-agency-name": {
+						"type": "string",
+						"description": "The name of the agency that maintains the list of codes. The listAgencyName of the Status"
+					},
+					"@list-name": {
+						"type": "string",
+						"description": "The name of a list of codes. The listName of the Status"
+					}
+				},
+				"required": [
+					"$"
+				]
+			}
+		}
+	}
+}

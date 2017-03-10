@@ -1,0 +1,41 @@
+{
+	"ids": [
+		{
+			"scheme-name": "note id",
+			"scheme-agency-name": "Vodafone",
+			"#text": "123"
+		}
+	],
+	"name": "note One",
+	"desc": "An associated note to the VBO",
+	"type": {
+		"list-name": "note type Code",
+		"list-agency-name": "Vodafone",
+		"#text": "Comment"
+	},
+	"categories": [
+		{
+			"list-name": "note category Code",
+			"list-agency-name": "Vodafone"
+		}
+	],
+	"status": {
+		"list-name": "incident status Code",
+		"list-agency-name": "Vodafone",
+		"#text": "Active"
+	},
+	"content": "The Customer likes to be called on a weekday evening",
+	"agent-id": {
+		"scheme-name": "Agent id",
+		"scheme-agency-name": "Vodafone",
+		"#text": "123"
+	},
+	"created-date-time": {
+		"format": "ISO8601",
+		"#text": "2015-10-01T00:00:00"
+	},
+	"last-modified-date-time": {
+		"format": "ISO8601",
+		"#text": "2015-10-01T00:00:00"
+	}
+}

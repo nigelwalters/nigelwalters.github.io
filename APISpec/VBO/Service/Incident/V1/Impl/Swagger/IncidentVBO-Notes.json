@@ -1,0 +1,145 @@
+﻿{
+	"title": "IncidentVBO-Notes",
+	"type": "object",
+	"description": "The notes associated with an incident raised.",
+	"properties": {
+		"ids": {
+			"type": "array",
+			"description": "The set of Identifiers for the VBO or component. These should be used to uniquely identifier instances of the business object or component.",
+			"items": {
+				"type": "object",
+				"description": "The identifier of the business object or component. This should be used to identify instances of a business object or component. Where the component is being used to reference another business object then this is the primary key of the target object. Use the attributes @schemeName and @schemeAgencyName to identify type of Identifier.",
+				"properties": {
+					"$": {
+						"type": "string",
+						"description": "The value of the field."
+					},
+					"@scheme-name": {
+						"type": "string",
+						"description": "The name of the identification scheme. The schemeName of the ID"
+					},
+					"@scheme-agency-name": {
+						"type": "string",
+						"description": "The name of the agency that maintains the identification scheme. The schemeAgencyName of the ID"
+					}
+				},
+				"required": [
+					"$"
+				]
+			}
+		},
+		"name": {
+			"type": "string",
+			"description": "The name of the instance of a business object or component."
+		},
+		"desc": {
+			"type": "string",
+			"description": "A free text description of a business object or component."
+		},
+		"type": {
+			"type": "object",
+			"description": "A classification of the business object or component. This identifies the sub-type of the instance of object or component.",
+			"properties": {
+				"$": {
+					"type": "string",
+					"description": "The value of the field."
+				},
+				"@list-agency-name": {
+					"type": "string",
+					"description": "The name of the agency that maintains the list of codes. The listAgencyName of the Type"
+				},
+				"@list-name": {
+					"type": "string",
+					"description": "The name of a list of codes. The listName of the Type"
+				}
+			},
+			"required": [
+				"$"
+			]
+		},
+		"categories": {
+			"type": "array",
+			"description": "The set of classifications for the business object or component.",
+			"items": {
+				"type": "object",
+				"description": "A classification applied to the business object or component. More than one classification scheme can be applied using the @listName attribute to identify the type of code list being used. The classification scheme can be used to group instances of the object or component.",
+				"properties": {
+					"$": {
+						"type": "string",
+						"description": "The value of the field."
+					},
+					"@list-agency-name": {
+						"type": "string",
+						"description": "The name of the agency that maintains the list of codes. The listAgencyName of the Category"
+					},
+					"@list-name": {
+						"type": "string",
+						"description": "The name of a list of codes. The listName of the Category"
+					}
+				},
+				"required": [
+					"$"
+				]
+			}
+		},
+		"status": {
+			"type": "object",
+			"description": "The lifecycle state of the business object or component. This field is used to track the specific state an instance of an object or component is in; e.g. the Customer Bill is Active or the Customer Request has been Cancelled.",
+			"properties": {
+				"$": {
+					"type": "string",
+					"description": "The value of the field."
+				},
+				"@list-agency-name": {
+					"type": "string",
+					"description": "The name of the agency that maintains the list of codes. The listAgencyName of the Status"
+				},
+				"@list-name": {
+					"type": "string",
+					"description": "The name of a list of codes. The listName of the Status"
+				}
+			},
+			"required": [
+				"$"
+			]
+		},
+		"content": {
+			"type": "string",
+			"description": "Conent of the Notes"
+		},
+		"agent-id": {
+			"type": "object",
+			"description": "Agent or user who updated or created the notes",
+			"properties": {
+				"$": {
+					"type": "string",
+					"description": "The value of the field."
+				},
+				"@scheme-name": {
+					"type": "string",
+					"description": "The name of the identification scheme. The schemeName of the Agent ID"
+				},
+				"@scheme-agency-name": {
+					"type": "string",
+					"description": "The name of the agency that maintains the identification scheme. The schemeAgencyName of the Agent ID"
+				}
+			},
+			"required": [
+				"$"
+			]
+		},
+		"created-date-time": {
+			"type": "string",
+			"description": "The  date and time the note was created.",
+			"format": "date-time"
+		},
+		"last-modified-date-time": {
+			"type": "string",
+			"description": "Last Modified time of the notes",
+			"format": "date-time"
+		}
+	},
+	"required": [
+		"$"
+	]
+}

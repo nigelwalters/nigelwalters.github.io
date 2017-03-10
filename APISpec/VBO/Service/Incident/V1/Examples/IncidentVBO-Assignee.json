@@ -1,0 +1,51 @@
+{
+	"ids": [
+		{
+			"scheme-name": "Party Role id",
+			"scheme-agency-name": "Vodafone",
+			"#text": "123"
+		}
+	],
+	"name": "Bob Hart",
+	"desc": "An individual involved in the incident",
+	"type": {
+		"list-name": "Party type Code",
+		"list-agency-name": "Vodafone",
+		"#text": "Support Engineer"
+	},
+	"categories": [
+		{
+			"list-name": "string",
+			"list-agency-name": "Vodafone"
+		}
+	],
+	"status": {
+		"list-name": "incident status Code",
+		"list-agency-name": "Vodafone",
+		"#text": "Active"
+	},
+	"assigned-to-group": {
+		"id": [
+			{
+				"scheme-name": "Support Group id",
+				"scheme-agency-name": "Vodafone",
+				"#text": "123"
+			}
+		],
+		"name-text": "service Desk",
+		"desc-text": "The first-line service Desk",
+		"shift-name-text": "Morning Shift",
+		"organisation-id": {
+			"scheme-name": "Organisation id",
+			"scheme-agency-name": "Vodafone",
+			"#text": "123"
+		},
+		"organisation-name-text": "Vodafone DE",
+		"parent-organisation-id": {
+			"scheme-name": "Organisation id",
+			"scheme-agency-name": "Vodafone",
+			"#text": "123"
+		},
+		"parent-organisation-name-text": "Vodafone"
+	}
+}

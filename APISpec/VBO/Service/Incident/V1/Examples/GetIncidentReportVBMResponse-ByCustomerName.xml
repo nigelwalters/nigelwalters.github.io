@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<vbm:GetIncidentReportVBMResponse
+	xmlns:vbm="http://group.vodafone.com/schema/vbm/service/incident/v1"
+	xmlns:cdt="urn:un:unece:uncefact:documentation:standard:CoreComponentType:2"
+	xmlns:cmn="http://group.vodafone.com/schema/common/v1" xmlns:vbo="http://group.vodafone.com/schema/vbo/service/incident/v1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://group.vodafone.com/schema/vbm/service/incident/v1 ../IncidentVBM.xsd">
+	<cmn:IDs>
+		<cmn:ID schemeAgencyName="Vodafone" schemeName="Report ID">123</cmn:ID>
+	</cmn:IDs>
+	<cmn:Name>Report One</cmn:Name>
+	<cmn:Type listAgencyName="Vodafone" listName="Report Type Code">Summary Report</cmn:Type>
+	<cmn:ReportItems>
+		<cmn:ReportItem>
+			<cmn:Field>
+				<cmn:Path>/IncidentVBO/Roles/Requester/Name</cmn:Path>
+				<cmn:Value>BMW UK</cmn:Value>
+			</cmn:Field>
+			<cmn:Field>
+				<cmn:Path>/IncidentVBO/Status</cmn:Path>
+				<cmn:Value>Acknowledged</cmn:Value>
+			</cmn:Field>
+			<cmn:Field>
+				<cmn:Path>/IncidentVBO/Details/PriorityCode</cmn:Path>
+				<cmn:Value>High</cmn:Value>
+			</cmn:Field>
+			<cmn:Field>
+				<cmn:Function>
+					<cmn:Name>COUNT</cmn:Name>
+					<cmn:Path>/IncidentVBO/Status</cmn:Path>
+				</cmn:Function>
+				<cmn:Value>2</cmn:Value>
+			</cmn:Field>
+		</cmn:ReportItem>
+	</cmn:ReportItems>
+</vbm:GetIncidentReportVBMResponse>

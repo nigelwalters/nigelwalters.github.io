@@ -1,0 +1,25 @@
+{
+	"report-query": {
+		"query-expression": {
+			"value-expression": [
+				{
+					"query-operator-code": "EQUALS",
+					"path": "$.roles.requester.name",
+					"value": "BMW UK"
+				}
+			]
+		},
+		"grouping-expression": {
+			"path": [
+				"$.status",
+				"$.details-priority-code"
+			]
+		},
+		"aggregate-functions": {
+			"function": {
+				"name": "COUNT",
+				"path": "$.status"
+			}
+		}
+	}
+}

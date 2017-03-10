@@ -1,0 +1,66 @@
+{
+	"ids": [
+		{
+			"scheme-agency-name": "Vodafone",
+			"scheme-name": "Report ID",
+			"#text": "123"
+		}
+	],
+	"name": "Report One",
+	"desc": "Report One",
+	"type": {
+		"list-agency-name": "Vodafone",
+		"list-name": "Report Type Code",
+		"#text": "Summary Report"
+	},
+	"categories": [
+		{
+			"list-agency-name": "Vodafone",
+			"list-name": "string"
+		}
+	],
+	"status": {
+		"list-agency-name": "Vodafone",
+		"list-name": "Alarm Report Status Code",
+		"#text": "Active"
+	},
+	"report-items": {
+		"report-item": [
+			{
+				"field": [
+					{
+						"path": "$.role.requester.name",
+						"Value": "BMW UK"
+					}
+				]
+			},
+			{
+				"field": [
+					{
+						"path": "$.status",
+						"value": "Acknowledged"
+					}
+				]
+			},
+			{
+				"field": [
+					{
+						"path": "$.details-priority-code",
+						"value": "High"
+					}
+				]
+			},
+			{
+				"field": [
+					{
+						"function": {
+							"name": "COUNT",
+							"path": "$.status"
+						},
+						"value": "7"
+					}
+				]
+			}
+		]
+	}
+}

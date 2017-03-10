@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<vbm:GetIncidentListVBMRequest
+	xmlns:vbm="http://group.vodafone.com/schema/vbm/service/incident/v1"
+	xmlns:cdt="urn:un:unece:uncefact:documentation:standard:CoreComponentType:2"
+	xmlns:cmn="http://group.vodafone.com/schema/common/v1"
+	xmlns:vbo="http://group.vodafone.com/schema/vbo/service/incident/v1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://group.vodafone.com/schema/vbm/service/incident/v1 ../IncidentVBM.xsd">
+	<cmn:Identification>
+		<cmn:IDs>
+			<cmn:ID schemeName="Incident ID">123</cmn:ID>
+		</cmn:IDs>
+	</cmn:Identification>
+</vbm:GetIncidentListVBMRequest>

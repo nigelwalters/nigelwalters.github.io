@@ -1,0 +1,202 @@
+﻿{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "uri:application/vnd.vodafone.report-request.v1+json",
+	"title": "report-request",
+	"description": "The Report request component, it holds the query expression, group expression and the aggregate function",
+	"type": "object",
+	"required": [
+		"report-query"
+	],
+	"properties": {
+		"_links": {
+			"$ref": "#/definitions/links"
+		},
+		"report-query": {
+			"type": "object",
+			"description": "Specifies the details of the data set on which to report.",
+			"required": [
+				"query-expression",
+				"grouping-expression",
+				"aggregate-functions"
+			],
+			"properties": {
+				"query-expression": {
+					"$ref": "#/definitions/query-expression"
+				},
+				"grouping-expression": {
+					"$ref": "#/definitions/grouping-expression"
+				},
+				"aggregate-functions": {
+					"$ref": "#/definitions/aggregate-functions"
+				}
+			}
+		}
+	},
+	"definitions": {
+		"query-expression": {
+			"type": "object",
+			"description": "A query expression that allows complex queries to be formulated out of a series of value expressions.",
+			"properties": {
+				"value-expression": {
+					"type": "array",
+					"description": "The value to be matched in a query criteria. The repeating structure allows more than one value to be specified, these must be taken as an implict OR function, i.e. This Value-1 OR Value-2 OR Value-3.",
+					"minItems": 1,
+					"items": {
+						"type": "object",
+						"description": "A query expression that allows complex queries to be formulated out of a series of value expressions.",
+						"properties": {
+							"value": {
+								"type": "array",
+								"description": "The value of the field.",
+								"minItems": 1,
+								"items": {
+									"type": "object",
+									"properties": {
+										"$": {
+											"type": "string",
+											"description": "The value to be matched in a query criteria. The repeating structure allows more than one value to be specified, these must be taken as an implict OR function, i.e. This Value-1 OR Value-2 OR Value-3."
+										},
+										"@language-id": {
+											"type": "string",
+											"description": "The identifier of the language used in the content component."
+										},
+										"@language-locale-id": {
+											"type": "string",
+											"description": "The identification of the locale of the language."
+										}
+									},
+									"required": [
+										"$"
+									]
+								}
+							},
+							"@query-operator-code": {
+								"description": "The value from the codelist representing the operator to apply between the Path and the Value. Examples include Equals, Less Than, etc.",
+								"type": "string",
+								"enum": [
+									"EQUALS",
+									"NOT_EQUALS",
+									"GREATER_THAN",
+									"GREATER_THAN_EQUALS",
+									"LESS_THAN",
+									"LESS_THAN_EQUALS",
+									"CONTAINS",
+									"DOES_NOT_CONTAIN",
+									"LIKE",
+									"NOT_LIKE"
+								]
+							},
+							"@path": {
+								"type": "string",
+								"description": "The path to the field within the business object to be used in the query. This field must use an XPath notation as per the MBP to provide a unique reference."
+							}
+						},
+						"required": [
+							"value"
+						]
+					}
+				},
+				"@logical-operator-code": {
+					"description": "A field indicating how consecutive query expression should be evaluated, e.g. Condition-1 AND Condition-2.",
+					"type": "string",
+					"enum": [
+						"AND",
+						"OR"
+					]
+				},
+				"@negation-indicator": {
+					"type": "string",
+					"description": "An indicator of whether the query expression should have a NOT applied to it, i.e. does NOT equal or is NOT less than."
+				}
+			}
+		},
+		"grouping-expression": {
+			"type": "object",
+			"description": "A grouping expression that allows unique attribute from business object for the grouping to build report.",
+			"properties": {
+				"path": {
+					"type": "array",
+					"description": "The path to the field within the business object to be used for the grouping. This field must use an XPath notation as per the MBP to provide a unique reference.",
+					"minItems": 1,
+					"items": {
+						"type": "object",
+						"properties": {
+							"$": {
+								"type": "string",
+								"description": "The path to the field within the business object to be used for the grouping. This field must use an XPath notation as per the MBP to provide a unique reference."
+							}
+						},
+						"required": [
+							"$"
+						]
+					}
+				}
+			},
+			"required": [
+				"path"
+			]
+		},
+		"aggregate-functions": {
+			"type": "object",
+			"description": "",
+			"properties": {
+				"function": {
+					"type": "array",
+					"description": "An aggregate function that allows statitics function to be specified for building the report",
+					"minItems": 1,
+					"items": {
+						"type": "object",
+						"description": "A query expression that allows complex queries to be formulated out of a series of value expressions.",
+						"properties": {
+							"path": {
+								"type": "string",
+								"description": "The path to the field within the business object to be used for the grouping. This field must use an XPath notation as per the MBP to provide a unique reference."
+							},
+							"name": {
+								"description": "This allows the specification of various statistics functions such as COUNT, MIN, MAX, and SUM to build the final report from the grouped records",
+								"type": "string",
+								"enum": [
+									"COUNT",
+									"SUM",
+									"MIN",
+									"MAX"
+								]
+							}
+						},
+						"required": [
+							"path",
+							"name"
+						]
+					}
+				}
+			},
+			"required": [
+				"function"
+			]
+		},
+		"links": {
+			"type": "object",
+			"description": "",
+			"properties": {
+				"link": {
+					"$ref": "#/definitions/link"
+				}
+			},
+			"additionalProperties": {
+				"$ref": "#/definitions/link"
+			}
+		},
+		"link": {
+			"type": "object",
+			"description": "",
+			"properties": {
+				"href": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"href"
+			]
+		}
+	}
+}

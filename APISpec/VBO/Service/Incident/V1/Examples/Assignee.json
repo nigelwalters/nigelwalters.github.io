@@ -1,0 +1,58 @@
+{
+	"@schemaLocation": "application/vnd.vodafone.incident.v1+json#assignee",
+	"_links": {
+		"self": {
+			"href": "/service/incident/{id}/assignee-parties/{party-id}"
+		},
+		"related": {
+			"href": "/service/incident/{another-id}"
+		}
+	},
+	"ids": {
+		"id": {
+			"scheme-name": "Party Role id",
+			"schemeAgencyname": "Vodafone",
+			"#text": "123"
+		}
+	},
+	"name": "Bob Hart",
+	"desc": "An individual involved in the incident",
+	"type": {
+		"list-name": "Party type Code",
+		"list-agency-name": "Vodafone",
+		"#text": "Support Engineer"
+	},
+	"categories": {
+		"category": {
+			"list-name": "string",
+			"list-agency-name": "Vodafone"
+		}
+	},
+	"status": {
+		"list-name": "incident status Code",
+		"list-agency-name": "Vodafone",
+		"#text": "Active"
+	},
+	"AssignedToGroup": {
+		"id": {
+			"scheme-name": "Support Group id",
+			"schemeAgencyname": "Vodafone",
+			"#text": "123"
+		},
+		"nameText": "Service Desk",
+		"descText": "The first-line Service Desk",
+		"ShiftnameText": "Morning Shift",
+		"Organisationid": {
+			"scheme-name": "Organisation id",
+			"schemeAgencyname": "Vodafone",
+			"#text": "123"
+		},
+		"OrganisationnameText": "Vodafone DE",
+		"ParentOrganisationid": {
+			"scheme-name": "Organisation id",
+			"schemeAgencyname": "Vodafone",
+			"#text": "123"
+		},
+		"ParentOrganisationnameText": "Vodafone"
+	}
+}

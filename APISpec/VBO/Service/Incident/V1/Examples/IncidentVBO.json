@@ -1,0 +1,1604 @@
+{
+	"name": "incident One",
+	"desc": "The incident for the party",
+	"type": {
+		"list-name": "incident type Code",
+		"list-agency-name": "Vodafone",
+		"#text": "Consumer incident"
+	},
+	"categories": [
+		{
+			"list-name": "incident category Code",
+			"list-agency-name": "Vodafone"
+		}
+	],
+	"status": {
+		"list-name": "incident status Code",
+		"list-agency-name": "Vodafone",
+		"#text": "Active"
+	},
+	"validity-period": {
+		"from-date": {
+			"date": "2015-10-01"
+		},
+		"to-date": {
+			"date": "2015-10-01"
+		}
+	},
+	"last-activity-date": {
+		"format": "ISO8601",
+		"#text": "2015-10-01"
+	},
+	"details": {
+		"severity-code": {
+			"list-name": "incident Severity Code",
+			"list-agency-name": "Vodafone",
+			"#text": "Medium"
+		},
+		"priority-code": {
+			"list-name": "incident Priority Code",
+			"list-agency-name": "Vodafone",
+			"#text": "Low"
+		},
+		"urgency-code": {
+			"list-name": "incident Urgency Code",
+			"list-agency-name": "Vodafone",
+			"#text": "Low"
+		},
+		"impact-code": {
+			"list-name": "incident impact Code",
+			"list-agency-name": "Vodafone",
+			"#text": "Medium"
+		},
+		"alert-request-ind": {
+			"indicator": "false"
+		},
+		"resolved-ind": {
+			"indicator": "false"
+		},
+		"Instant-resolution-ind": {
+			"indicator": "false"
+		},
+		"external-reference-id": {
+			"scheme-name": "string",
+			"scheme-agency-name": "Vodafone",
+			"#text": "123"
+		},
+		"parent-ind": {
+			"indicator": "false"
+		},
+		"shared-ind": {
+			"indicator": "false"
+		},
+		"customer-resolution-acceptance-indicator": {
+			"indicator": "true"
+		},
+		"extension": {
+			"last-assigned-date": {
+				"date": "2015-10-01"
+			},
+			"sub-reasons": {
+				"sub-reason": {
+					"sub-reason-code": {
+						"list-name": "string",
+						"list-agency-name": "Vodafone",
+						"#text": "token"
+					},
+					"sub-reason-text": "string"
+				}
+			}
+		}
+	},
+	"related-incidents": {
+		"related-incident": {
+			"relationship-type-code": "Parent",
+			"relationship-organisation-code": "BMW DE",
+			"relationship-location-code": "DE",
+			"ids": [
+				{
+					"scheme-name": "incident id",
+					"scheme-agency-name": "Vodafone",
+					"#text": "123"
+				}
+			],
+			"name": "incident Two",
+			"desc": "The incident for the party",
+			"type": {
+				"list-name": "incident type Code",
+				"list-agency-name": "Vodafone",
+				"#text": "Consumer incident"
+			},
+			"categories": [
+				{
+					"list-name": "string",
+					"list-agency-name": "Vodafone"
+				}
+			],
+			"status": {
+				"list-name": "incident status Code",
+				"list-agency-name": "Vodafone",
+				"#text": "Active"
+			}
+		}
+	},
+	"roles": {
+		"requester": {
+			"ids": [
+				{
+					"scheme-name": "Party Role id",
+					"scheme-agency-name": "Vodafone",
+					"#text": "123"
+				}
+			],
+			"name": "John Smith",
+			"desc": "An individual involved in the incident",
+			"type": {
+				"list-name": "Party type Code",
+				"list-agency-name": "Vodafone",
+				"#text": "Consumer Party"
+			},
+			"categories": [
+				{
+					"list-name": "string",
+					"list-agency-name": "Vodafone"
+				}
+			],
+			"status": {
+				"list-name": "incident status Code",
+				"list-agency-name": "Vodafone",
+				"#text": "Active"
+			},
+			"individual": {
+				"ids": [
+					{
+						"scheme-name": "Party Role id",
+						"scheme-agency-name": "Vodafone",
+						"#text": "123"
+					}
+				],
+				"name": "John Smith",
+				"desc": "A Party interacting with Vodafone",
+				"type": {
+					"list-name": "Party type Code",
+					"list-agency-name": "Vodafone",
+					"#text": "Consumer Party"
+				},
+				"categories": [
+					{
+						"list-name": "string",
+						"list-agency-name": "Vodafone"
+					}
+				],
+				"status": {
+					"list-name": "incident status Code",
+					"list-agency-name": "Vodafone",
+					"#text": "Active"
+				},
+				"individual-name": {
+					"title": {
+						"list-name": "individual title Code",
+						"list-agency-name": "Vodafone",
+						"#text": "Mr"
+					},
+					"first-name": "John",
+					"middle-name": "Peter",
+					"middle-initial": "P",
+					"family-name": "Smith",
+					"prefix": {
+						"list-name": "individual name prefix Code",
+						"list-agency-name": "Vodafone",
+						"#text": "token"
+					},
+					"suffix": {
+						"list-name": "individual name suffix Code",
+						"list-agency-name": "Vodafone",
+						"#text": "token"
+					},
+					"salutation": "string",
+					"formatted-name": "Mr John P. Smith",
+					"aristocratic-title": {
+						"list-name": "individual aristocratic title Code",
+						"list-agency-name": "Vodafone",
+						"#text": "token"
+					},
+					"legal-name": "Mr John P. Smith",
+					"preferred-given-name": "John"
+				},
+				"birth-date": {
+					"date": "2015-10-01"
+				},
+				"blood-type": "B Neg",
+				"death-date": {
+					"date": "2015-10-01"
+				},
+				"death-indicator": {
+					"indicator": "false"
+				},
+				"ethnicity": "string",
+				"gender": "Male",
+				"language": "en",
+				"marital-status": "Single",
+				"nationality": "British",
+				"designated-indicator": {
+					"indicator": "false"
+				},
+				"tps-registration": {
+					"indicator": "false"
+				}
+			},
+			"contact-points": [
+				{
+					"id": [
+						{
+							"scheme-name": "Party Role id",
+							"scheme-agency-name": "Vodafone",
+							"#text": "123"
+						}
+					],
+					"email": {
+						"full-address": "j.smith@vodafone.com",
+						"domain-name": "vodafone.com",
+						"username": "j.smith",
+						"verified": {
+							"indicator": "false"
+						}
+					}
+				}
+			],
+			"contact-name": {
+				"ids": [
+					{
+						"scheme-name": "Party Role id",
+						"scheme-agency-name": "Vodafone",
+						"#text": "123"
+					}
+				],
+				"name": "Contact One",
+				"desc": "string",
+				"type": {
+					"list-name": "Party type Code",
+					"list-agency-name": "Vodafone",
+					"#text": "Consumer Party"
+				},
+				"categories": [
+					{
+						"list-name": "string",
+						"list-agency-name": "Vodafone"
+					}
+				],
+				"status": {
+					"list-name": "incident status Code",
+					"list-agency-name": "Vodafone",
+					"#text": "Active"
+				}
+			}
+		},
+		"initiator": {
+			"ids": [
+				{
+					"scheme-name": "Party Role id",
+					"scheme-agency-name": "Vodafone",
+					"#text": "123"
+				}
+			],
+			"name": "John Smith",
+			"desc": "An individual involved in the incident",
+			"type": {
+				"list-name": "Party type Code",
+				"list-agency-name": "Vodafone",
+				"#text": "Consumer Party"
+			},
+			"categories": [
+				{
+					"list-name": "string",
+					"list-agency-name": "Vodafone"
+				}
+			],
+			"status": {
+				"list-name": "incident status Code",
+				"list-agency-name": "Vodafone",
+				"#text": "Active"
+			},
+			"individual": {
+				"ids": [
+					{
+						"scheme-name": "Party Role id",
+						"scheme-agency-name": "Vodafone",
+						"#text": "123"
+					}
+				],
+				"name": "John Smith",
+				"desc": "A Party interacting with Vodafone",
+				"type": {
+					"list-name": "Party type Code",
+					"list-agency-name": "Vodafone",
+					"#text": "Consumer Party"
+				},
+				"categories": [
+					{
+						"list-name": "string",
+						"list-agency-name": "Vodafone"
+					}
+				],
+				"status": {
+					"list-name": "incident status Code",
+					"list-agency-name": "Vodafone",
+					"#text": "Active"
+				},
+				"individual-name": {
+					"title": {
+						"list-name": "individual title Code",
+						"list-agency-name": "Vodafone",
+						"#text": "Mr"
+					},
+					"first-name": "John",
+					"middle-name": "Peter",
+					"middle-initial": "P",
+					"family-name": "Smith",
+					"prefix": {
+						"list-name": "individual name prefix Code",
+						"list-agency-name": "Vodafone",
+						"#text": "token"
+					},
+					"suffix": {
+						"list-name": "individual name suffix Code",
+						"list-agency-name": "Vodafone",
+						"#text": "token"
+					},
+					"salutation": "string",
+					"formatted-name": "Mr John P. Smith",
+					"aristocratic-title": {
+						"list-name": "individual aristocratic title Code",
+						"list-agency-name": "Vodafone",
+						"#text": "token"
+					},
+					"legal-name": "Mr John P. Smith",
+					"preferred-given-name": "John"
+				},
+				"birth-date": {
+					"date": "2015-10-01"
+				},
+				"blood-type": "B Neg",
+				"death-date": {
+					"date": "2015-10-01"
+				},
+				"death-indicator": {
+					"indicator": "false"
+				},
+				"ethnicity": "string",
+				"gender": "Male",
+				"language": "en",
+				"marital-status": "Single",
+				"nationality": "British",
+				"designated-indicator": {
+					"indicator": "false"
+				},
+				"tps-registration": {
+					"indicator": "false"
+				}
+			},
+			"initiator-group": {
+				"id": [
+					{
+						"scheme-name": "Support Group id",
+						"scheme-agency-name": "Vodafone",
+						"#text": "123"
+					}
+				],
+				"name-text": "service Desk",
+				"desc-text": "The first-line service Desk",
+				"shift-name-text": "Morning Shift",
+				"organisation-id": {
+					"scheme-name": "Organisation id",
+					"scheme-agency-name": "Vodafone",
+					"#text": "123"
+				},
+				"organisation-name-text": "Vodafone DE",
+				"parent-organisation-id": {
+					"scheme-name": "Organisation id",
+					"scheme-agency-name": "Vodafone",
+					"#text": "123"
+				},
+				"parent-organisation-name-text": "Vodafone"
+			},
+			"extension": {
+				"contact-points": [
+					{
+						"id": {
+							"scheme-name": "Party Role id",
+							"scheme-agency-name": "Vodafone",
+							"#text": "123"
+						},
+						"email": {
+							"full-address": "j.smith@vodafone.com",
+							"domain-name": "vodafone.com",
+							"user-name": "j.smith",
+							"verified": {
+								"indicator": "false"
+							}
+						}
+					}
+				],
+				"contact-name": {
+					"ids": [
+						{
+							"scheme-name": "Party Role id",
+							"scheme-agency-name": "Vodafone",
+							"#text": "123"
+						}
+					],
+					"name": "Contact One",
+					"desc": "string",
+					"type": {
+						"list-name": "Party type Code",
+						"list-agency-name": "Vodafone",
+						"#text": "Consumer Party"
+					},
+					"categories": [
+						{
+							"list-name": "string",
+							"list-agency-name": "Vodafone"
+						}
+					],
+					"status": {
+						"list-name": "incident status Code",
+						"list-agency-name": "Vodafone",
+						"#text": "Active"
+					}
+				}
+			}
+		},
+		"assignee": {
+			"ids": [
+				{
+					"scheme-name": "Party Role id",
+					"scheme-agency-name": "Vodafone",
+					"#text": "123"
+				}
+			],
+			"name": "Bob Hart",
+			"desc": "An individual involved in the incident",
+			"type": {
+				"list-name": "Party type Code",
+				"list-agency-name": "Vodafone",
+				"#text": "Support Engineer"
+			},
+			"categories": [
+				{
+					"list-name": "string",
+					"list-agency-name": "Vodafone"
+				}
+			],
+			"status": {
+				"list-name": "incident status Code",
+				"list-agency-name": "Vodafone",
+				"#text": "Active"
+			},
+			"assigned-to-group": {
+				"id": [
+					{
+						"scheme-name": "Support Group id",
+						"scheme-agency-name": "Vodafone",
+						"#text": "123"
+					}
+				],
+				"name-text": "service Desk",
+				"desc-text": "The first-line service Desk",
+				"shift-name-text": "Morning Shift",
+				"organisation-id": {
+					"scheme-name": "Organisation id",
+					"scheme-agency-name": "Vodafone",
+					"#text": "123"
+				},
+				"organisation-name-text": "Vodafone DE",
+				"parent-organisation-id": {
+					"scheme-name": "Organisation id",
+					"scheme-agency-name": "Vodafone",
+					"#text": "123"
+				},
+				"parent-organisation-name-text": "Vodafone"
+			}
+		},
+		"owner": {
+			"ids": [
+				{
+					"scheme-name": "Party Role id",
+					"scheme-agency-name": "Vodafone",
+					"#text": "123"
+				}
+			],
+			"name": "John Smith",
+			"desc": "An individual involved in the incident",
+			"type": {
+				"list-name": "Party type Code",
+				"list-agency-name": "Vodafone",
+				"#text": "Consumer Party"
+			},
+			"categories": [
+				{
+					"list-name": "string",
+					"list-agency-name": "Vodafone"
+				}
+			],
+			"status": {
+				"list-name": "incident status Code",
+				"list-agency-name": "Vodafone",
+				"#text": "Active"
+			},
+			"owner-group": {
+				"id": [
+					{
+						"scheme-name": "Support Group id",
+						"scheme-agency-name": "Vodafone",
+						"#text": "123"
+					}
+				],
+				"name-text": "service Desk",
+				"desc-text": "The first-line service Desk",
+				"shift-name-text": "Morning Shift",
+				"organisation-id": {
+					"scheme-name": "Organisation id",
+					"scheme-agency-name": "Vodafone",
+					"#text": "123"
+				},
+				"organisation-name-text": "Vodafone DE",
+				"parent-organisation-id": {
+					"scheme-name": "Organisation id",
+					"scheme-agency-name": "Vodafone",
+					"#text": "123"
+				},
+				"parent-organisation-name-text": "Vodafone"
+			}
+		},
+		"affectee": {
+			"ids": [
+				{
+					"scheme-name": "Party Role id",
+					"scheme-agency-name": "Vodafone",
+					"#text": "123"
+				}
+			],
+			"name": "Bill Wan",
+			"desc": "An individual involved in the incident",
+			"type": {
+				"list-name": "Party type Code",
+				"list-agency-name": "Vodafone",
+				"#text": "Consumer Party"
+			},
+			"categories": [
+				{
+					"list-name": "string",
+					"list-agency-name": "Vodafone"
+				}
+			],
+			"status": {
+				"list-name": "incident status Code",
+				"list-agency-name": "Vodafone",
+				"#text": "Active"
+			},
+			"individual": {
+				"ids": [
+					{
+						"scheme-name": "Party Role id",
+						"scheme-agency-name": "Vodafone",
+						"#text": "123"
+					}
+				],
+				"name": "John Smith",
+				"desc": "A Party interacting with Vodafone",
+				"type": {
+					"list-name": "Party type Code",
+					"list-agency-name": "Vodafone",
+					"#text": "Consumer Party"
+				},
+				"categories": [
+					{
+						"list-name": "string",
+						"list-agency-name": "Vodafone"
+					}
+				],
+				"status": {
+					"list-name": "incident status Code",
+					"list-agency-name": "Vodafone",
+					"#text": "Active"
+				},
+				"individualname": {
+					"title": {
+						"list-name": "individual title Code",
+						"list-agency-name": "Vodafone",
+						"#text": "Mr"
+					},
+					"first-name": "John",
+					"middle-name": "Peter",
+					"middle-initial": "P",
+					"family-name": "Smith",
+					"prefix": {
+						"list-name": "individual name prefix Code",
+						"list-agency-name": "Vodafone",
+						"#text": "token"
+					},
+					"suffix": {
+						"list-name": "individual name suffix Code",
+						"list-agency-name": "Vodafone",
+						"#text": "token"
+					},
+					"salutation": "string",
+					"formatted-name": "Mr John P. Smith",
+					"aristocratic-title": {
+						"list-name": "individual aristocratic title Code",
+						"list-agency-name": "Vodafone",
+						"#text": "token"
+					},
+					"legal-name": "Mr John P. Smith",
+					"preferred-given-name": "John"
+				},
+				"birth-date": {
+					"date": "2015-10-01"
+				},
+				"blood-type": "B Neg",
+				"death-date": {
+					"date": "2015-10-01"
+				},
+				"death-indicator": {
+					"indicator": "false"
+				},
+				"ethnicity": "string",
+				"gender": "Male",
+				"language": "en",
+				"marital-status": "Single",
+				"nationality": "British",
+				"designated-indicator": {
+					"indicator": "false"
+				},
+				"tps-registration": {
+					"indicator": "false"
+				}
+			},
+			"contact-points": [
+				{
+					"id": {
+						"scheme-name": "Party Role id",
+						"scheme-agency-name": "Vodafone",
+						"#text": "123"
+					},
+					"email": {
+						"full-address": "j.smith@vodafone.com",
+						"domain-name": "vodafone.com",
+						"user-name": "j.smith",
+						"verified": {
+							"indicator": "false"
+						}
+					}
+				}
+			],
+			"contact-name": {
+				"ids": [
+					{
+						"scheme-name": "Party Role id",
+						"scheme-agency-name": "Vodafone",
+						"#text": "123"
+					}
+				],
+				"name": "Contact One",
+				"desc": "string",
+				"type": {
+					"list-name": "Party type Code",
+					"list-agency-name": "Vodafone",
+					"#text": "Consumer Party"
+				},
+				"categories": [
+					{
+						"list-name": "string",
+						"list-agency-name": "Vodafone"
+					}
+				],
+				"status": {
+					"list-name": "incident status Code",
+					"list-agency-name": "Vodafone",
+					"#text": "Active"
+				}
+			}
+		}
+	},
+	"parts": {
+		"products": {
+			"product": {
+				"ids": [
+					{
+						"scheme-name": "string",
+						"scheme-agency-name": "Vodafone",
+						"#text": "123"
+					}
+				],
+				"name": "Product One",
+				"desc": "The Online Portal",
+				"type": {
+					"list-name": "Product type Code",
+					"list-agency-name": "Vodafone",
+					"#text": "Portal"
+				},
+				"categories": [
+					{
+						"list-name": "string",
+						"list-agency-name": "Vodafone"
+					}
+				],
+				"status": {
+					"list-name": "incident status Code",
+					"list-agency-name": "Vodafone",
+					"#text": "Active"
+				},
+				"specification": {
+					"ids": [
+						{
+							"scheme-name": "specification id",
+							"scheme-agency-name": "Vodafone",
+							"#text": "123"
+						}
+					],
+					"name": "specification One",
+					"desc": "description of the specification",
+					"type": {
+						"list-name": "specification type Code",
+						"list-agency-name": "Vodafone",
+						"#text": "Default"
+					},
+					"categories": [
+						{
+							"list-name": "specification category Code",
+							"list-agency-name": "Vodafone"
+						}
+					],
+					"status": {
+						"list-name": "specification status Code",
+						"list-agency-name": "Vodafone",
+						"#text": "Active"
+					},
+					"characteristics-value": {
+						"characteristic-name": "string",
+						"value": "Network services",
+						"type": {
+							"list-name": "string",
+							"list-agency-name": "Vodafone",
+							"#text": "token"
+						},
+						"description": "string",
+						"creation-time": {
+							"format": "ISO8601",
+							"#text": "2015-04-01T00:00:00Z"
+						},
+						"validity-period": {
+							"from-date": {
+								"date": "2015-10-01"
+							},
+							"to-date": {
+								"date": "2015-10-01"
+							}
+						}
+					}
+				}
+			}
+		},
+		"services": {
+			"service": {
+				"ids": [
+					{
+						"scheme-name": "string",
+						"scheme-agency-name": "Vodafone",
+						"#text": "123"
+					}
+				],
+				"name": "service One",
+				"desc": "string",
+				"type": {
+					"list-name": "service type Code",
+					"list-agency-name": "Vodafone",
+					"#text": "token"
+				},
+				"categories": [
+					{
+						"list-name": "string",
+						"list-agency-name": "Vodafone"
+					}
+				],
+				"status": {
+					"list-name": "incident status Code",
+					"list-agency-name": "Vodafone",
+					"#text": "Active"
+				},
+				"serviceArea": {
+					"list-name": "string",
+					"list-agency-name": "Vodafone",
+					"#text": "token"
+				},
+				"serviceAffecting": {
+					"indicator": "false"
+				},
+				"provider": {
+					"ids": [
+						{
+							"scheme-name": "string",
+							"scheme-agency-name": "Vodafone",
+							"#text": "123"
+						}
+					],
+					"name": "Provider One",
+					"desc": "The provider of the service",
+					"type": {
+						"list-name": "Provider type Code",
+						"list-agency-name": "Vodafone",
+						"#text": "token"
+					},
+					"categories": [
+						{
+							"list-name": "string",
+							"list-agency-name": "Vodafone"
+						}
+					],
+					"status": {
+						"list-name": "incident status Code",
+						"list-agency-name": "Vodafone",
+						"#text": "Active"
+					}
+				},
+				"specification": {
+					"ids": [
+						{
+							"scheme-name": "specification id",
+							"scheme-agency-name": "Vodafone",
+							"#text": "123"
+						}
+					],
+					"name": "specification One",
+					"desc": "description of the specification",
+					"type": {
+						"list-name": "specification type Code",
+						"list-agency-name": "Vodafone",
+						"#text": "Default"
+					},
+					"categories": [
+						{
+							"list-name": "specification category Code",
+							"list-agency-name": "Vodafone"
+						}
+					],
+					"status": {
+						"list-name": "specification status Code",
+						"list-agency-name": "Vodafone",
+						"#text": "Active"
+					},
+					"characteristics-value": {
+						"characteristic-name": "string",
+						"value": "Network services",
+						"type": {
+							"list-name": "string",
+							"list-agency-name": "Vodafone",
+							"#text": "token"
+						},
+						"description": "string",
+						"creation-time": {
+							"format": "ISO8601",
+							"#text": "2015-04-01T00:00:00Z"
+						},
+						"validity-period": {
+							"from-date": {
+								"date": "2015-10-01"
+							},
+							"to-date": {
+								"date": "2015-10-01"
+							}
+						}
+					}
+				}
+			}
+		},
+		"resources": {
+			"resource": {
+				"ids": [
+					{
+						"scheme-name": "IMEI",
+						"scheme-agency-name": "Vodafone",
+						"#text": "49-015420-323751"
+					}
+				],
+				"name": "Resource One",
+				"desc": "Customer's Mobile Device",
+				"type": {
+					"list-name": "Resource type Code",
+					"list-agency-name": "Vodafone",
+					"#text": "Mobile Device"
+				},
+				"categories": [
+					{
+						"list-name": "string",
+						"list-agency-name": "Vodafone"
+					}
+				],
+				"status": {
+					"list-name": "incident status Code",
+					"list-agency-name": "Vodafone",
+					"#text": "Active"
+				},
+				"specification": {
+					"ids": {
+						"id": {
+							"scheme-name": "specification id",
+							"scheme-agency-name": "Vodafone",
+							"#text": "123"
+						}
+					},
+					"name": "specification One",
+					"desc": "description of the specification",
+					"type": {
+						"list-name": "specification type Code",
+						"list-agency-name": "Vodafone",
+						"#text": "Default"
+					},
+					"categories": [
+						{
+							"list-name": "specification category Code",
+							"list-agency-name": "Vodafone"
+						}
+					],
+					"status": {
+						"list-name": "specification status Code",
+						"list-agency-name": "Vodafone",
+						"#text": "Active"
+					},
+					"characteristics-value": {
+						"characteristic-name": "string",
+						"value": "Network services",
+						"type": {
+							"list-name": "string",
+							"list-agency-name": "Vodafone",
+							"#text": "token"
+						},
+						"description": "string",
+						"creation-time": {
+							"format": "ISO8601",
+							"#text": "2015-04-01T00:00:00Z"
+						},
+						"validity-period": {
+							"from-date": {
+								"date": "2015-10-01"
+							},
+							"to-date": {
+								"date": "2015-10-01"
+							}
+						}
+					}
+				}
+			}
+		},
+		"service-level": {
+			"ids": [
+				{
+					"scheme-name": "string",
+					"scheme-agency-name": "Vodafone",
+					"#text": "123"
+				}
+			],
+			"name": "service Level One",
+			"desc": "string",
+			"type": {
+				"list-name": "service Level type Code",
+				"list-agency-name": "Vodafone",
+				"#text": "token"
+			},
+			"categories": [
+				{
+					"list-name": "string",
+					"list-agency-name": "Vodafone"
+				}
+			],
+			"status": {
+				"list-name": "incident status Code",
+				"list-agency-name": "Vodafone",
+				"#text": "Active"
+			},
+			"start-date-time": {
+				"format": "ISO8601",
+				"#text": "2015-10-01T00:00:00"
+			},
+			"requested-response-date-time": {
+				"format": "ISO8601",
+				"#text": "2015-10-01T00:00:00"
+			},
+			"promised-response-date-time": {
+				"format": "ISO8601",
+				"#text": "2015-10-01T00:00:00"
+			},
+			"actual-response-date-time": {
+				"format": "ISO8601",
+				"#text": "2015-10-01T00:00:00"
+			},
+			"requested-resolution-date-time": {
+				"format": "ISO8601",
+				"#text": "2015-10-01T00:00:00"
+			},
+			"promised-resolution-date-time": {
+				"format": "ISO8601",
+				"#text": "2015-10-01T00:00:00"
+			},
+			"actual-resolution-date-time": {
+				"format": "ISO8601",
+				"#text": "2015-10-01T00:00:00"
+			},
+			"EstimatedOnholddate-time": {
+				"format": "ISO8601",
+				"#text": "2015-10-01T00:00:00"
+			},
+			"estimated-close-date-time": {
+				"format": "ISO8601",
+				"#text": "2015-10-01T00:00:00"
+			}
+		},
+		"channel": {
+			"ids": [
+				{
+					"scheme-name": "Channel id",
+					"scheme-agency-name": "Vodafone",
+					"#text": "123"
+				}
+			],
+			"name": "UK Contact Centre",
+			"desc": "UK Contact Centre",
+			"type": {
+				"list-name": "Channel type Code",
+				"list-agency-name": "Vodafone",
+				"#text": "Support"
+			},
+			"categories": [
+				{
+					"list-name": "string",
+					"list-agency-name": "Vodafone"
+				}
+			],
+			"status": {
+				"list-name": "incident status Code",
+				"list-agency-name": "Vodafone",
+				"#text": "Active"
+			}
+		},
+		"incident-sites": {
+			"incident-site": {
+				"ids": [
+					{
+						"scheme-name": "string",
+						"scheme-agency-name": "Vodafone",
+						"#text": "123"
+					}
+				],
+				"name": "Site One",
+				"desc": "string",
+				"type": {
+					"list-name": "Site type Code",
+					"list-agency-name": "Vodafone",
+					"#text": "token"
+				},
+				"categories": [
+					{
+						"list-name": "string",
+						"list-agency-name": "Vodafone"
+					}
+				],
+				"status": {
+					"list-name": "Site status Code",
+					"list-agency-name": "Vodafone",
+					"#text": "Active"
+				},
+				"AccessInfoText": "string",
+				"contact-points": {
+					"contact-point": {
+						"id": {
+							"scheme-name": "string",
+							"scheme-agency-name": "Vodafone",
+							"#text": "123"
+						},
+						"email": {
+							"full-address": "j.smith@vodafone.com",
+							"domain-name": "vodafone.com",
+							"user-name": "j.smith",
+							"verified": {
+								"indicator": "false"
+							}
+						}
+					}
+				},
+				"contact-name": {
+					"ids": [
+						{
+							"scheme-name": "string",
+							"scheme-agency-name": "Vodafone",
+							"#text": "123"
+						}
+					],
+					"name": "Contact One",
+					"desc": "string",
+					"type": {
+						"list-name": "Contact type Code",
+						"list-agency-name": "Vodafone",
+						"#text": "token"
+					},
+					"categories": [
+						{
+							"list-name": "string",
+							"list-agency-name": "Vodafone"
+						}
+					],
+					"status": {
+						"list-name": "incident status Code",
+						"list-agency-name": "Vodafone",
+						"#text": "Active"
+					}
+				},
+				"geographic-location": {
+					"altitude-measure": {
+						"unit-code": "KG",
+						"#text": "100"
+					},
+					"latitude-measure": {
+						"unit-code": "KG",
+						"#text": "51.5072"
+					},
+					"longitude-measure": {
+						"unit-code": "KG",
+						"#text": "0.1275"
+					},
+					"latitude-direction-code": {
+						"list-name": "ISO6709",
+						"list-agency-name": "ISO",
+						"#text": "+(N)"
+					},
+					"longitude-direction-code": {
+						"list-name": "ISO6709",
+						"list-agency-name": "ISO",
+						"#text": "+(W)"
+					},
+					"system-id": {
+						"scheme-name": "string",
+						"scheme-agency-name": "Vodafone",
+						"#text": "123"
+					}
+				}
+			}
+		},
+		"symptom": {
+			"ids": [
+				{
+					"scheme-name": "string",
+					"scheme-agency-name": "Vodafone",
+					"#text": "123"
+				}
+			],
+			"name": "Server Unavailable",
+			"desc": "Server Unavailable",
+			"type": {
+				"list-name": "symptom type Code",
+				"list-agency-name": "Vodafone",
+				"#text": "token"
+			},
+			"categories": [
+				{
+					"list-name": "symptom category Code",
+					"list-agency-name": "Vodafone"
+				}
+			],
+			"status": {
+				"list-name": "incident status Code",
+				"list-agency-name": "Vodafone",
+				"#text": "Active"
+			},
+			"discovered-date-time": {
+				"format": "ISO8601",
+				"#text": "2015-10-01T00:00:00"
+			},
+			"is-repeatable-ind": {
+				"indicator": "false"
+			}
+		},
+		"impact": {
+			"financial-impact-text": "string",
+			"brand-impact-text": "string",
+			"trading-period-impact-text": "string",
+			"site-quantity": {
+				"unit-code": "Site",
+				"#text": "5"
+			},
+			"site-percent": "20",
+			"site-text": "The impact covers those sites in the south-east",
+			"user-quantity": {
+				"unit-code": "KG",
+				"#text": "5"
+			},
+			"user-percent": "20",
+			"user-text": "The impact covers those users logged in to the UK servers"
+		},
+		"cause": {
+			"ids": [
+				{
+					"scheme-name": "string",
+					"scheme-agency-name": "Vodafone",
+					"#text": "123"
+				}
+			],
+			"name": "Network Unavailable",
+			"desc": "string",
+			"type": {
+				"list-name": "Cause type Code",
+				"list-agency-name": "Vodafone",
+				"#text": "token"
+			},
+			"categories": [
+				{
+					"list-name": "Cause category Code",
+					"list-agency-name": "Vodafone"
+				}
+			],
+			"status": {
+				"list-name": "Cause status Code",
+				"list-agency-name": "Vodafone",
+				"#text": "Active"
+			}
+		},
+		"resolution": {
+			"ids": [
+				{
+					"scheme-name": "string",
+					"scheme-agency-name": "Vodafone",
+					"#text": "123"
+				}
+			],
+			"name": "Resolution One",
+			"desc": "string",
+			"type": {
+				"list-name": "Resolution type Code",
+				"list-agency-name": "Vodafone",
+				"#text": "token"
+			},
+			"categories": [
+				{
+					"list-name": "Resolution category Code",
+					"list-agency-name": "Vodafone"
+				}
+			],
+			"status": {
+				"list-name": "Resolution status Code",
+				"list-agency-name": "Vodafone",
+				"#text": "Active"
+			},
+			"resolution-method": "string"
+		},
+		"work-log": {
+			"work-info": {
+				"ids": [
+					{
+						"scheme-name": "Work Info id",
+						"scheme-agency-name": "Vodafone",
+						"#text": "123"
+					}
+				],
+				"name": "Work Info One",
+				"desc": "description of the Work Info",
+				"type": {
+					"list-name": "Work Info type Code",
+					"list-agency-name": "Vodafone",
+					"#text": "Default"
+				},
+				"categories": [
+					{
+						"list-name": "Work Info category Code",
+						"list-agency-name": "Vodafone"
+					}
+				],
+				"status": {
+					"list-name": "incident status Code",
+					"list-agency-name": "Vodafone",
+					"#text": "Active"
+				},
+				"text": "string",
+				"logged-date-time": {
+					"format": "ISO8601",
+					"#text": "2015-10-01T00:00:00"
+				},
+				"locked-ind": {
+					"indicator": "false"
+				},
+				"view-access-code": {
+					"list-name": "string",
+					"list-agency-name": "Vodafone",
+					"#text": "token"
+				},
+				"submitter": {
+					"id": {
+						"scheme-name": "Support Person id",
+						"scheme-agency-name": "Vodafone",
+						"#text": "123"
+					},
+					"name-text": "J. Stokes",
+					"desc-text": "The first-line service Desk Analyst",
+					"shift-name-text": "Morning Shift",
+					"organisation-id": {
+						"scheme-name": "Organisation id",
+						"scheme-agency-name": "Vodafone",
+						"#text": "123"
+					},
+					"organisation-name-text": "First Line Support",
+					"parent-organisation-id": {
+						"scheme-name": "Organisation id",
+						"scheme-agency-name": "Vodafone",
+						"#text": "123"
+					},
+					"parent-organisation-name-text": "Vodafone DE"
+				},
+				"end-date-time": {
+					"format": "ISO8601",
+					"#text": "2016-10-01T00:00:00"
+				},
+				"extension": {
+					"SubOperation": "string"
+				}
+			}
+		},
+		"work-orders": {
+			"work-order": {
+				"ids": [
+					{
+						"scheme-name": "Work Order id",
+						"scheme-agency-name": "Vodafone",
+						"#text": "123"
+					}
+				],
+				"name": "Work Order One",
+				"desc": "description of the Work Order",
+				"type": {
+					"list-name": "Work Order type Code",
+					"list-agency-name": "Vodafone",
+					"#text": "Default"
+				},
+				"categories": [
+					{
+						"list-name": "Work Order category Code",
+						"list-agency-name": "Vodafone"
+					}
+				],
+				"status": {
+					"list-name": "incident status Code",
+					"list-agency-name": "Vodafone",
+					"#text": "Active"
+				}
+			}
+		},
+		"specification": {
+			"ids": [
+				{
+					"scheme-name": "specification id",
+					"scheme-agency-name": "Vodafone",
+					"#text": "123"
+				}
+			],
+			"name": "specification One",
+			"desc": "description of the specification",
+			"type": {
+				"list-name": "specification type Code",
+				"list-agency-name": "Vodafone",
+				"#text": "Default"
+			},
+			"categories": [
+				{
+					"list-name": "specification category Code",
+					"list-agency-name": "Vodafone"
+				}
+			],
+			"status": {
+				"list-name": "specification status Code",
+				"list-agency-name": "Vodafone",
+				"#text": "Active"
+			},
+			"characteristics-value": {
+				"characteristic-name": "string",
+				"value": "Network services",
+				"type": {
+					"list-name": "string",
+					"list-agency-name": "Vodafone",
+					"#text": "token"
+				},
+				"description": "string",
+				"creation-time": {
+					"format": "ISO8601",
+					"#text": "2015-04-01T00:00:00Z"
+				},
+				"validity-period": {
+					"from-date": {
+						"date": "2015-10-01"
+					},
+					"to-date": {
+						"date": "2015-10-01"
+					}
+				}
+			}
+		},
+		"notes": {
+			"note": {
+				"ids": [
+					{
+						"scheme-name": "note id",
+						"scheme-agency-name": "Vodafone",
+						"#text": "123"
+					}
+				],
+				"name": "note One",
+				"desc": "An associated note to the VBO",
+				"type": {
+					"list-name": "note type Code",
+					"list-agency-name": "Vodafone",
+					"#text": "Comment"
+				},
+				"categories": [
+					{
+						"list-name": "note category Code",
+						"list-agency-name": "Vodafone"
+					}
+				],
+				"status": {
+					"list-name": "incident status Code",
+					"list-agency-name": "Vodafone",
+					"#text": "Active"
+				},
+				"content": "The Customer likes to be called on a weekday evening",
+				"agent-id": {
+					"scheme-name": "Agent id",
+					"scheme-agency-name": "Vodafone",
+					"#text": "123"
+				},
+				"created-date-time": {
+					"format": "ISO8601",
+					"#text": "2015-10-01T00:00:00"
+				},
+				"last-modified-date-time": {
+					"format": "ISO8601",
+					"#text": "2015-10-01T00:00:00"
+				}
+			}
+		},
+		"attachments": {
+			"attachment": {
+				"ids": [
+					{
+						"scheme-name": "attachment id",
+						"scheme-agency-name": "Vodafone",
+						"#text": "123"
+					}
+				],
+				"name": "attachment One",
+				"desc": "string",
+				"type": {
+					"list-name": "string",
+					"list-agency-name": "Vodafone",
+					"#text": "token"
+				},
+				"categories": [
+					{
+						"list-name": "string",
+						"list-agency-name": "Vodafone"
+					}
+				],
+				"status": {
+					"list-name": "incident status Code",
+					"list-agency-name": "Vodafone",
+					"#text": "Active"
+				},
+				"binary-object": {
+					"format": "base64",
+					"mimeCode": "application/base64",
+					"#text": "SGVsbG8sIFdvcmxkIQ=="
+				},
+				"size": {
+					"unit-code": "Byte",
+					"#text": "20"
+				},
+				"reference": {
+					"ids": [
+						{
+							"scheme-name": "Document reference id",
+							"scheme-agency-name": "Vodafone",
+							"#text": "123"
+						}
+					]
+				}
+			}
+		},
+		"escalation-history": {
+			"escalation": {
+				"id": {
+					"scheme-name": "Escalation id",
+					"scheme-agency-name": "Vodafone",
+					"#text": "123"
+				},
+				"name-text": "string",
+				"desc-text": "string",
+				"escalation-indicator": {
+					"indicator": "false"
+				},
+				"escalated-to-person": {
+					"id": {
+						"scheme-name": "Support Person id",
+						"scheme-agency-name": "Vodafone",
+						"#text": "123"
+					},
+					"name-text": "Burt Foray",
+					"desc-text": "string",
+					"shift-name-text": "string",
+					"organisation-id": {
+						"scheme-name": "Organisation id",
+						"scheme-agency-name": "Vodafone",
+						"#text": "123"
+					},
+					"organisation-name-text": "Network services Manager",
+					"parent-organisation-id": {
+						"scheme-name": "Organisation id",
+						"scheme-agency-name": "Vodafone",
+						"#text": "123"
+					},
+					"parent-organisation-name-text": "Network services Manager"
+				},
+				"escalated-to-group": {
+					"id": {
+						"scheme-name": "Support Group id",
+						"scheme-agency-name": "Vodafone",
+						"#text": "123"
+					},
+					"name-text": "Network services",
+					"desc-text": "string",
+					"shift-name-text": "string",
+					"organisation-id": {
+						"scheme-name": "Organisation id",
+						"scheme-agency-name": "Vodafone",
+						"#text": "123"
+					},
+					"organisation-name-text": "Network services Support Group",
+					"parent-organisation-id": {
+						"scheme-name": "Organisation id",
+						"scheme-agency-name": "Vodafone",
+						"#text": "123"
+					},
+					"parent-organisation-name-text": "Network services Support Group"
+				},
+				"escalated-type-code": {
+					"list-name": "string",
+					"list-agency-name": "Vodafone",
+					"#text": "token"
+				},
+				"effective-date-time": {
+					"format": "ISO8601",
+					"#text": "2015-10-01T00:00:00"
+				},
+				"reason-code": {
+					"list-name": "string",
+					"list-agency-name": "Vodafone",
+					"#text": "Has violated its promised resolution date time"
+				}
+			}
+		},
+		"external-references": {
+			"external-reference": {
+				"type-code": {
+					"list-name": "External reference type Code",
+					"list-agency-name": "Vodafone",
+					"#text": "External Record reference"
+				},
+				"referenceid": {
+					"scheme-name": "External Record reference id",
+					"scheme-agency-name": "Vodafone",
+					"#text": "123"
+				},
+				"name": "string",
+				"type": {
+					"list-name": "string",
+					"list-agency-name": "Vodafone",
+					"#text": "token"
+				}
+			}
+		}
+	}
+}

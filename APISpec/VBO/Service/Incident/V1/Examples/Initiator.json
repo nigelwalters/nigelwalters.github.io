@@ -1,0 +1,182 @@
+{
+	"@schemaLocation": "application/vnd.vodafone.incident.v1+json#initiator",
+	"_links": {
+		"self": {
+			"href": "/service/incident/{id}/initiator-parties/{party-id}"
+		},
+		"related": {
+			"href": "/service/incident/{another-id}"
+		}
+	},
+	"ids": {
+		"id": {
+			"scheme-name": "Party Role id",
+			"schemeAgencyname": "Vodafone",
+			"#text": "123"
+		}
+	},
+	"name": "John Smith",
+	"desc": "An individual involved in the incident",
+	"type": {
+		"list-name": "Party type Code",
+		"list-agency-name": "Vodafone",
+		"#text": "Consumer Party"
+	},
+	"categories": {
+		"category": {
+			"list-name": "string",
+			"list-agency-name": "Vodafone"
+		}
+	},
+	"status": {
+		"list-name": "incident status Code",
+		"list-agency-name": "Vodafone",
+		"#text": "Active"
+	},
+	"individual": {
+		"ids": {
+			"id": {
+				"scheme-name": "Party Role id",
+				"schemeAgencyname": "Vodafone",
+				"#text": "123"
+			}
+		},
+		"name": "John Smith",
+		"desc": "A Party interacting with Vodafone",
+		"type": {
+			"list-name": "Party type Code",
+			"list-agency-name": "Vodafone",
+			"#text": "Consumer Party"
+		},
+		"categories": {
+			"category": {
+				"list-name": "string",
+				"list-agency-name": "Vodafone"
+			}
+		},
+		"status": {
+			"list-name": "incident status Code",
+			"list-agency-name": "Vodafone",
+			"#text": "Active"
+		},
+		"individualname": {
+			"title": {
+				"list-name": "individual title Code",
+				"list-agency-name": "Vodafone",
+				"#text": "Mr"
+			},
+			"first-name": "John",
+			"middle-name": "Peter",
+			"middle-initial": "P",
+			"family-name": "Smith",
+			"prefix": {
+				"list-name": "individual name prefix Code",
+				"list-agency-name": "Vodafone",
+				"#text": "token"
+			},
+			"suffix": {
+				"list-name": "individual name suffix Code",
+				"list-agency-name": "Vodafone",
+				"#text": "token"
+			},
+			"salutation": "string",
+			"formatted-name": "Mr John P. Smith",
+			"aristocratic-title": {
+				"list-name": "individual aristocratic title Code",
+				"list-agency-name": "Vodafone",
+				"#text": "token"
+			},
+			"legal-name": "Mr John P. Smith",
+			"preferred-given-name": "John"
+		},
+		"birth-date": {
+			"date": "2015-10-01"
+		},
+		"blood-type": "B Neg",
+		"death-date": {
+			"date": "2015-10-01"
+		},
+		"death-indicator": {
+			"indicator": "false"
+		},
+		"ethnicity": "string",
+		"gender": "Male",
+		"language": "en",
+		"marital-status": "Single",
+		"nationality": "British",
+		"designated-indicator": {
+			"indicator": "false"
+		},
+		"TPSRegistration": {
+			"indicator": "false"
+		}
+	},
+	"InitiatorGroup": {
+		"id": {
+			"scheme-name": "Support Group id",
+			"schemeAgencyname": "Vodafone",
+			"#text": "123"
+		},
+		"nameText": "Service Desk",
+		"descText": "The first-line Service Desk",
+		"ShiftnameText": "Morning Shift",
+		"Organisationid": {
+			"scheme-name": "Organisation id",
+			"schemeAgencyname": "Vodafone",
+			"#text": "123"
+		},
+		"OrganisationnameText": "Vodafone DE",
+		"ParentOrganisationid": {
+			"scheme-name": "Organisation id",
+			"schemeAgencyname": "Vodafone",
+			"#text": "123"
+		},
+		"ParentOrganisationnameText": "Vodafone"
+	},
+	"Extension": {
+		"contact-points": {
+			"contact-point": {
+				"id": {
+					"scheme-name": "Party Role id",
+					"schemeAgencyname": "Vodafone",
+					"#text": "123"
+				},
+				"Email": {
+					"FullAddress": "j.smith@vodafone.com",
+					"Domainname": "vodafone.com",
+					"Username": "j.smith",
+					"Verified": {
+						"indicator": "false"
+					}
+				}
+			}
+		},
+		"contact-name": {
+			"ids": {
+				"id": {
+					"scheme-name": "Party Role id",
+					"schemeAgencyname": "Vodafone",
+					"#text": "123"
+				}
+			},
+			"name": "Contact One",
+			"desc": "string",
+			"type": {
+				"list-name": "Party type Code",
+				"list-agency-name": "Vodafone",
+				"#text": "Consumer Party"
+			},
+			"categories": {
+				"category": {
+					"list-name": "string",
+					"list-agency-name": "Vodafone"
+				}
+			},
+			"status": {
+				"list-name": "incident status Code",
+				"list-agency-name": "Vodafone",
+				"#text": "Active"
+			}
+		}
+	}
+}

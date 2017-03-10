@@ -1,0 +1,67 @@
+{
+	"@schemaLocation": "application/vnd.vodafone.fault.v1+json",
+	"_links": 
+	{
+		
+	},
+
+	"timestamp": "2016-01-01T00:00:00",
+	"originators": 
+	[
+		{
+			"address": "http://vodafone.com",
+			"reference-parameters": 
+			[
+				{
+					
+				}
+			],
+
+			"metadata": 
+			[
+				{
+					
+				}
+			]
+		}
+	],
+
+	"error-codes": 
+	[
+		{
+			"$": "491",
+			"@dialect": "anyURI"
+		}
+	],
+
+	"descriptions": 
+	[
+		{
+			"$": "The business object (123) supplied was not found in the backend system.",
+			"@lang": "en_GB"
+		}
+	],
+
+	"fault-cause": 
+	{
+		
+	},
+
+	"name": "Missing Business Object",
+	"severity": "Minor",
+	"category": "System",
+	"message": "The business object (123) supplied was not found in the backend system.",
+	
+	"failures": 
+	[
+		{
+			"code": "491",
+			"text": "The business object (123) supplied was not found in the backend system.",
+			"data-ref": 
+			{
+				"path-name": "$.ids[0].$",
+				"path-value-text": "123"
+			}
+		}
+	]
+}

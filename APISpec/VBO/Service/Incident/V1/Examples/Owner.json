@@ -1,0 +1,59 @@
+{
+	"@schemaLocation": "application/vnd.vodafone.incident.v1+json#owner",
+	"_links": {
+		"self": {
+			"href": "/service/incident/{id}/owner-parties/{party-id}"
+		},
+		"related": {
+			"href": "/service/incident/{another-id}"
+		}
+	},
+	"ids": {
+		"id": {
+			"scheme-name": "Party Role id",
+			"scheme-agency-name": "Vodafone",
+			"#text": "123"
+		}
+	},
+	"name": "John Smith",
+	"desc": "An individual involved in the Incident",
+	"Type": {
+		"list-name": "Party Type Code",
+		"list-agency-name": "Vodafone",
+		"#text": "Consumer Party"
+	},
+	"categories": {
+		"category": {
+			"list-name": "string",
+			"list-agency-name": "Vodafone"
+		}
+	},
+	"status": {
+		"list-name": "Incident status Code",
+		"list-agency-name": "Vodafone",
+		"#text": "Active"
+	},
+	"owner-group": {
+		"id": {
+			"scheme-name": "Support Group id",
+			"scheme-agency-name": "Vodafone",
+			"#text": "123"
+		},
+		"name-text": "Service Desk",
+		"desc-text": "The first-line Service Desk",
+		"shift-name-text": "Morning Shift",
+		"organisation-id": {
+			"scheme-name": "Organisation id",
+			"scheme-agency-name": "Vodafone",
+			"#text": "123"
+		},
+		"organisation-name-text": "Vodafone DE",
+		"parent-organisation-id": {
+			"scheme-name": "Organisation id",
+			"scheme-agency-name": "Vodafone",
+			"#text": "123"
+		},
+		"parent-organisation-name-text": "Vodafone"
+	}
+}
+

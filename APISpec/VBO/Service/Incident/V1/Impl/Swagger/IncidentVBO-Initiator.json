@@ -1,0 +1,1195 @@
+﻿{
+	"title": "IncidentVBO-Initiator",
+	"type": "object",
+	"description": "The individual who has raised the incident on behalf of the requester.",
+	"properties": {
+		"ids": {
+			"type": "array",
+			"description": "The set of Identifiers for the VBO or component. These should be used to uniquely identifier instances of the business object or component.",
+			"items": {
+				"type": "object",
+				"description": "The identifier of the business object or component. This should be used to identify instances of a business object or component. Where the component is being used to reference another business object then this is the primary key of the target object. Use the attributes @schemeName and @schemeAgencyName to identify type of Identifier.",
+				"properties": {
+					"$": {
+						"type": "string",
+						"description": "The value of the field."
+					},
+					"@scheme-name": {
+						"type": "string",
+						"description": "The name of the identification scheme. The schemeName of the ID"
+					},
+					"@scheme-agency-name": {
+						"type": "string",
+						"description": "The name of the agency that maintains the identification scheme. The schemeAgencyName of the ID"
+					}
+				},
+				"required": [
+					"$"
+				]
+			}
+		},
+		"name": {
+			"type": "string",
+			"description": "The name of the instance of a business object or component."
+		},
+		"desc": {
+			"type": "string",
+			"description": "A free text description of a business object or component."
+		},
+		"type": {
+			"type": "object",
+			"description": "A classification of the business object or component. This identifies the sub-type of the instance of object or component.",
+			"properties": {
+				"$": {
+					"type": "string",
+					"description": "The value of the field."
+				},
+				"@list-agency-name": {
+					"type": "string",
+					"description": "The name of the agency that maintains the list of codes. The listAgencyName of the Type"
+				},
+				"@list-name": {
+					"type": "string",
+					"description": "The name of a list of codes. The listName of the Type"
+				}
+			},
+			"required": [
+				"$"
+			]
+		},
+		"categories": {
+			"type": "array",
+			"description": "The set of classifications for the business object or component.",
+			"items": {
+				"type": "object",
+				"description": "A classification applied to the business object or component. More than one classification scheme can be applied using the @listName attribute to identify the type of code list being used. The classification scheme can be used to group instances of the object or component.",
+				"properties": {
+					"$": {
+						"type": "string",
+						"description": "The value of the field."
+					},
+					"@list-agency-name": {
+						"type": "string",
+						"description": "The name of the agency that maintains the list of codes. The listAgencyName of the Category"
+					},
+					"@list-name": {
+						"type": "string",
+						"description": "The name of a list of codes. The listName of the Category"
+					}
+				},
+				"required": [
+					"$"
+				]
+			}
+		},
+		"status": {
+			"type": "object",
+			"description": "The lifecycle state of the business object or component. This field is used to track the specific state an instance of an object or component is in.",
+			"properties": {
+				"$": {
+					"type": "string",
+					"description": "The value of the field."
+				},
+				"@list-agency-name": {
+					"type": "string",
+					"description": "The name of the agency that maintains the list of codes. The listAgencyName of the Status"
+				},
+				"@list-name": {
+					"type": "string",
+					"description": "The name of a list of codes. The listName of the Status"
+				}
+			},
+			"required": [
+				"$"
+			]
+		},
+		"individual": {
+			"type": "object",
+			"description": "A component describing the Individual Party (Person) that is undertaking the role.",
+			"properties": {
+				"ids": {
+					"type": "array",
+					"description": "The set of Identifiers for the VBO or component. These should be used to uniquely identifier instances of the business object or component.",
+					"items": {
+						"type": "object",
+						"description": "The identifier of the business object or component. This should be used to identify instances of a business object or component. Where the component is being used to reference another business object then this is the primary key of the target object. Use the attributes @schemeName and @schemeAgencyName to identify type of Identifier.",
+						"properties": {
+							"$": {
+								"type": "string",
+								"description": "The value of the field."
+							},
+							"@scheme-name": {
+								"type": "string",
+								"description": "The name of the identification scheme. The schemeName of the ID"
+							},
+							"@scheme-agency-name": {
+								"type": "string",
+								"description": "The name of the agency that maintains the identification scheme. The schemeAgencyName of the ID"
+							}
+						},
+						"required": [
+							"$"
+						]
+					}
+				},
+				"name": {
+					"type": "string",
+					"description": "The name of the instance of a business object or component."
+				},
+				"desc": {
+					"type": "string",
+					"description": "A free text description of a business object or component."
+				},
+				"type": {
+					"type": "object",
+					"description": "A classification of the business object or component. This identifies the sub-type of the instance of object or component.",
+					"properties": {
+						"$": {
+							"type": "string",
+							"description": "The value of the field."
+						},
+						"@list-agency-name": {
+							"type": "string",
+							"description": "The name of the agency that maintains the list of codes. The listAgencyName of the Type"
+						},
+						"@list-name": {
+							"type": "string",
+							"description": "The name of a list of codes. The listName of the Type"
+						}
+					},
+					"required": [
+						"$"
+					]
+				},
+				"categories": {
+					"type": "array",
+					"description": "The set of classifications for the business object or component.",
+					"items": {
+						"type": "object",
+						"description": "A classification applied to the business object or component. More than one classification scheme can be applied using the @listName attribute to identify the type of code list being used. The classification scheme can be used to group instances of the object or component.",
+						"properties": {
+							"$": {
+								"type": "string",
+								"description": "The value of the field."
+							},
+							"@list-agency-name": {
+								"type": "string",
+								"description": "The name of the agency that maintains the list of codes. The listAgencyName of the Category"
+							},
+							"@list-name": {
+								"type": "string",
+								"description": "The name of a list of codes. The listName of the Category"
+							}
+						},
+						"required": [
+							"$"
+						]
+					}
+				},
+				"status": {
+					"type": "object",
+					"description": "The lifecycle state of the business object or component. This field is used to track the specific state an instance of an object or component is in; e.g. the Customer Bill is Active or the Customer Request has been Cancelled.",
+					"properties": {
+						"$": {
+							"type": "string",
+							"description": "The value of the field."
+						},
+						"@list-agency-name": {
+							"type": "string",
+							"description": "The name of the agency that maintains the list of codes. The listAgencyName of the Status"
+						},
+						"@list-name": {
+							"type": "string",
+							"description": "The name of a list of codes. The listName of the Status"
+						}
+					},
+					"required": [
+						"$"
+					]
+				},
+				"individual-name": {
+					"type": "object",
+					"description": "Details associated to an individual name",
+					"properties": {
+						"title": {
+							"type": "object",
+							"description": "Is the title of the person. e.g. Mr.; Dr. Ms.",
+							"properties": {
+								"$": {
+									"type": "string",
+									"description": "The value of the field."
+								},
+								"@list-agency-name": {
+									"type": "string",
+									"description": "The name of the agency that maintains the list of codes. The listAgencyName of the Title"
+								},
+								"@list-name": {
+									"type": "string",
+									"description": "The name of a list of codes. The listName of the Title"
+								}
+							},
+							"required": [
+								"$"
+							]
+						},
+						"first-name": {
+							"type": "string",
+							"description": "The primary chosen name. Also known as given name."
+						},
+						"middle-name": {
+							"type": "string",
+							"description": "The person middle name"
+						},
+						"middle-initial": {
+							"type": "string",
+							"description": "The person middle initial name"
+						},
+						"family-name": {
+							"type": "string",
+							"description": "The person family name"
+						},
+						"prefix": {
+							"type": "object",
+							"description": "Prefix to the last name that is not considered part of the last name; such as German von or French dela; etc.",
+							"properties": {
+								"$": {
+									"type": "string",
+									"description": "The value of the field."
+								},
+								"@list-agency-name": {
+									"type": "string",
+									"description": "The name of the agency that maintains the list of codes. The listAgencyName of the Prefix"
+								},
+								"@list-name": {
+									"type": "string",
+									"description": "The name of a list of codes. The listName of the Prefix"
+								}
+							},
+							"required": [
+								"$"
+							]
+						},
+						"suffix": {
+							"type": "object",
+							"description": "Suffix to the last name; such as Senior; III; the Third etc.",
+							"properties": {
+								"$": {
+									"type": "string",
+									"description": "The value of the field."
+								},
+								"@list-agency-name": {
+									"type": "string",
+									"description": "The name of the agency that maintains the list of codes. The listAgencyName of the Suffix"
+								},
+								"@list-name": {
+									"type": "string",
+									"description": "The name of a list of codes. The listName of the Suffix"
+								}
+							},
+							"required": [
+								"$"
+							]
+						},
+						"salutation": {
+							"type": "string",
+							"description": "Way the person is addressed e.g. Honorable etc"
+						},
+						"formatted-name": {
+							"type": "string",
+							"description": "Formatted name"
+						},
+						"aristocratic-title": {
+							"type": "object",
+							"description": "Aristocratic Title e.g. Duke; Knight",
+							"properties": {
+								"$": {
+									"type": "string",
+									"description": "The value of the field."
+								},
+								"@list-agency-name": {
+									"type": "string",
+									"description": "The name of the agency that maintains the list of codes. The listAgencyName of the Aristocratic Title"
+								},
+								"@list-name": {
+									"type": "string",
+									"description": "The name of a list of codes. The listName of the Aristocratic Title"
+								}
+							},
+							"required": [
+								"$"
+							]
+						},
+						"legal-name": {
+							"type": "string",
+							"description": "Legal Name by which the person is addressed"
+						},
+						"preferred-given-name": {
+							"type": "string",
+							"description": "Name by which the person prefers to be addressed"
+						}
+					}
+				},
+				"birth-date": {
+					"type": "string",
+					"format": "date-time",
+					"description": "Date on which the Individual was born."
+				},
+				"blood-type": {
+					"type": "string",
+					"description": "Blood Type of the Individual"
+				},
+				"death-date": {
+					"type": "string",
+					"format": "date-time",
+					"description": "Date on which the Individual died."
+				},
+				"death-indicator": {
+					"type": "boolean",
+					"description": "Flag indicating whether the Individual has died"
+				},
+				"ethnicity": {
+					"type": "string",
+					"description": "Ethnicity of the Individual"
+				},
+				"gender": {
+					"type": "string",
+					"description": "Gender of the Individual"
+				},
+				"language": {
+					"type": "string",
+					"description": "Langauge of the Individual"
+				},
+				"marital-status": {
+					"type": "string",
+					"description": "Martial status of the Individual"
+				},
+				"nationality": {
+					"type": "string",
+					"description": "Nationality of the Individual"
+				},
+				"designated-indicator": {
+					"type": "boolean",
+					"description": "Designated indicator of the Individual"
+				},
+				"tps-registration": {
+					"type": "boolean",
+					"description": "TPS (Telephone preference service) registeration indicator for the Individual"
+				}
+			}
+		},
+		"organisation": {
+			"type": "object",
+			"description": "A component describing the Organisation Party that is udnertaking the role.s",
+			"properties": {
+				"ids": {
+					"type": "array",
+					"description": "The set of Identifiers for the VBO or component. These should be used to uniquely identifier instances of the business object or component.",
+					"items": {
+						"type": "object",
+						"description": "The identifier of the business object or component. This should be used to identify instances of a business object or component. Where the component is being used to reference another business object then this is the primary key of the target object. Use the attributes @schemeName and @schemeAgencyName to identify type of Identifier.",
+						"properties": {
+							"$": {
+								"type": "string",
+								"description": "The value of the field."
+							},
+							"@scheme-name": {
+								"type": "string",
+								"description": "The name of the identification scheme. The schemeName of the ID"
+							},
+							"@scheme-agency-name": {
+								"type": "string",
+								"description": "The name of the agency that maintains the identification scheme. The schemeAgencyName of the ID"
+							}
+						},
+						"required": [
+							"$"
+						]
+					}
+				},
+				"name": {
+					"type": "string",
+					"description": "The name of the instance of a business object or component."
+				},
+				"desc": {
+					"type": "string",
+					"description": "A free text description of a business object or component."
+				},
+				"type": {
+					"type": "object",
+					"description": "A classification of the business object or component. This identifies the sub-type of the instance of object or component.",
+					"properties": {
+						"$": {
+							"type": "string",
+							"description": "The value of the field."
+						},
+						"@list-agency-name": {
+							"type": "string",
+							"description": "The name of the agency that maintains the list of codes. The listAgencyName of the Type"
+						},
+						"@list-name": {
+							"type": "string",
+							"description": "The name of a list of codes. The listName of the Type"
+						}
+					},
+					"required": [
+						"$"
+					]
+				},
+				"categories": {
+					"type": "array",
+					"description": "The set of classifications for the business object or component.",
+					"items": {
+						"type": "object",
+						"description": "A classification applied to the business object or component. More than one classification scheme can be applied using the @listName attribute to identify the type of code list being used. The classification scheme can be used to group instances of the object or component.",
+						"properties": {
+							"$": {
+								"type": "string",
+								"description": "The value of the field."
+							},
+							"@list-agency-name": {
+								"type": "string",
+								"description": "The name of the agency that maintains the list of codes. The listAgencyName of the Category"
+							},
+							"@list-name": {
+								"type": "string",
+								"description": "The name of a list of codes. The listName of the Category"
+							}
+						},
+						"required": [
+							"$"
+						]
+					}
+				},
+				"status": {
+					"type": "object",
+					"description": "The lifecycle state of the business object or component. This field is used to track the specific state an instance of an object or component is in; e.g. the Customer Bill is Active or the Customer Request has been Cancelled.",
+					"properties": {
+						"$": {
+							"type": "string",
+							"description": "The value of the field."
+						},
+						"@list-agency-name": {
+							"type": "string",
+							"description": "The name of the agency that maintains the list of codes. The listAgencyName of the Status"
+						},
+						"@list-name": {
+							"type": "string",
+							"description": "The name of a list of codes. The listName of the Status"
+						}
+					},
+					"required": [
+						"$"
+					]
+				},
+				"local-trading-name": {
+					"type": "string",
+					"description": "The name of the organisation in its local area under which it trades. This may be its formal name or a colloquial version."
+				},
+				"geo-location": {
+					"type": "string",
+					"description": "The geographical location (latitude and longitude) of the organisation. The Geographical Location component should be used in preference to this field."
+				},
+				"accounting-period": {
+					"type": "string",
+					"description": "The period through which the organisation measures its financial performance; e.g. Apr-Mar. Also known as the Financial Year of the organisation."
+				},
+				"ctps-registeration": {
+					"type": "boolean",
+					"description": "Indicates whether the organisation has registered with the Corporate Telephone Preference Service"
+				},
+				"dissolution-date": {
+					"type": "string",
+					"format": "date-time",
+					"description": "If the organisation no longer trades; this is the date on which it was closed down. Must comply with the ISO8601 standard."
+				},
+				"foundation-date": {
+					"type": "string",
+					"format": "date-time",
+					"description": "The date on which the organisation was founded; but not necessarily incorporated."
+				},
+				"incorporation-date": {
+					"type": "string",
+					"format": "date-time",
+					"description": "The date on which the organisation was incorporated; i.e. registered with the local Companies House or similar."
+				},
+				"number-of-family-members": {
+					"type": "string",
+					"description": "The number of sub-organisations within this parent organisation. This may be interpreted as the number of departments in an organisation or the number of companies under an umbrella company."
+				},
+				"organisation-status-code": {
+					"type": "object",
+					"description": "The status of the organisation. The Organisation/Status must be used in preference to this field.",
+					"properties": {
+						"$": {
+							"type": "string",
+							"description": "The value of the field."
+						},
+						"@list-agency-name": {
+							"type": "string",
+							"description": "The name of the agency that maintains the list of codes. The listAgencyName of the Organisation Status Code"
+						},
+						"@list-name": {
+							"type": "string",
+							"description": "The name of a list of codes. The listName of the Organisation Status Code"
+						}
+					},
+					"required": [
+						"$"
+					]
+				},
+				"organisation-status-date": {
+					"type": "object",
+					"description": "The start and end dates from which the status of the organisation applied.",
+					"properties": {
+						"from-date": {
+							"type": "string",
+							"format": "date-time",
+							"description": "The date from which the business object or component is effective."
+						},
+						"to-date": {
+							"type": "string",
+							"format": "date-time",
+							"description": "The date to which the business object or component is effective."
+						}
+					}
+				},
+				"sic-description": {
+					"type": "string",
+					"description": "The description of the Standard Industry Classification code."
+				},
+				"standard-industrial-classification": {
+					"type": "string",
+					"description": "The Standard Industry Classification Code for the organisation."
+				},
+				"industry": {
+					"type": "string",
+					"description": "The industry in which the organisation has primary operation."
+				},
+				"sub-industry": {
+					"type": "string",
+					"description": "Part of segmentation process; used for marketing analysis."
+				},
+				"tax-identification-number": {
+					"type": "string",
+					"description": "Tax Identification Number (TIN). The registration number of the organisation with the federal/government tax office. In the U.K. this would be the HMRC."
+				},
+				"website": {
+					"type": "string",
+					"description": "A reference to the organisation's main website. This field must comply with RFC3986."
+				}
+			}
+		},
+		"initiator-group": {
+			"type": "object",
+			"description": "The support group the initiator belongs to.",
+			"properties": {
+				"id": {
+					"type": "object",
+					"description": "A classification of the business object or component. This identifies the sub-type of the instance of object or component.",
+					"properties": {
+						"$": {
+							"type": "string",
+							"description": "The value of the field."
+						},
+						"@scheme-name": {
+							"type": "string",
+							"description": "The name of the identification scheme. The schemeName of the ID"
+						},
+						"@scheme-agency-name": {
+							"type": "string",
+							"description": "The name of the agency that maintains the identification scheme. The schemeAgencyName of the ID"
+						}
+					},
+					"required": [
+						"$"
+					]
+				},
+				"name-text": {
+					"type": "object",
+					"description": "The original price of the product offering before any discounts have been made.",
+					"properties": {
+						"$": {
+							"type": "string",
+							"description": "The value of the field."
+						},
+						"@language-id": {
+							"type": "string",
+							"description": "The currency of the amount. The currencyID of the Original Price"
+						},
+						"@language-locale-id": {
+							"type": "string",
+							"description": "The currency of the amount. The currencyID of the Original Price"
+						}
+					}
+				},
+				"desc-text": {
+					"type": "object",
+					"description": "The original price of the product offering before any discounts have been made.",
+					"properties": {
+						"$": {
+							"type": "string",
+							"description": "The value of the field."
+						},
+						"@language-id": {
+							"type": "string",
+							"description": "The currency of the amount. The currencyID of the Original Price"
+						},
+						"@language-locale-id": {
+							"type": "string",
+							"description": "The currency of the amount. The currencyID of the Original Price"
+						}
+					}
+				},
+				"shift-name-text": {
+					"type": "object",
+					"description": "The original price of the product offering before any discounts have been made.",
+					"properties": {
+						"$": {
+							"type": "string",
+							"description": "The value of the field."
+						},
+						"@language-id": {
+							"type": "string",
+							"description": "The currency of the amount. The currencyID of the Original Price"
+						},
+						"@language-locale-id": {
+							"type": "string",
+							"description": "The currency of the amount. The currencyID of the Original Price"
+						}
+					}
+				},
+				"organisation-id": {
+					"type": "object",
+					"description": "A classification of the business object or component. This identifies the sub-type of the instance of object or component.",
+					"properties": {
+						"$": {
+							"type": "string",
+							"description": "The value of the field."
+						},
+						"@scheme-name": {
+							"type": "string",
+							"description": "The name of the identification scheme. The schemeName of the ID"
+						},
+						"@scheme-agency-name": {
+							"type": "string",
+							"description": "The name of the agency that maintains the identification scheme. The schemeAgencyName of the ID"
+						}
+					},
+					"required": [
+						"$"
+					]
+				},
+				"organisation-name-text": {
+					"type": "object",
+					"description": "The original price of the product offering before any discounts have been made.",
+					"properties": {
+						"$": {
+							"type": "string",
+							"description": "The value of the field."
+						},
+						"@language-id": {
+							"type": "string",
+							"description": "The currency of the amount. The currencyID of the Original Price"
+						},
+						"@language-locale-id": {
+							"type": "string",
+							"description": "The currency of the amount. The currencyID of the Original Price"
+						}
+					}
+				},
+				"parent-organisation-id": {
+					"type": "object",
+					"description": "A classification of the business object or component. This identifies the sub-type of the instance of object or component.",
+					"properties": {
+						"$": {
+							"type": "string",
+							"description": "The value of the field."
+						},
+						"@scheme-name": {
+							"type": "string",
+							"description": "The name of the identification scheme. The schemeName of the ID"
+						},
+						"@scheme-agency-name": {
+							"type": "string",
+							"description": "The name of the agency that maintains the identification scheme. The schemeAgencyName of the ID"
+						}
+					},
+					"required": [
+						"$"
+					]
+				},
+				"parent-organisation-name-text": {
+					"type": "object",
+					"description": "The original price of the product offering before any discounts have been made.",
+					"properties": {
+						"$": {
+							"type": "string",
+							"description": "The value of the field."
+						},
+						"@language-id": {
+							"type": "string",
+							"description": "The currency of the amount. The currencyID of the Original Price"
+						},
+						"@language-locale-id": {
+							"type": "string",
+							"description": "The currency of the amount. The currencyID of the Original Price"
+						}
+					}
+				}
+			}
+		},
+		"contact-points": {
+			"type": "array",
+			"description": "The set of contact points for the organisation. A contact point being one of a postal address; email address; phone number.",
+			"items": {
+				"type": "object",
+				"description": "Contact Point. The choice being Postal; Telephone; Fax and SMS",
+				"properties": {
+					"id": {
+						"type": "object",
+						"description": "A classification of the business object or component. This identifies the sub-type of the instance of object or component.",
+						"properties": {
+							"$": {
+								"type": "string",
+								"description": "The value of the field."
+							},
+							"@scheme-name": {
+								"type": "string",
+								"description": "The name of the identification scheme. The schemeName of the ID"
+							},
+							"@scheme-agency-name": {
+								"type": "string",
+								"description": "The name of the agency that maintains the identification scheme. The schemeAgencyName of the ID"
+							}
+						},
+						"required": [
+							"$"
+						]
+					},
+					"email": {
+						"type": "object",
+						"description": "Email as contact point",
+						"properties": {
+							"full-address": {
+								"type": "string",
+								"description": "The full email address e.g. peter.jackson@vodafone.com"
+							},
+							"domain-name": {
+								"type": "string",
+								"description": "The domain e.g. vodafone.com"
+							},
+							"user-name": {
+								"type": "string",
+								"description": "The username e.g. peter.jackson"
+							},
+							"email-verified": {
+								"type": "boolean",
+								"description": "Indicates whether the email address is verified."
+							}
+						}
+					},
+					"telephone": {
+						"type": "object",
+						"description": "Telephone as contact point",
+						"properties": {
+							"phone-type": {
+								"type": "object",
+								"description": "The phone type e.g. Landline; mobile",
+								"properties": {
+									"$": {
+										"type": "string",
+										"description": "The value of the field."
+									},
+									"@list-agency-name": {
+										"type": "string",
+										"description": "The name of the agency that maintains the list of codes. The listAgencyName of the Phone Type"
+									},
+									"@list-name": {
+										"type": "string",
+										"description": "The name of a list of codes. The listName of the Phone Type"
+									}
+								},
+								"required": [
+									"$"
+								]
+							},
+							"subscriber-number": {
+								"type": "string",
+								"description": "The subscriber number"
+							},
+							"local-area-code": {
+								"type": "string",
+								"description": "The local area code for this telephone"
+							},
+							"full-number": {
+								"type": "string",
+								"description": "The full number of this telephone"
+							}
+						}
+					},
+					"postal": {
+						"type": "object",
+						"description": "Postal as contact point",
+						"properties": {
+							"street": {
+								"type": "string",
+								"description": "The street; expressed as text; of this address"
+							},
+							"town": {
+								"type": "string",
+								"description": "The town name; expressed as text; of this address"
+							},
+							"building-name": {
+								"type": "string",
+								"description": "The building name; expressed as text; of this address"
+							},
+							"building-number": {
+								"type": "string",
+								"description": "The building number expressed as text; for this address. e.g. 38; 55a"
+							},
+							"country": {
+								"type": "string",
+								"description": "The country for this address"
+							},
+							"county": {
+								"type": "string",
+								"description": "Name of the county in which the city falls; where applicable"
+							},
+							"occupant": {
+								"type": "string",
+								"description": "The occupant at this address"
+							},
+							"post-code": {
+								"type": "string",
+								"description": "A code specifying the post code of the address"
+							},
+							"primary-classification": {
+								"type": "string",
+								"description": "The primary classification of this address"
+							},
+							"sub-locality": {
+								"type": "string",
+								"description": "The sub locality of this address e.g district or borough"
+							},
+							"sub-street": {
+								"type": "string",
+								"description": "The sub street of this address"
+							},
+							"sub-unit": {
+								"type": "string",
+								"description": "The sub unit of this address"
+							},
+							"building-letter": {
+								"type": "string",
+								"description": "The building letter of this address"
+							},
+							"town-suffix": {
+								"type": "string",
+								"description": "The town suffic of this address"
+							},
+							"country-code": {
+								"type": "string",
+								"description": "The ISO 3166-2 country code of this address"
+							},
+							"type": {
+								"type": "string",
+								"description": "The type of address"
+							},
+							"street-suffix": {
+								"type": "string",
+								"description": "A modifier to a street name often to denote a relative direction"
+							},
+							"street-type": {
+								"type": "string",
+								"description": "The kind of thoroughfare. Example alley; avenue; boulevard; crescent etc"
+							},
+							"level-nr": {
+								"type": "string",
+								"description": "The floor number within a building"
+							},
+							"level-type": {
+								"type": "string",
+								"description": "A description of the level within a building where numbers are not used"
+							},
+							"private-street-name": {
+								"type": "string",
+								"description": "The name of a street with a site. Example Street within a university"
+							},
+							"portal": {
+								"type": "string",
+								"description": "The portal name of the apartment or flat"
+							},
+							"portal-door": {
+								"type": "string",
+								"description": "The portal door number of the apartment or flat"
+							},
+							"characteristics": {
+								"type": "array",
+								"items": {
+									"type": "object",
+									"description": "The set of characteristics for the specification.",
+									"properties": {
+										"name": {
+											"type": "string",
+											"description": "The name of the characteristic"
+										},
+										"value": {
+											"type": "string",
+											"description": "The value of the characteristic"
+										},
+										"type": {
+											"type": "object",
+											"description": "A classification of the characteristic component. This identifies the sub-type of the instance of object or component.",
+											"properties": {
+												"$": {
+													"type": "string",
+													"description": "The value of the field."
+												},
+												"@list-agency-name": {
+													"type": "string",
+													"description": "The name of the agency that maintains the list of codes. The listAgencyName of the Type"
+												},
+												"@list-name": {
+													"type": "string",
+													"description": "The name of a list of codes. The listName of the Type"
+												}
+											},
+											"required": [
+												"$"
+											]
+										},
+										"description": {
+											"type": "string",
+											"description": "A free text description of the characteristic."
+										},
+										"creation-time": {
+											"type": "string",
+											"description": "The date and time the characteristic was created.",
+											"format": "date-time"
+										},
+										"validity-period": {
+											"type": "object",
+											"description": "The from and to dates when the object is valid.",
+											"properties": {
+												"from-date": {
+													"type": "string",
+													"format": "date-time",
+													"description": "The date from which the business object or component is effective."
+												},
+												"to-date": {
+													"type": "string",
+													"format": "date-time",
+													"description": "The date to which the business object or component is effective."
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					},
+					"sms": {
+						"type": "object",
+						"description": "SMS as contact point",
+						"properties": {
+							"type-code": {
+								"type": "object",
+								"description": "The type code of this SMS",
+								"properties": {
+									"$": {
+										"type": "string",
+										"description": "The value of the field."
+									},
+									"@list-agency-name": {
+										"type": "string",
+										"description": "The name of the agency that maintains the list of codes. The listAgencyName of the Type Code"
+									},
+									"@list-name": {
+										"type": "string",
+										"description": "The name of a list of codes. The listName of the Type Code"
+									}
+								},
+								"required": [
+									"$"
+								]
+							},
+							"subscriber-number": {
+								"type": "string",
+								"description": "The subscriber number e.g. 07765092245"
+							}
+						}
+					},
+					"fax": {
+						"type": "object",
+						"description": "SMS as contact point",
+						"properties": {
+							"type-code": {
+								"type": "object",
+								"description": "The type code for the fax",
+								"properties": {
+									"$": {
+										"type": "string",
+										"description": "The value of the field."
+									},
+									"@list-agency-name": {
+										"type": "string",
+										"description": "The name of the agency that maintains the list of codes. The listAgencyName of the Type Code"
+									},
+									"@list-name": {
+										"type": "string",
+										"description": "The name of a list of codes. The listName of the Type Code"
+									}
+								},
+								"required": [
+									"$"
+								]
+							},
+							"subscriber-number": {
+								"type": "string",
+								"description": "The subscriber number"
+							},
+							"local-area-code": {
+								"type": "object",
+								"description": "The local area code for the fax",
+								"properties": {
+									"$": {
+										"type": "string",
+										"description": "The value of the field."
+									},
+									"@list-agency-name": {
+										"type": "string",
+										"description": "The name of the agency that maintains the list of codes. The listAgencyName of the Local Area Code"
+									},
+									"@list-name": {
+										"type": "string",
+										"description": "The name of a list of codes. The listName of the Local Area Code"
+									}
+								},
+								"required": [
+									"$"
+								]
+							}
+						}
+					}
+				}
+			}
+		},
+		"contact-name": {
+			"type": "array",
+			"description": "A reference from this susbscription to another.",
+			"items": {
+				"type": "object",
+				"properties": {
+					"ids": {
+						"type": "array",
+						"description": "The set of Identifiers for the VBO or component. These should be used to uniquely identifier instances of the business object or component.",
+						"items": {
+							"type": "object",
+							"description": "The identifier of the business object or component. This should be used to identify instances of a business object or component. Where the component is being used to reference another business object then this is the primary key of the target object. Use the attributes @schemeName and @schemeAgencyName to identify type of Identifier.",
+							"properties": {
+								"$": {
+									"type": "string",
+									"description": "The value of the field."
+								},
+								"@scheme-name": {
+									"type": "string",
+									"description": "The name of the identification scheme. The schemeName of the ID"
+								},
+								"@scheme-agency-name": {
+									"type": "string",
+									"description": "The name of the agency that maintains the identification scheme. The schemeAgencyName of the ID"
+								}
+							},
+							"required": [
+								"$"
+							]
+						}
+					},
+					"name": {
+						"type": "string",
+						"description": "The name of the instance of a business object or component."
+					},
+					"desc": {
+						"type": "string",
+						"description": "A free text description of a business object or component."
+					},
+					"type": {
+						"type": "object",
+						"description": "A classification of the business object or component. This identifies the sub-type of the instance of object or component.",
+						"properties": {
+							"$": {
+								"type": "string",
+								"description": "The value of the field."
+							},
+							"@list-agency-name": {
+								"type": "string",
+								"description": "The name of the agency that maintains the list of codes. The listAgencyName of the Type"
+							},
+							"@list-name": {
+								"type": "string",
+								"description": "The name of a list of codes. The listName of the Type"
+							}
+						},
+						"required": [
+							"$"
+						]
+					},
+					"categories": {
+						"type": "array",
+						"description": "The set of classifications for the business object or component.",
+						"items": {
+							"type": "object",
+							"description": "A classification applied to the business object or component. More than one classification scheme can be applied using the @listName attribute to identify the type of code list being used. The classification scheme can be used to group instances of the object or component.",
+							"properties": {
+								"$": {
+									"type": "string",
+									"description": "The value of the field."
+								},
+								"@list-agency-name": {
+									"type": "string",
+									"description": "The name of the agency that maintains the list of codes. The listAgencyName of the Category"
+								},
+								"@list-name": {
+									"type": "string",
+									"description": "The name of a list of codes. The listName of the Category"
+								}
+							},
+							"required": [
+								"$"
+							]
+						}
+					},
+					"status": {
+						"type": "object",
+						"description": "The lifecycle state of the business object or component. This field is used to track the specific state an instance of an object or component is in; e.g. the Susbscription is Active or the Customer Request has been Cancelled.",
+						"properties": {
+							"$": {
+								"type": "string",
+								"description": "The value of the field."
+							},
+							"@list-agency-name": {
+								"type": "string",
+								"description": "The name of the agency that maintains the list of codes. The listAgencyName of the Status"
+							},
+							"@list-name": {
+								"type": "string",
+								"description": "The name of a list of codes. The listName of the Status"
+							}
+						},
+						"required": [
+							"$"
+						]
+					},
+					"middle-name": {
+						"type": "string",
+						"description": "The person middle name"
+					},
+					"family-name": {
+						"type": "string",
+						"description": "The person family name"
+					}
+				}
+			}
+		}
+	}
+}

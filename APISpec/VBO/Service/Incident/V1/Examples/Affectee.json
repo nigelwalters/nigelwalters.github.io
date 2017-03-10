@@ -1,0 +1,158 @@
+{
+	"@schemaLocation": "application/vnd.vodafone.incident.v1+json#affectee",
+	"_links": {
+		"self": {
+			"href": "/service/incident/{id}/affectee-parties/{party-id}"
+		},
+		"related": {
+			"href": "/service/incident/{another-id}"
+		}
+	},
+	"ids": {
+		"id": {
+			"scheme-name": "Party Role id",
+			"schemeAgencyname": "Vodafone",
+			"#text": "123"
+		}
+	},
+	"name": "Bill Wan",
+	"desc": "An individual involved in the incident",
+	"type": {
+		"list-name": "Party type Code",
+		"list-agency-name": "Vodafone",
+		"#text": "Consumer Party"
+	},
+	"categories": {
+		"category": {
+			"list-name": "string",
+			"list-agency-name": "Vodafone"
+		}
+	},
+	"status": {
+		"list-name": "incident status Code",
+		"list-agency-name": "Vodafone",
+		"#text": "Active"
+	},
+	"individual": {
+		"ids": {
+			"id": {
+				"scheme-name": "Party Role id",
+				"schemeAgencyname": "Vodafone",
+				"#text": "123"
+			}
+		},
+		"name": "John Smith",
+		"desc": "A Party interacting with Vodafone",
+		"type": {
+			"list-name": "Party type Code",
+			"list-agency-name": "Vodafone",
+			"#text": "Consumer Party"
+		},
+		"categories": {
+			"category": {
+				"list-name": "string",
+				"list-agency-name": "Vodafone"
+			}
+		},
+		"status": {
+			"list-name": "incident status Code",
+			"list-agency-name": "Vodafone",
+			"#text": "Active"
+		},
+		"individualname": {
+			"title": {
+				"list-name": "individual title Code",
+				"list-agency-name": "Vodafone",
+				"#text": "Mr"
+			},
+			"first-name": "John",
+			"middle-name": "Peter",
+			"middle-initial": "P",
+			"family-name": "Smith",
+			"prefix": {
+				"list-name": "individual name prefix Code",
+				"list-agency-name": "Vodafone",
+				"#text": "token"
+			},
+			"suffix": {
+				"list-name": "individual name suffix Code",
+				"list-agency-name": "Vodafone",
+				"#text": "token"
+			},
+			"Salutation": "string",
+			"Formattedname": "Mr John P. Smith",
+			"aristocratic-title": {
+				"list-name": "individual aristocratic title Code",
+				"list-agency-name": "Vodafone",
+				"#text": "token"
+			},
+			"Legalname": "Mr John P. Smith",
+			"PreferredGivenname": "John"
+		},
+		"Birthdate": {
+			"date": "2015-10-01"
+		},
+		"Bloodtype": "B Neg",
+		"Deathdate": {
+			"date": "2015-10-01"
+		},
+		"Deathindicator": {
+			"indicator": "false"
+		},
+		"Ethnicity": "string",
+		"Gender": "Male",
+		"Language": "en",
+		"Maritalstatus": "Single",
+		"Nationality": "British",
+		"Designatedindicator": {
+			"indicator": "false"
+		},
+		"TPSRegistration": {
+			"indicator": "false"
+		}
+	},
+	"contact-points": {
+		"contact-point": {
+			"id": {
+				"scheme-name": "Party Role id",
+				"schemeAgencyname": "Vodafone",
+				"#text": "123"
+			},
+			"Email": {
+				"FullAddress": "j.smith@vodafone.com",
+				"Domainname": "vodafone.com",
+				"Username": "j.smith",
+				"Verified": {
+					"indicator": "false"
+				}
+			}
+		}
+	},
+	"contact-name": {
+		"ids": {
+			"id": {
+				"scheme-name": "Party Role id",
+				"schemeAgencyname": "Vodafone",
+				"#text": "123"
+			}
+		},
+		"name": "Contact One",
+		"desc": "string",
+		"type": {
+			"list-name": "Party type Code",
+			"list-agency-name": "Vodafone",
+			"#text": "Consumer Party"
+		},
+		"categories": {
+			"category": {
+				"list-name": "string",
+				"list-agency-name": "Vodafone"
+			}
+		},
+		"status": {
+			"list-name": "incident status Code",
+			"list-agency-name": "Vodafone",
+			"#text": "Active"
+		}
+	}
+}

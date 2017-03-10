@@ -1,0 +1,27 @@
+{
+	"ids": [
+		{
+			"scheme-name": "incident id",
+			"scheme-agency-name": "Vodafone",
+			"#text": "123"
+		}
+	],
+	"name": "incident Two",
+	"desc": "The incident for the party",
+	"type": {
+		"list-name": "incident type Code",
+		"list-agency-name": "Vodafone",
+		"#text": "Consumer incident"
+	},
+	"categories": [
+		{
+			"list-name": "string",
+			"list-agency-name": "Vodafone"
+		}
+	],
+	"status": {
+		"list-name": "incident status Code",
+		"list-agency-name": "Vodafone",
+		"#text": "Active"
+	}
+}

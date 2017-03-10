@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<vbm:GetIncidentReportVBMRequest
+	xmlns:vbm="http://group.vodafone.com/schema/vbm/service/incident/v1"
+	xmlns:cdt="urn:un:unece:uncefact:documentation:standard:CoreComponentType:2"
+	xmlns:cmn="http://group.vodafone.com/schema/common/v1" xmlns:vbo="http://group.vodafone.com/schema/vbo/service/incident/v1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://group.vodafone.com/schema/vbm/service/incident/v1 ../IncidentVBM.xsd">
+	<cmn:ReportQuery>
+		<cmn:QueryExpression LogicalOperatorCode="AND"
+			NegationIndicator="string">
+			<cmn:ValueExpression
+				Path="/IncidentVBO/Parts/Symptom/Categories/Category[/@listName='Symptom Category Code']"
+				QueryOperatorCode="EQUALS">
+				<cmn:Value>Network Services</cmn:Value>
+			</cmn:ValueExpression>
+		</cmn:QueryExpression>
+		<cmn:GroupingExpression>
+			<cmn:Path>/IncidentVBO/Status</cmn:Path>
+		</cmn:GroupingExpression>
+		<cmn:AggregateFunctions>
+			<cmn:Function>
+				<cmn:Name>COUNT</cmn:Name>
+				<cmn:Path>/IncidentVBO/Status</cmn:Path>
+			</cmn:Function>
+		</cmn:AggregateFunctions>
+	</cmn:ReportQuery>
+</vbm:GetIncidentReportVBMRequest>

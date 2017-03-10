@@ -1,0 +1,493 @@
+{
+	"title": "SubscriptionVBO-Get-Report-Response",
+	"type": "object",
+	"properties": {
+		"ids": {
+			"type": "array",
+			"description": "The set of Identifiers for the VBO or component. These should be used to uniquely identifier instances of the business object or component.",
+			"items": {
+				"type": "object",
+				"description": "The identifier of the business object or component. This should be used to identify instances of a business object or component. Where the component is being used to reference another business object then this is the primary key of the target object. Use the attributes @schemeName and @schemeAgencyName to identify type of Identifier.",
+				"minItems": 1,
+				"properties": {
+					"$": {
+						"type": "string",
+						"description": "The value of the field."
+					},
+					"@scheme-id": {
+						"type": "string",
+						"description": "The identification of the identification scheme."
+					},
+					"@scheme-name": {
+						"type": "string",
+						"description": "The name of the identification scheme."
+					},
+					"@scheme-agency-id": {
+						"type": "string",
+						"description": "The identification of the agency that maintains the identification scheme."
+					},
+					"@scheme-agency-name": {
+						"type": "string",
+						"description": "The name of the agency that maintains the identification scheme."
+					},
+					"@scheme-version-id": {
+						"type": "string",
+						"description": "The version of the identification scheme."
+					},
+					"@scheme-data-uri": {
+						"type": "string",
+						"description": "The Uniform Resource Identifier that identifies where the identification scheme data is located."
+					},
+					"@scheme-uri": {
+						"type": "string",
+						"description": "The Uniform Resource Identifier that identifies where the identification scheme is located."
+					}
+				},
+				"required": [
+					"$"
+				]
+			}
+		},
+		"name": {
+			"type": "object",
+			"description": "The name of the instance of a business object or component.",
+			"properties": {
+				"$": {
+					"type": "string",
+					"description": "The value to be matched in a query criteria. The repeating structure allows more than one value to be specified, these must be taken as an implict OR function, i.e. This Value-1 OR Value-2 OR Value-3."
+				},
+				"@language-id": {
+					"type": "string",
+					"description": "The identifier of the language used in the content component."
+				},
+				"@language-locale-id": {
+					"type": "string",
+					"description": "The identification of the locale of the language."
+				}
+			},
+			"required": [
+				"$"
+			]
+		},
+		"desc": {
+			"type": "object",
+			"description": "A free text description of a business object or component.",
+			"properties": {
+				"$": {
+					"type": "string",
+					"description": "The value to be matched in a query criteria. The repeating structure allows more than one value to be specified, these must be taken as an implict OR function, i.e. This Value-1 OR Value-2 OR Value-3."
+				},
+				"@language-id": {
+					"type": "string",
+					"description": "The identifier of the language used in the content component."
+				},
+				"@language-locale-id": {
+					"type": "string",
+					"description": "The identification of the locale of the language."
+				}
+			},
+			"required": [
+				"$"
+			]
+		},
+		"type": {
+			"type": "object",
+			"description": "A classification of the business object or component. This identifies the sub-type of the instance of object or component.",
+			"properties": {
+				"$": {
+					"type": "string",
+					"description": "The value of the field."
+				},
+				"@list-id": {
+					"type": "string",
+					"description": "The identification of a list of codes."
+				},
+				"@list-agency-id": {
+					"type": "string",
+					"description": "An agency that maintains one or more lists of codes."
+				},
+				"@list-agency-name": {
+					"type": "string",
+					"description": "The name of the agency that maintains the list of codes."
+				},
+				"@list-name": {
+					"type": "string",
+					"description": "The name of a list of codes."
+				},
+				"@list-version-id": {
+					"type": "string",
+					"description": "The version of the list of codes."
+				},
+				"@name": {
+					"type": "string",
+					"description": "The textual equivalent of the code content component."
+				},
+				"@language-id": {
+					"type": "string",
+					"description": "The identifier of the language used in the code name."
+				},
+				"@list-uri": {
+					"type": "string",
+					"description": "The Uniform Resource Identifier that identifies where the code list is located."
+				},
+				"@list-scheme-uri": {
+					"type": "string",
+					"description": "The Uniform Resource Identifier that identifies where the code list scheme is located."
+				}
+			},
+			"required": [
+				"$"
+			]
+		},
+		"categories": {
+			"type": "array",
+			"description": "The set of classifications for the business object or component.",
+			"minItems": 1,
+			"items": {
+				"type": "object",
+				"description": "A classification applied to the business object or component. More than one classification scheme can be applied using the @listName attribute to identify the type of code list being used. The classification scheme can be used to group instances of the object or component.",
+				"properties": {
+					"$": {
+						"type": "string",
+						"description": "The value of the field."
+					},
+					"@list-id": {
+						"type": "string",
+						"description": "The identification of a list of codes."
+					},
+					"@list-agency-id": {
+						"type": "string",
+						"description": "An agency that maintains one or more lists of codes."
+					},
+					"@list-agency-name": {
+						"type": "string",
+						"description": "The name of the agency that maintains the list of codes."
+					},
+					"@list-name": {
+						"type": "string",
+						"description": "The name of a list of codes."
+					},
+					"@list-version-id": {
+						"type": "string",
+						"description": "The version of the list of codes."
+					},
+					"@name": {
+						"type": "string",
+						"description": "The textual equivalent of the code content component."
+					},
+					"@language-id": {
+						"type": "string",
+						"description": "The identifier of the language used in the code name."
+					},
+					"@list-uri": {
+						"type": "string",
+						"description": "The Uniform Resource Identifier that identifies where the code list is located."
+					},
+					"@list-scheme-uri": {
+						"type": "string",
+						"description": "The Uniform Resource Identifier that identifies where the code list scheme is located."
+					}
+				},
+				"required": [
+					"$"
+				]
+			}
+		},
+		"status": {
+			"type": "object",
+			"description": "The lifecycle state of the business object or component. This field is used to track the specific state an instance of an object or component is in; e.g. the Susbscription is Active or the Customer Request has been Cancelled.",
+			"properties": {
+				"$": {
+					"type": "string",
+					"description": "The value of the field."
+				},
+				"@list-id": {
+					"type": "string",
+					"description": "The identification of a list of codes."
+				},
+				"@list-agency-id": {
+					"type": "string",
+					"description": "An agency that maintains one or more lists of codes."
+				},
+				"@list-agency-name": {
+					"type": "string",
+					"description": "The name of the agency that maintains the list of codes."
+				},
+				"@list-name": {
+					"type": "string",
+					"description": "The name of a list of codes."
+				},
+				"@list-version-id": {
+					"type": "string",
+					"description": "The version of the list of codes."
+				},
+				"@name": {
+					"type": "string",
+					"description": "The textual equivalent of the code content component."
+				},
+				"@language-id": {
+					"type": "string",
+					"description": "The identifier of the language used in the code name."
+				},
+				"@list-uri": {
+					"type": "string",
+					"description": "The Uniform Resource Identifier that identifies where the code list is located."
+				},
+				"@list-scheme-uri": {
+					"type": "string",
+					"description": "The Uniform Resource Identifier that identifies where the code list scheme is located."
+				}
+			},
+			"required": [
+				"$"
+			]
+		},
+		"version": {
+			"type": "object",
+			"description": "A field that identifies the specific version of an instance of a business object or component. This field should be used in support of multi-agent environments to control the concurrency (locking) of the instance.",
+			"properties": {
+				"$": {
+					"type": "string",
+					"description": "The value to be matched in a query criteria. The repeating structure allows more than one value to be specified, these must be taken as an implict OR function, i.e. This Value-1 OR Value-2 OR Value-3."
+				},
+				"@language-id": {
+					"type": "string",
+					"description": "The identifier of the language used in the content component."
+				},
+				"@language-locale-id": {
+					"type": "string",
+					"description": "The identification of the locale of the language."
+				}
+			},
+			"required": [
+				"$"
+			]
+		},
+		"created": {
+			"type": "object",
+			"description": "The date and time the business object or component was created. A date and time formatted in compliance with the ISO8601 standard must be used.",
+			"properties": {
+				"date-time-type": {
+					"type": "string",
+					"description": "A particular point in the progression of time together with the relevant supplementary information."
+				},
+				"@format": {
+					"type": "string",
+					"description": "The format of the date time content."
+				}
+			},
+			"required": [
+				"date-time-type"
+			]
+		},
+		"createdBy": {
+			"type": "object",
+			"description": "The unique ID of the User that created the instance of the business object or component. This should be used as a reference to the IDM system and the details about that User.",
+			"properties": {
+				"$": {
+					"type": "string",
+					"description": "The value of the field."
+				},
+				"@scheme-id": {
+					"type": "string",
+					"description": "The identification of the identification scheme."
+				},
+				"@scheme-name": {
+					"type": "string",
+					"description": "The name of the identification scheme."
+				},
+				"@scheme-agency-id": {
+					"type": "string",
+					"description": "The identification of the agency that maintains the identification scheme."
+				},
+				"@scheme-agency-name": {
+					"type": "string",
+					"description": "The name of the agency that maintains the identification scheme."
+				},
+				"@scheme-version-id": {
+					"type": "string",
+					"description": "The version of the identification scheme."
+				},
+				"@scheme-data-uri": {
+					"type": "string",
+					"description": "The Uniform Resource Identifier that identifies where the identification scheme data is located."
+				},
+				"@scheme-uri": {
+					"type": "string",
+					"description": "The Uniform Resource Identifier that identifies where the identification scheme is located."
+				}
+			},
+			"required": [
+				"$"
+			]
+		},
+		"last-modified": {
+			"type": "object",
+			"description": "The date and time the business object or component was last modified. A date and time formatted in compliance with the ISO8601 standard must be used.",
+			"properties": {
+				"date-time-type": {
+					"type": "string",
+					"description": "A particular point in the progression of time together with the relevant supplementary information."
+				},
+				"@format": {
+					"type": "string",
+					"description": "The format of the date time content."
+				}
+			},
+			"required": [
+				"date-time-type"
+			]
+		},
+		"last-modified-by": {
+			"type": "object",
+			"description": "The unique ID of the User that last modified the instance of the business object or component. This should be used as a reference to the IDM system and the details about that User.",
+			"properties": {
+				"$": {
+					"type": "string",
+					"description": "The value of the field."
+				},
+				"@scheme-id": {
+					"type": "string",
+					"description": "The identification of the identification scheme."
+				},
+				"@scheme-name": {
+					"type": "string",
+					"description": "The name of the identification scheme."
+				},
+				"@scheme-agency-id": {
+					"type": "string",
+					"description": "The identification of the agency that maintains the identification scheme."
+				},
+				"@scheme-agency-name": {
+					"type": "string",
+					"description": "The name of the agency that maintains the identification scheme."
+				},
+				"@scheme-version-id": {
+					"type": "string",
+					"description": "The version of the identification scheme."
+				},
+				"@scheme-data-uri": {
+					"type": "string",
+					"description": "The Uniform Resource Identifier that identifies where the identification scheme data is located."
+				},
+				"@scheme-uri": {
+					"type": "string",
+					"description": "The Uniform Resource Identifier that identifies where the identification scheme is located."
+				}
+			},
+			"required": [
+				"$"
+			]
+		},
+		"validity-period": {
+			"type": "object",
+			"description": "A component that states the date and time from which this business object is effective (or valid) and the date and time to which it is effective. Again the ISO8601 standard must be used.",
+			"properties": {
+				"from-date": {
+					"type": "object",
+					"description": "The date from which the business object or component is effective. There is a choice in date-string and date. Due to swagger 2.0 limitation, it cannot be represented in the documentation, but, has been correctly represnted in the JSON schema. The consumer is expected to validate it using the JSON schema.",
+					"properties": {
+						"date-string": {
+							"type": "string"
+						},
+						"@format": {
+							"type": "string"
+						},
+						"date": {
+							"type": "string",
+							"description": "The name of a list of codes. The listName of the Organisation Status Code"
+						}
+					}
+				},
+				"to-date": {
+					"type": "object",
+					"description": "The date to which the business object or component is effective. There is a choice between date-string and date. Due to swagger 2.0 limitation, it cannot be represented in the documentation, but, has been correctly represented in the JSON schema. The consumer is expected to validate it using the JSON schema.",
+					"properties": {
+						"date-string": {
+							"type": "string"
+						},
+						"@format": {
+							"type": "string"
+						},
+						"date": {
+							"type": "string",
+							"description": "The name of a list of codes. The listName of the Organisation Status Code"
+						}
+					}
+				}
+			}
+		},
+		"last-activity-date": {
+			"type": "object",
+			"description": "A field representing the date and time on which business activity was last made on this business object or component. The date and time must conform to the ISO8601 standard.",
+			"properties": {
+				"date-time-type": {
+					"type": "string",
+					"description": "A particular point in the progression of time together with the relevant supplementary information."
+				},
+				"@format": {
+					"type": "string",
+					"description": "The format of the date time content."
+				}
+			},
+			"required": [
+				"date-time-type"
+			]
+		},
+		"report-items": {
+			"type": "array",
+			"description": "The set of Identifiers for the VBO or component. These should be used to uniquely identifier instances of the business object or component.",
+			"minItems": 1,
+			"items": {
+				"properties": {
+					"field": {
+						"type": "array",
+						"description": "A column (field) in the report lint item, either a field from the source VBO being part of the grouping expression or a calculated field. There is a choice between path and function. Due to swagger 2.0 limitation, it cannot be represented in the documentation, but, has been correctly represented in the JSON schema. The consumer is expected to validate it using the JSON schema.",
+						"minItems": 1,
+						"items": {
+							"properties": {
+								"path": {
+									"type": "string",
+									"description": "The path to the field on which to make the calculation. This field must use an XPath notation as per the MBP to provide a unique reference."
+								},
+								"function": {
+									"type": "object",
+									"description": "An aggregate function that allows statistics function to be specified for building the report",
+									"properties": {
+										"path": {
+											"type": "string",
+											"description": "The path to the field on which to make the calculation. This field must use an XPath notation as per the MBP to provide a unique reference."
+										},
+										"name": {
+											"description": "This allows the specification of various statistics functions such as COUNT, MIN, MAX, and SUM to build the final report from the grouped records",
+											"enum": [
+												"COUNT",
+												"SUM",
+												"MIN",
+												"MAX"
+											]
+										}
+									},
+									"required": [
+										"name",
+										"path"
+									]
+								},
+								"value": {
+									"type": "string",
+									"description": "The value of the source VBO field or the calculated value of an aggregate function."
+								}
+							},
+							"required": [
+								"value"
+							]
+						}
+					}
+				},
+				"required": [
+					"field"
+				]
+			}
+		}
+	}
+}
