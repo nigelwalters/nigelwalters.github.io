@@ -2,7 +2,7 @@
 <head><title>STC Billing Info Capture Form</title></head>
   
 <body>
-<form action="http://dev-stc-poc.devportal.apigee.com" method="GET" name="myForm">
+<form action="myurl" method="GET" name="myForm">
 
 <h1>STC Billing Info Capture Form</h1>
   
@@ -48,7 +48,7 @@
 
 <script type="text/javascript">
 	
-var getQueryString = function ( field, url ) {
+function getQueryString( field, url ) {
     var href = url ? url : window.location.href;
     var reg = new RegExp( '[?&]' + field + '=([^&#]*)', 'i' );
     var string = reg.exec(href);
@@ -56,6 +56,7 @@ var getQueryString = function ( field, url ) {
 };
 	
     function submitform(form){
+	    alert(window.location.href);
 	    
 	alert(getQueryString("callback"));    
         form.action = "http://dev-stc-poc.devportal.apigee.com/" + getQueryString("callback");
