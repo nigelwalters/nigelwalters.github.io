@@ -1,5 +1,6 @@
 <html>
 <head><title>STC Billing Info Capture Form</title></head>
+  
 <body>
 <form action="http://dev-stc-poc.devportal.apigee.com/users/7/monetization/packages/purchased" method="GET" name="myForm">
 
@@ -41,12 +42,17 @@
 <p><label for="expiration">CC Expiration:</label>
 <input type="text" name="expiration" id="expiration"></p> 
 
-<input value="Submit" type="submit" onclick="submitForm()">
-</form></body></html>
+<input value="Submit" type="submit" onclick="submitform()">
+</form></body>
+
 
 <script type="text/javascript">
     function submitform(){
         alert("Sending Json");
     }
-</script>
+</script>  
+
+</html>
+
+
 
