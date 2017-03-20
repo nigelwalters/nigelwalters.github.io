@@ -2,7 +2,7 @@
 <head><title>STC Billing Info Capture Form</title></head>
   
 <body>
-<form action="myurl" method="GET" name="myForm" id="myForm">
+<form method="GET" name="myForm" id="myForm">
 
 <h1>STC Billing Info Capture Form</h1>
   
@@ -42,7 +42,7 @@
 <p><label for="expiration">CC Expiration:</label>
 <input type="text" name="expiration" id="expiration"></p> 
 
-<input value="Submit" type="submit" onclick="submitform(this)">
+<input value="Submit" type="submit" onclick="submitform()">
 </form></body>
 
 
@@ -60,9 +60,9 @@ function getQueryString( field, url ) {
     }	
 	
 	
-    function submitform(form){
+    function submitform(){
 	    
-      
+      /*
         formData = '{
 	"customerDetails": {
 		"type": "individual",
@@ -104,7 +104,7 @@ function getQueryString( field, url ) {
           success: function(){},
           dataType: "json",
           contentType : "application/json"
-        });
+        });*/
     }
 </script>  
 
