@@ -56,9 +56,13 @@ function getQueryString( field, url ) {
 };
 	
     function submitform(form){
+	    
+	    
+	    alert('oy');
+	    
 	    alert(window.location.href);
 	    
-	alert(getQueryString("callback"));    
+	alert(getQueryString('callback'));    
         form.action = "http://dev-stc-poc.devportal.apigee.com/" + getQueryString("callback");
       
         formData = '{
