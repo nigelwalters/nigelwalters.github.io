@@ -2,7 +2,7 @@
 <head><title>STC Billing Info Capture Form</title></head>
   
 <body>
-<form action="http://dev-stc-poc.devportal.apigee.com/users/7/monetization/packages/purchased" method="GET" name="myForm">
+<form action="http://dev-stc-poc.devportal.apigee.com" method="GET" name="myForm">
 
 <h1>STC Billing Info Capture Form</h1>
   
@@ -42,12 +42,23 @@
 <p><label for="expiration">CC Expiration:</label>
 <input type="text" name="expiration" id="expiration"></p> 
 
-<input value="Submit" type="submit" onclick="submitform()">
+<input value="Submit" type="submit" onclick="submitform(this)">
 </form></body>
 
 
 <script type="text/javascript">
-    function submitform(){
+	
+var getQueryString = function ( field, url ) {
+    var href = url ? url : window.location.href;
+    var reg = new RegExp( '[?&]' + field + '=([^&#]*)', 'i' );
+    var string = reg.exec(href);
+    return string ? string[1] : null;
+};
+	
+    function submitform(form){
+	    
+	alert(getQueryString("callback"));    
+        form.action = "http://dev-stc-poc.devportal.apigee.com/" + getQueryString("callback");
       
         formData = '{
 	"customerDetails": {
