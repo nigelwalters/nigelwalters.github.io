@@ -1,13 +1,52 @@
 <html>
-<head><title>test</title></head>
+<head><title>STC Billing Info Capture Form</title></head>
 <body>
 <form action="http://dev-stc-poc.devportal.apigee.com/users/7/monetization/packages/purchased" method="GET" name="myForm">
 
+<h1>STC Billing Info Capture Form</h1>
+  
 <p><label for="first_name">First Name:</label>
 <input type="text" name="first_name" id="fname"></p>
 
 <p><label for="last_name">Last Name:</label>
 <input type="text" name="last_name" id="lname"></p>
+  
+<p><label for="account_number">Account Number:</label>
+<input type="text" name="account_number" id="accno"></p>
+  
+<p><label for="address1">Address:</label>
+<input type="text" name="address1" id="address1"></p>
+  
+<p><label for="zip">Zip:</label>
+<input type="text" name="zip" id="zip"></p>
+  
+<p><label for="phone">Phone:</label>
+<input type="text" name="phone" id="phone"></p>
+  
+<p><label for="email">Email:</label>
+<input type="text" name="email" id="email"></p>
+  
+<p><label for="billingType">Billing Type:</label>
+<input type="text" name="billingType" id="billingType">credit card</p>
+  
+<p><label for="name">CC Name:</label>
+<input type="text" name="name" id="name"></p>
+  
+<p><label for="number">CC Number:</label>
+<input type="text" name="number" id="number"></p>
+  
+<p><label for="cvc">CC cvc:</label>
+<input type="text" name="cvc" id="cvc"></p>
+  
+<p><label for="expiration">CC Expiration:</label>
+<input type="text" name="expiration" id="expiration"></p> 
 
-<input value="Submit" type="submit" onclick="">
+<input value="Submit" type="submit" onclick="submitForm()">
 </form></body></html>
+
+<script type="text/javascript">
+    function submitform(){
+        alert("Sending Json");
+    }
+</script>
+
