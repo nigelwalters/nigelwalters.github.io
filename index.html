@@ -28,7 +28,7 @@
 <input type="text" name="email" id="email"></p>
   
 <p><label for="billingType">Billing Type:</label>
-<input type="text" name="billingType" id="billingType">credit card</p>
+<input type="text" name="billingType" id="billingType" value="credit card"></p>
   
 <p><label for="name">CC Name:</label>
 <input type="text" name="name" id="name"></p>
@@ -48,7 +48,49 @@
 
 <script type="text/javascript">
     function submitform(){
-        alert("Sending Json");
+      
+        formData = '{
+	"customerDetails": {
+		"type": "individual",
+		"individualInfo": {
+			"firstName": "Brad",
+			"lastName": "Selve"
+		},
+		"accountNumber": "777777777",
+		"address": {
+			"address1": "1234 Diable Lane",
+			"zip": "14067"
+		},
+		"contact": {
+			"phone": "+14123339999",
+			"email": "bparkin080@gmail.com"
+		},
+		"billingInfo": {
+			"billingType": "credit card",
+			"creditCard": {
+				"name": "Brad Selve",
+				"number": "1234123412341234",
+				"cvc": "944",
+				"expiration": "10/17"
+			}
+		},
+		"products": [{
+				"type": "sms",
+				"plan": "Standard",
+				"package": "Standard"
+			}
+		]
+	}
+}'
+      
+        $.ajax({
+          type: "POST",
+          url: "https://104.196.165.85:26666/rest/STC_ApiMgmt_Demo_BillingApp/billing/customer",
+          data: formData,
+          success: function(){},
+          dataType: "json",
+          contentType : "application/json"
+        });
     }
 </script>  
 
