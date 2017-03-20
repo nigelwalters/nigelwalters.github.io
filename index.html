@@ -2,7 +2,7 @@
 <head><title>STC Billing Info Capture Form</title></head>
   
 <body>
-<form action="myurl" method="GET" name="myForm">
+<form action="myurl" method="GET" name="myForm" id="myForm">
 
 <h1>STC Billing Info Capture Form</h1>
   
@@ -55,11 +55,16 @@ function getQueryString( field, url ) {
     return string ? string[1] : null;
 };
 	
+    window.onload = function() {
+        document.myForm.action = "http://dev-stc-poc.devportal.apigee.com/" + getQueryString('callback');
+    }	
+	
+	
     function submitform(form){
 	    
-	
+	alert(form.action);
 
-        form.action = "http://dev-stc-poc.devportal.apigee.com/" + getQueryString('callback');
+        //form.action = "http://dev-stc-poc.devportal.apigee.com/" + getQueryString('callback');
       /*
         formData = '{
 	"customerDetails": {
